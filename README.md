@@ -36,7 +36,7 @@ Ensure you have **Node.js** (version 18 or newer) installed.
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/<your-username>/breaksy.git
+git clone https://github.com/Imama1076/breaksy.git
 cd breaksy
 ```
 
