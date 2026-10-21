@@ -20,33 +20,36 @@ export const TermsPage: React.FC<TermsPageProps> = ({
   return (
     <div className="min-h-screen bg-transparent text-[#D7E2EA] font-sans selection:bg-purple-500/30 selection:text-white flex flex-col justify-between">
       {/* 1. Header / Navigation */}
-      <header className="sticky top-0 z-40 w-full bg-[#060816]/80 backdrop-blur-md border-b border-white/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-8 py-3.5 flex items-center justify-between">
+      <header className="sticky top-0 z-40 w-full bg-[#060816]/90 backdrop-blur-md border-b border-white/5">
+        <div className="max-w-7xl mx-auto px-3 sm:px-8 py-3 flex items-center justify-between gap-2">
           {/* Logo links back to home */}
           <button
             onClick={onBackToHome}
-            className="flex items-center gap-2.5 group cursor-pointer bg-transparent border-0 p-0 text-left"
+            className="flex items-center gap-2 group cursor-pointer bg-transparent border-0 p-0 text-left shrink-0"
           >
             <BreaksyLogo size="sm" showText={false} />
-            <span className="text-xl font-black tracking-tight text-white uppercase heading-font group-hover:text-purple-300 transition-colors">
+            <span className="text-lg sm:text-xl font-black tracking-tight text-white uppercase heading-font group-hover:text-purple-300 transition-colors">
               Breaksy
             </span>
           </button>
 
-          <div className="flex items-center gap-2 sm:gap-4">
+          <div className="flex items-center gap-1.5 sm:gap-3 shrink-0">
             <a
               href="#/privacy"
-              className="px-3 sm:px-3.5 py-1.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-slate-300 hover:text-white text-xs font-medium uppercase tracking-wider transition-all flex items-center gap-1.5 cursor-pointer"
+              title="Privacy Policy"
+              className="px-2.5 sm:px-3.5 py-1.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-slate-300 hover:text-white text-xs font-medium uppercase tracking-wider transition-all flex items-center gap-1.5 cursor-pointer whitespace-nowrap"
             >
-              <ShieldCheck className="w-3.5 h-3.5 text-purple-400" />
-              <span>Privacy Policy</span>
+              <ShieldCheck className="w-3.5 h-3.5 text-purple-400 shrink-0" />
+              <span className="hidden md:inline">Privacy Policy</span>
+              <span className="hidden xs:inline md:hidden">Privacy</span>
             </a>
             <button
               onClick={onBackToHome}
-              className="px-3.5 sm:px-4 py-1.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-slate-300 hover:text-white text-xs font-medium uppercase tracking-wider transition-all flex items-center gap-1.5 cursor-pointer"
+              title="Back to Home"
+              className="px-2.5 sm:px-3.5 py-1.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-slate-300 hover:text-white text-xs font-medium uppercase tracking-wider transition-all flex items-center gap-1.5 cursor-pointer whitespace-nowrap"
             >
-              <ArrowLeft className="w-3.5 h-3.5" />
-              <span className="hidden sm:inline">Back to Home</span>
+              <ArrowLeft className="w-3.5 h-3.5 shrink-0" />
+              <span className="hidden sm:inline">Home</span>
             </button>
             <button
               onClick={onOpenDownload}
@@ -56,7 +59,7 @@ export const TermsPage: React.FC<TermsPageProps> = ({
                 outline: '2px solid rgba(255, 255, 255, 0.95)',
                 outlineOffset: '-3px',
               }}
-              className="px-4 py-1.5 rounded-full text-white text-xs font-semibold uppercase tracking-wider transition-all duration-200 hover:scale-[1.03] active:scale-[0.97] cursor-pointer shadow-md select-none inline-flex items-center justify-center"
+              className="px-3 sm:px-4 py-1.5 rounded-full text-white text-xs font-semibold uppercase tracking-wider transition-all duration-200 hover:scale-[1.03] active:scale-[0.97] cursor-pointer shadow-md select-none inline-flex items-center justify-center whitespace-nowrap shrink-0"
             >
               Get App
             </button>

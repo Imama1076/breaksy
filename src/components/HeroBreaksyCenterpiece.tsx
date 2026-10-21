@@ -449,7 +449,7 @@ export const HeroBreaksyCenterpiece: React.FC<HeroBreaksyCenterpieceProps> = ({
       {/* 2. HERO CENTERPIECE SPOT (PERFECTLY PERCHED ABOVE BREAKSY) */}
       <div
         ref={heroCenterpieceRef}
-        className="relative z-30 w-[84vw] xs:w-[80vw] sm:w-full max-w-[360px] xs:max-w-[420px] sm:max-w-[480px] md:max-w-[540px] lg:max-w-[620px] max-h-[30vh] xs:max-h-[32vh] sm:max-h-[34vh] md:max-h-[36vh] lg:max-h-[40vh] aspect-[1/0.92] flex items-center justify-center cursor-pointer -mb-8 xs:-mb-10 sm:-mb-14 md:-mb-16 lg:-mb-20"
+        className="relative z-30 w-[84vw] xs:w-[80vw] sm:w-full max-w-[360px] xs:max-w-[420px] sm:max-w-[500px] md:max-w-[620px] lg:max-w-[720px] xl:max-w-[800px] max-h-[30vh] xs:max-h-[32vh] sm:max-h-[35vh] md:max-h-[38vh] lg:max-h-[42vh] aspect-[1/0.92] flex items-center justify-center cursor-pointer -mb-8 xs:-mb-10 sm:-mb-14 md:-mb-18 lg:-mb-24 xl:-mb-28"
         onClick={handleMascotClick}
         title="Tap to pet Breaksy Mascot!"
       >
@@ -498,7 +498,7 @@ export const HeroBreaksyCenterpiece: React.FC<HeroBreaksyCenterpieceProps> = ({
             initial={{ opacity: 0, scale: 1.1, filter: 'blur(8px)' }}
             animate={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
             transition={{ duration: 1.1, ease: 'easeOut' }}
-            style={{ fontSize: 'clamp(4.6rem, min(20.5vw, 16vh), 12.8rem)' }}
+            style={{ fontSize: 'clamp(4.8rem, min(22vw, 21.5vh), 18rem)' }}
             className="w-full text-center font-black uppercase tracking-[-0.035em] xs:tracking-[-0.03em] sm:tracking-[-0.025em] md:tracking-[-0.02em] leading-none select-none flex items-center justify-center whitespace-nowrap drop-shadow-[0_14px_32px_rgba(20,10,50,0.7)]"
           >
             {letters.map((char, index) => (

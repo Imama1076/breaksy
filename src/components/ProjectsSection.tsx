@@ -1,4 +1,4 @@
-import React, { useState, Suspense, lazy } from 'react';
+import React, { useState, useRef, Suspense, lazy } from 'react';
 import { FadeIn } from './MotionHelpers';
 import { ContactButton } from './Buttons';
 // Code-split interactive tabs to keep initial page bundle lean & instant
@@ -87,6 +87,7 @@ interface ProjectsSectionProps {
 
 export const ProjectsSection: React.FC<ProjectsSectionProps> = React.memo(({ onOpenDownload }) => {
   const [activeTab, setActiveTab] = useState<ExperienceTab>('interception');
+  const tabsContainerRef = useRef<HTMLDivElement>(null);
 
   return (
     <section
@@ -111,7 +112,10 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = React.memo(({ onO
 
         {/* Tab Switcher */}
         <FadeIn delay={0.1} y={20}>
-          <div className="w-full overflow-x-auto breaksy-scrollbar-x pb-4 mb-8 sm:mb-12">
+          <div
+            ref={tabsContainerRef}
+            className="w-full overflow-x-auto breaksy-scrollbar-x pb-4 mb-8 sm:mb-12 max-w-full"
+          >
             <div className="flex items-center gap-2 sm:gap-3 min-w-max mx-auto px-2 justify-start xl:justify-center">
               {TABS.map((tab) => {
                 const isActive = activeTab === tab.id;
@@ -120,11 +124,16 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = React.memo(({ onO
                     key={tab.id}
                     onClick={(e) => {
                       setActiveTab(tab.id);
-                      e.currentTarget.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'nearest',
-                        inline: 'center',
-                      });
+                      const container = tabsContainerRef.current;
+                      if (container) {
+                        const btn = e.currentTarget;
+                        const targetLeft =
+                          btn.offsetLeft - container.clientWidth / 2 + btn.clientWidth / 2;
+                        container.scrollTo({
+                          left: Math.max(0, targetLeft),
+                          behavior: 'smooth',
+                        });
+                      }
                     }}
                     className={`px-3.5 sm:px-5 py-2.5 sm:py-3 rounded-xl sm:rounded-2xl text-[11px] sm:text-sm font-semibold uppercase tracking-wider transition-all shrink-0 cursor-pointer ${
                       isActive

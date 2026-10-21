@@ -21,6 +21,7 @@ class SoundEngine {
   private bgChimeTimer: number | null = null;
   private isBgPlaying: boolean = false;
   private bgChimeIndex: number = 0;
+  private wasBgPausedBySoundscape: boolean = false;
 
   // Gentle celestial pentatonic scale (Dmaj9 starlight chime tones: D5, F#5, A5, C#6, E5)
   private readonly cosmicChimes = [
@@ -72,6 +73,7 @@ class SoundEngine {
           this.masterGain.gain.value = 0;
         } catch {}
       }
+      this.wasBgPausedBySoundscape = false;
       this.pauseBackgroundMusic();
       this.stopAllSoundscapes();
       try {
@@ -439,6 +441,7 @@ class SoundEngine {
       if (!active) {
         current.stop();
         this.soundscapeNodes.delete(id);
+        this.checkResumeBackgroundMusic();
         return;
       } else {
         current.gain.gain.setTargetAtTime(Math.max(0.001, volume * 0.45), this.ctx.currentTime, 0.15);
@@ -447,6 +450,12 @@ class SoundEngine {
     }
 
     if (!active) return;
+
+    // Automatically pause ambient background music when user activates a soundscape / vibe lock
+    if (this.isBgPlaying) {
+      this.wasBgPausedBySoundscape = true;
+      this.pauseBackgroundMusic();
+    }
 
     const gainNode = this.ctx.createGain();
     gainNode.gain.setValueAtTime(0.001, this.ctx.currentTime);
@@ -1099,9 +1108,19 @@ class SoundEngine {
 
   public stopAllSoundscapes() {
     this.soundscapeNodes.forEach((node) => {
-      node.stop();
+      try {
+        node.stop();
+      } catch {}
     });
     this.soundscapeNodes.clear();
+    this.checkResumeBackgroundMusic();
+  }
+
+  private checkResumeBackgroundMusic() {
+    if (this.soundscapeNodes.size === 0 && this.wasBgPausedBySoundscape && !this.isMuted) {
+      this.wasBgPausedBySoundscape = false;
+      this.startBackgroundMusic();
+    }
   }
 }
 
