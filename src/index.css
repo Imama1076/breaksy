@@ -1,0 +1,337 @@
+@import "tailwindcss";
+
+:root {
+  --bunny-cursor: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIiBmaWxsPSJub25lIj4KICA8IS0tIE1hZ2ljIFN0YXIgUG9pbnRlciBhdCAoNSwgNSkgLS0+CiAgPHBhdGggZD0iTTUgMSBMNi4yIDMuOCBMOSA1IEw2LjIgNi4yIEw1IDkgTDMuOCA2LjIgTDEgNSBMMy44IDMuOCBaIiBmaWxsPSIjRkVFMjkyIiBzdHJva2U9IiNGNTlFMEIiIHN0cm9rZS13aWR0aD0iMC41Ii8+CiAgPCEtLSBTcHJvdXQgTGVhZiBFYXIgb24gTGVmdCAtLT4KICA8cGF0aCBkPSJNMTIgMTIgQzkuNSA4IDEwLjUgMyAxMy41IDQuNSBDMTQuNSA3IDE0IDExIDEyIDEyIFoiIGZpbGw9IiM1NEMxODIiLz4KICA8cGF0aCBkPSJNMTAuNSAxNCBDNy41IDEyLjUgNi41IDE1IDcuOCAxNyBDOS41IDE4IDExLjggMTYgMTAuNSAxNCBaIiBmaWxsPSIjM0VCMzhDIi8+CiAgPCEtLSBCdW5ueSBIZWFkIC0tPgogIDxlbGxpcHNlIGN4PSIxOCIgY3k9IjE4LjUiIHJ4PSIxMCIgcnk9IjguOCIgZmlsbD0iIzdCODBGOCIvPgogIDxlbGxpcHNlIGN4PSIxOCIgY3k9IjE3LjUiIHJ4PSI5IiByeT0iNy44IiBmaWxsPSIjOTE5NUZBIi8+CiAgPCEtLSBIZWFkIEdsb3NzIC0tPgogIDxwYXRoIGQ9Ik0xMyAxMyBDMTUgMTEuNSAyMSAxMS41IDIzIDEzIEMyMS41IDEyLjIgMTQuNSAxMi4yIDEzIDEzIFoiIGZpbGw9IiNGRkZGRkYiIGZpbGwtb3BhY2l0eT0iMC42Ii8+CiAgPCEtLSBSb3N5IENoZWVrcyAtLT4KICA8ZWxsaXBzZSBjeD0iMTIuNSIgY3k9IjE5LjgiIHJ4PSIyLjIiIHJ5PSIxLjQiIGZpbGw9IiNFNTgzQjQiIGZpbGwtb3BhY2l0eT0iMC44NSIvPgogIDxlbGxpcHNlIGN4PSIyMy41IiBjeT0iMTkuOCIgcng9IjIuMiIgcnk9IjEuNCIgZmlsbD0iI0U1ODNCNCIgZmlsbC1vcGFjaXR5PSIwLjg1Ii8+CiAgPCEtLSBXaWRlIE9wZW4gRXllcyAtLT4KICA8cmVjdCB4PSIxMi4yIiB5PSIxNS44IiB3aWR0aD0iNC4yIiBoZWlnaHQ9IjMiIHJ4PSIxLjUiIGZpbGw9IiNGRkZGRkYiLz4KICA8Y2lyY2xlIGN4PSIxNC4zIiBjeT0iMTcuMyIgcj0iMS4zIiBmaWxsPSIjMUIxQzNDIi8+CiAgPGNpcmNsZSBjeD0iMTQiIGN5PSIxNyIgcj0iMC40NSIgZmlsbD0iI0ZGRkZGRiIvPgogIDxyZWN0IHg9IjE5LjYiIHk9IjE1LjgiIHdpZHRoPSI0LjIiIGhlaWdodD0iMyIgcng9IjEuNSIgZmlsbD0iI0ZGRkZGRiIvPgogIDxjaXJjbGUgY3g9IjIxLjciIGN5PSIxNy4zIiByPSIxLjMiIGZpbGw9IiMxQjFDM0MiLz4KICA8Y2lyY2xlIGN4PSIyMS40IiBjeT0iMTciIHI9IjAuNDUiIGZpbGw9IiNGRkZGRkYiLz4KICA8IS0tIFN3ZWV0IFNtaWxlIC0tPgogIDxwYXRoIGQ9Ik0xNyAyMCBRMTggMjEuMiAxOSAyMCIgc3Ryb2tlPSIjMUMxRDNGIiBzdHJva2Utd2lkdGg9IjAuOCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBmaWxsPSJub25lIi8+Cjwvc3ZnPg==') 5 5, auto;
+
+  --bunny-cursor-pointer: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIiBmaWxsPSJub25lIj4KICA8IS0tIEdsb3dpbmcgUG9pbnRlciBTdGFyIHdpdGggUmluZyAtLT4KICA8Y2lyY2xlIGN4PSI1IiBjeT0iNSIgcj0iNC4yIiBmaWxsPSIjRkRFMDQ3IiBmaWxsLW9wYWNpdHk9IjAuMzUiLz4KICA8cGF0aCBkPSJNNSAwIEw2LjQgMy42IEwxMCA1IEw2LjQgNi40IEw1IDEwIEwzLjYgNi40IEwwIDUgTDMuNiAzLjYgWiIgZmlsbD0iI0ZGRTU4RiIgc3Ryb2tlPSIjRjU5RTBCIiBzdHJva2Utd2lkdGg9IjAuNiIvPgogIDwhLS0gU3Byb3V0IExlYWYgRWFyIG9uIExlZnQgd2l0aCBoYXBweSB0aWx0IC0tPgogIDxwYXRoIGQ9Ik0xMiAxMSBDOSA2IDEwIDEuNSAxMy41IDMuNSBDMTQuNSA2LjUgMTQgMTAuNSAxMiAxMSBaIiBmaWxsPSIjNTRDMTgyIi8+CiAgPHBhdGggZD0iTTEwIDEzIEM2LjggMTEuNSA2IDE0LjIgNy41IDE2LjUgQzkuMiAxNy41IDExLjUgMTUuMiAxMCAxMyBaIiBmaWxsPSIjM0VCMzhDIi8+CiAgPCEtLSBCdW5ueSBIZWFkIC0tPgogIDxlbGxpcHNlIGN4PSIxOCIgY3k9IjE4IiByeD0iMTAiIHJ5PSI4LjgiIGZpbGw9IiM3QjgwRjgiLz4KICA8ZWxsaXBzZSBjeD0iMTgiIGN5PSIxNyIgcng9IjkiIHJ5PSI3LjgiIGZpbGw9IiM5MTk1RkEiLz4KICA8IS0tIEhlYWQgR2xvc3MgLS0+CiAgPHBhdGggZD0iTTEzIDEyLjUgQzE1IDExIDIxIDExIDIzIDEyLjUgQzIxLjUgMTEuNyAxNC41IDExLjcgMTMgMTIuNSBaIiBmaWxsPSIjRkZGRkZGIiBmaWxsLW9wYWNpdHk9IjAuNjUiLz4KICA8IS0tIFJvc3kgQ2hlZWtzIEdsb3dpbmcgLS0+CiAgPGVsbGlwc2UgY3g9IjEyLjUiIGN5PSIxOS41IiByeD0iMi40IiByeT0iMS42IiBmaWxsPSIjRjQ3MkI2IiBmaWxsLW9wYWNpdHk9IjAuOTUiLz4KICA8ZWxsaXBzZSBjeD0iMjMuNSIgY3k9IjE5LjUiIHJ4PSIyLjQiIHJ5PSIxLjYiIGZpbGw9IiNGNDcyQjYiIGZpbGwtb3BhY2l0eT0iMC45NSIvPgogIDwhLS0gV2lkZSBPcGVuIFNwYXJrbHkgRXhjaXRlZCBFeWVzIC0tPgogIDxyZWN0IHg9IjEyIiB5PSIxNS4yIiB3aWR0aD0iNC41IiBoZWlnaHQ9IjMuMiIgcng9IjEuNiIgZmlsbD0iI0ZGRkZGRiIvPgogIDxjaXJjbGUgY3g9IjE0LjIiIGN5PSIxNi44IiByPSIxLjM1IiBmaWxsPSIjMUIxQzNDIi8+CiAgPGNpcmNsZSBjeD0iMTMuOSIgY3k9IjE2LjQiIHI9IjAuNSIgZmlsbD0iI0ZGRkZGRiIvPgogIDxyZWN0IHg9IjE5LjUiIHk9IjE1LjIiIHdpZHRoPSI0LjUiIGhlaWdodD0iMy4yIiByeD0iMS42IiBmaWxsPSIjRkZGRkZGIi8+CiAgPGNpcmNsZSBjeD0iMjEuOCIgY3k9IjE2LjgiIHI9IjEuMzUiIGZpbGw9IiMxQjFDM0MiLz4KICA8Y2lyY2xlIGN4PSIyMS41IiBjeT0iMTYuNCIgcj0iMC41IiBmaWxsPSIjRkZGRkZGIi8+CiAgPCEtLSBTd2VldCBFeGNpdGVkIE9wZW4gU21pbGUgLS0+CiAgPHBhdGggZD0iTTE2LjUgMTkuNSBRMTggMjEuNSAxOS41IDE5LjUiIHN0cm9rZT0iIzFDMUQzRiIgc3Ryb2tlLXdpZHRoPSIwLjkiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgZmlsbD0iI0U1ODNCNCIvPgo8L3N2Zz4=') 5 5, pointer;
+}
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Lenis handles ultra-smooth, lightweight momentum scrolling */
+
+  html, body, #root {
+    background-color: #080914;
+    color: #D7E2EA;
+    min-height: 100%;
+    overflow-x: clip;
+    width: 100%;
+    max-width: 100%;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  /* Touch device optimization: prevent cursor override on touchscreens, optimize tap response */
+  @media (hover: none) and (pointer: coarse) {
+    * {
+      cursor: auto !important;
+    }
+    button, a, input, select, textarea {
+      touch-action: manipulation;
+    }
+  }
+
+  /* Headings universally styled with friendly, premium Nunito typography */
+  h1, h2, h3, h4, h5, h6, .heading-font, .hero-heading {
+    font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  }
+
+  h1 *, h2 *, h3 *, h4 *, h5 *, h6 * {
+    font-family: inherit;
+  }
+
+  p, span, a, button, input, textarea, select {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+/* Universal typography harmonization: consistent weights, smooth tabular numerals */
+.font-mono {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+}
+
+.heading-font {
+  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+/* Gradient Hero Heading: Purple, Lavender, Sky Blue blend */
+.hero-heading {
+  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  background: linear-gradient(180deg, #A7B0C5 0%, #E3E8FF 40%, #9B8CFA 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glassmorphism utility with purple-navy tint (GPU compositor accelerated) */
+.glass-panel {
+  background: rgba(17, 19, 42, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(167, 139, 250, 0.15);
+  transform: translateZ(0);
+}
+
+.glass-pill {
+  background: rgba(167, 139, 250, 0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(167, 139, 250, 0.2);
+  transform: translateZ(0);
+}
+
+/* Ambient Moon Pulsing (Compositor accelerated: zero paint/rasterization) */
+@keyframes moonGlow {
+  0%, 100% {
+    transform: scale(1) rotate(-8deg);
+    opacity: 0.88;
+  }
+  50% {
+    transform: scale(1.04) rotate(-8deg);
+    opacity: 1;
+  }
+}
+.animate-moon {
+  animation: moonGlow 7s ease-in-out infinite;
+  transform-origin: center center;
+  will-change: transform, opacity;
+  filter: drop-shadow(0 0 30px rgba(254, 235, 165, 0.55));
+}
+
+/* Ambient Stars Twinkle */
+@keyframes twinkleA {
+  0%, 100% { opacity: 0.35; transform: scale(0.85); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+@keyframes twinkleB {
+  0%, 100% { opacity: 0.85; transform: scale(1.1); }
+  50% { opacity: 0.25; transform: scale(0.75); }
+}
+.star-a { animation: twinkleA 3.6s ease-in-out infinite; }
+.star-b { animation: twinkleB 4.4s ease-in-out 1.2s infinite; }
+.star-c { animation: twinkleA 2.9s ease-in-out 0.8s infinite; }
+
+/* Big Revolving and Drifting Stars Across Full Website */
+@keyframes starRevolveSlowClockwise {
+  0% {
+    transform: rotate(0deg) scale(0.92);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.18);
+  }
+  100% {
+    transform: rotate(360deg) scale(0.92);
+  }
+}
+
+@keyframes starRevolveSlowCounter {
+  0% {
+    transform: rotate(360deg) scale(1.15);
+  }
+  50% {
+    transform: rotate(180deg) scale(0.88);
+  }
+  100% {
+    transform: rotate(0deg) scale(1.15);
+  }
+}
+
+/* Moving & Drifting Stars across night sky */
+@keyframes starDriftFloatA {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  25% {
+    transform: translate(-18px, -12px);
+  }
+  50% {
+    transform: translate(-6px, -24px);
+  }
+  75% {
+    transform: translate(14px, -10px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes starDriftFloatB {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  25% {
+    transform: translate(16px, 14px);
+  }
+  50% {
+    transform: translate(22px, -8px);
+  }
+  75% {
+    transform: translate(-10px, 16px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes starDriftFloatC {
+  0% {
+    transform: translate(0px, 0px) scale(0.9);
+  }
+  33% {
+    transform: translate(-20px, 15px) scale(1.15);
+  }
+  66% {
+    transform: translate(18px, -12px) scale(0.85);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(0.9);
+  }
+}
+
+@keyframes gentleCloudFloat {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-8px) scale(1.02);
+  }
+}
+.animate-bottom-cloud {
+  animation: gentleCloudFloat 8s ease-in-out infinite;
+}
+
+.revolving-star-cw {
+  animation: starRevolveSlowClockwise 18s linear infinite;
+  transform-origin: center center;
+}
+
+.revolving-star-ccw {
+  animation: starRevolveSlowCounter 24s linear infinite;
+  transform-origin: center center;
+}
+
+.star-drift-a {
+  animation: starDriftFloatA 16s ease-in-out infinite;
+}
+
+.star-drift-b {
+  animation: starDriftFloatB 21s ease-in-out infinite;
+}
+
+/* Mascot Breathing & Floating */
+@keyframes mascotHoverBob {
+  0%, 100% {
+    transform: translateY(0px) scale(1, 1);
+  }
+  35% {
+    transform: translateY(-6px) scale(0.995, 1.01);
+  }
+  70% {
+    transform: translateY(4px) scale(1.012, 0.988);
+  }
+}
+.mascot-floating-body {
+  animation: mascotHoverBob 4.8s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+.mascot-floating-body.asleep-breathe {
+  animation: mascotHoverBob 7s ease-in-out infinite;
+}
+
+/* ZZZ Sleep Floating Particles - Smooth Staggered Dream Drift */
+@keyframes floatZzz1 {
+  0% { transform: translate(0px, 0px) scale(0.7); opacity: 0; }
+  25% { opacity: 0.9; }
+  75% { opacity: 0.6; }
+  100% { transform: translate(16px, -32px) scale(1.1); opacity: 0; }
+}
+@keyframes floatZzz2 {
+  0% { transform: translate(0px, 0px) scale(0.8); opacity: 0; }
+  25% { opacity: 0.95; }
+  75% { opacity: 0.7; }
+  100% { transform: translate(24px, -48px) scale(1.25); opacity: 0; }
+}
+@keyframes floatZzz3 {
+  0% { transform: translate(0px, 0px) scale(0.9); opacity: 0; }
+  25% { opacity: 1; }
+  75% { opacity: 0.75; }
+  100% { transform: translate(34px, -66px) scale(1.4); opacity: 0; }
+}
+.zzz-1 { animation: floatZzz1 3s ease-in-out infinite; }
+.zzz-2 { animation: floatZzz2 3s ease-in-out 0.95s infinite; }
+.zzz-3 { animation: floatZzz3 3s ease-in-out 1.9s infinite; }
+
+/* Ear flutter */
+@keyframes softEarSway {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(-2deg); }
+}
+.ear-flutter {
+  transform-origin: 125px 170px;
+  animation: softEarSway 5s ease-in-out infinite;
+}
+
+/* Waking bounce */
+@keyframes wakeBounceAnim {
+  0% { transform: scale(1); }
+  30% { transform: scale(1.06, 0.94); }
+  60% { transform: scale(0.96, 1.04); }
+  100% { transform: scale(1); }
+}
+.wake-bounce {
+  animation: wakeBounceAnim 0.5s ease-out;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #080914;
+}
+::-webkit-scrollbar-thumb {
+  background: #252854;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8078F8;
+}
+
+/* Custom Themed Horizontal Scrollbar (Displays only when content overflows) */
+.breaksy-scrollbar-x {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(168, 85, 247, 0.55) rgba(255, 255, 255, 0.05);
+}
+.breaksy-scrollbar-x::-webkit-scrollbar {
+  height: 6px;
+}
+.breaksy-scrollbar-x::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 9999px;
+  margin: 0 12px;
+}
+.breaksy-scrollbar-x::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #9333EA, #6366F1);
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 8px rgba(147, 51, 234, 0.35);
+}
+.breaksy-scrollbar-x::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(90deg, #A855F7, #818CF8);
+  box-shadow: 0 0 14px rgba(168, 85, 247, 0.6);
+}
+

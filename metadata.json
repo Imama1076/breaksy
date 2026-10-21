@@ -1,0 +1,6 @@
+{
+  "name": "Breaksy — Mindful Screen-Time Intervention & Focus",
+  "description": "Breaksy interrupts subconscious muscle memory when you try to open distracting apps. Micro-friction challenges, themed vibe locks, and habit rewiring.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
