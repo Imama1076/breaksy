@@ -121,8 +121,7 @@ export default function App() {
   if (currentPage === 'privacy') {
     return (
       <div
-        style={{ overflowX: 'clip' }}
-        className="min-h-screen bg-[#060816] bg-gradient-to-b from-[#060816] via-[#0B102E] to-[#0D102E] text-[#D7E2EA] font-sans selection:bg-purple-500/30 selection:text-white relative"
+        className="min-h-screen bg-[#060816] bg-gradient-to-b from-[#060816] via-[#0B102E] to-[#0D102E] text-[#D7E2EA] font-sans selection:bg-purple-500/30 selection:text-white relative overflow-x-hidden max-w-full"
       >
         <BunnyCursorCompanion />
         <Suspense fallback={<div className="min-h-screen flex items-center justify-center text-purple-300 font-bold tracking-widest text-xl">...</div>}>
@@ -142,8 +141,7 @@ export default function App() {
   if (currentPage === 'terms') {
     return (
       <div
-        style={{ overflowX: 'clip' }}
-        className="min-h-screen bg-[#060816] bg-gradient-to-b from-[#060816] via-[#0B102E] to-[#0D102E] text-[#D7E2EA] font-sans selection:bg-purple-500/30 selection:text-white relative"
+        className="min-h-screen bg-[#060816] bg-gradient-to-b from-[#060816] via-[#0B102E] to-[#0D102E] text-[#D7E2EA] font-sans selection:bg-purple-500/30 selection:text-white relative overflow-x-hidden max-w-full"
       >
         <BunnyCursorCompanion />
         <Suspense fallback={<div className="min-h-screen flex items-center justify-center text-purple-300 font-bold tracking-widest text-xl">...</div>}>
@@ -162,8 +160,7 @@ export default function App() {
 
   return (
     <div
-      style={{ overflowX: 'clip' }}
-      className="min-h-screen bg-[#060816] text-[#D7E2EA] font-sans selection:bg-purple-500/30 selection:text-white relative"
+      className="min-h-screen bg-[#060816] text-[#D7E2EA] font-sans selection:bg-purple-500/30 selection:text-white relative overflow-x-hidden max-w-full"
     >
       {/* Top Scrolling Progress Bar (Solid Purple, zero gradient) */}
       <motion.div

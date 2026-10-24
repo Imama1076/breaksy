@@ -102,6 +102,10 @@ export const CrystalGardenShowcase: React.FC = () => {
             <img
               src="/crystal-flower-bloom.webp"
               alt={activeFlower.name}
+              width={224}
+              height={224}
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-contain filter drop-shadow-[0_0_28px_rgba(147,51,234,0.5)] hover:scale-105 transition-transform duration-300 select-none"
               onError={(e) => {
                 if (e.currentTarget.src.endsWith('.webp')) {
