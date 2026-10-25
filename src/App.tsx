@@ -7,6 +7,7 @@ import { HeroSection } from './components/HeroSection';
 const CosmicStarfield = lazy(() => import('./components/CosmicStarfield').then((m) => ({ default: m.CosmicStarfield })));
 const BunnyCursorCompanion = lazy(() => import('./components/BunnyCursorCompanion').then((m) => ({ default: m.BunnyCursorCompanion })));
 const AboutSection = lazy(() => import('./components/AboutSection').then((m) => ({ default: m.AboutSection })));
+const ComparisonMatrix = lazy(() => import('./components/ComparisonMatrix').then((m) => ({ default: m.ComparisonMatrix })));
 const ProjectsSection = lazy(() => import('./components/ProjectsSection').then((m) => ({ default: m.ProjectsSection })));
 const ServicesSection = lazy(() => import('./components/ServicesSection').then((m) => ({ default: m.ServicesSection })));
 const AppScreenshotsSection = lazy(() => import('./components/AppScreenshotsSection').then((m) => ({ default: m.AppScreenshotsSection })));
@@ -183,10 +184,13 @@ export default function App() {
 
         {/* Below-the-fold heavy sections wrapped in Suspense for asynchronous streaming */}
         <Suspense fallback={<div className="min-h-[40vh] flex items-center justify-center text-purple-300 font-bold tracking-widest text-xl">...</div>}>
-          {/* Section 2: Why Breaksy Section (Breaksy's behavioral intervention philosophy: Friction Over Hard Blocking) */}
+          {/* Section 2: Why Breaksy Component (<WhyBreaksy /> — #why-breaksy) */}
           <AboutSection onOpenDownload={handleOpenDownload} />
 
-          {/* Section 3: Interactive Breaksy Experience & Simulator Section (Live launch interceptor, 6 challenges, vibe lock soundscapes, garden, sleep calculator, comparison table) */}
+          {/* Section 3: Product Comparison Component (<ComparisonMatrix /> — #comparison) */}
+          <ComparisonMatrix />
+
+          {/* Section 4: Interactive Breaksy Experience & Simulator Section (#simulator / #interactive) */}
           <ProjectsSection onOpenDownload={handleOpenDownload} />
 
           {/* Section 4: Features Section (01 Reflex Interception, 02 Micro-Hurdles, 03 Vibe Locks, 04 Crystal Garden, 05 Circadian Sleep) */}
@@ -222,7 +226,33 @@ export default function App() {
               }}
               className="hover:text-white transition-colors cursor-pointer"
             >
-              Philosophy
+              Why Breaksy
+            </a>
+            <a
+              href="#comparison"
+              onClick={(e) => {
+                e.preventDefault();
+                soundEngine.playClick();
+                const lenis = (window as unknown as { __lenis?: { scrollTo: (t: string, o?: { offset?: number }) => void } }).__lenis;
+                if (lenis) lenis.scrollTo('#comparison', { offset: -24 });
+                else document.querySelector('#comparison')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="hover:text-white transition-colors cursor-pointer text-purple-200"
+            >
+              Comparison
+            </a>
+            <a
+              href="#simulator"
+              onClick={(e) => {
+                e.preventDefault();
+                soundEngine.playClick();
+                const lenis = (window as unknown as { __lenis?: { scrollTo: (t: string, o?: { offset?: number }) => void } }).__lenis;
+                if (lenis) lenis.scrollTo('#simulator', { offset: -24 });
+                else document.querySelector('#simulator')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="hover:text-white transition-colors cursor-pointer"
+            >
+              Simulator
             </a>
             <a
               href="#features"

@@ -91,9 +91,11 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = React.memo(({ onO
 
   return (
     <section
-      id="interactive"
-      className="relative bg-gradient-to-b from-[#0D102D] via-[#090C24] to-[#0B0E2A] text-white px-4 sm:px-8 md:px-10 pt-10 sm:pt-14 md:pt-16 pb-16 sm:pb-20 overflow-hidden select-none border-t border-purple-500/10"
+      id="simulator"
+      className="relative bg-gradient-to-b from-[#0D102D] via-[#090C24] to-[#0B0E2A] text-white px-4 sm:px-8 md:px-10 pt-10 sm:pt-14 md:pt-16 pb-16 sm:pb-20 overflow-hidden select-none border-t border-purple-500/10 scroll-mt-6"
     >
+      {/* Anchor for backward compatibility with #interactive links */}
+      <span id="interactive" className="absolute -top-10 opacity-0 pointer-events-none" />
       {/* Background ambient cosmic glow (Hardware-accelerated radial gradients) */}
       <div className="absolute top-1/4 left-1/3 w-[850px] h-[600px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(147,51,234,0.14)_0%,transparent_70%)] pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/4 w-[650px] h-[500px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(99,102,241,0.12)_0%,transparent_70%)] pointer-events-none" />

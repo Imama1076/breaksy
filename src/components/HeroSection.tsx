@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FadeIn } from './MotionHelpers';
 import { ContactButton } from './Buttons';
 import { HeroBreaksyCenterpiece } from './HeroBreaksyCenterpiece';
+import { HeroMetrics } from './HeroMetrics';
 import { BreaksyLogo } from './BreaksyLogo';
 const HeroNightSkyBackground = React.lazy(() => import('./HeroNightSkyBackground').then((m) => ({ default: m.HeroNightSkyBackground })));
 import { Menu, X, ArrowRight, Volume2, VolumeX } from 'lucide-react';
@@ -58,7 +59,7 @@ export const HeroSection: React.FC<HeroSectionProps> = React.memo(({
   };
 
   return (
-    <section className="relative min-h-[100dvh] md:h-screen w-full flex flex-col justify-between overflow-hidden bg-gradient-to-b from-[#060816] via-[#0B102E] to-[#0D102E] select-none pt-2 sm:pt-3 pb-3 sm:pb-4">
+    <section id="hero" className="relative min-h-[100dvh] w-full flex flex-col justify-start overflow-hidden bg-gradient-to-b from-[#060816] via-[#0B102E] to-[#0D102E] select-none pt-2 sm:pt-3 pb-16 sm:pb-24">
       {/* 1. Exact Night Sky Artwork Background with glowing clouds, warm golden rims, and galaxy stars */}
       <React.Suspense fallback={<div className="absolute inset-0 bg-gradient-to-b from-[#060816] via-[#0B102E] to-[#0D102E] pointer-events-none" />}>
         <HeroNightSkyBackground />
@@ -90,11 +91,25 @@ export const HeroSection: React.FC<HeroSectionProps> = React.memo(({
             className="hidden md:flex items-center gap-6 lg:gap-8 text-[#D7E2EA] font-medium uppercase tracking-wider text-xs sm:text-sm"
           >
             <a
+              href="#why-breaksy"
+              onClick={(e) => handleDesktopNavClick(e, '#why-breaksy')}
+              className="hover:text-white hover:opacity-100 opacity-80 transition-all duration-200 cursor-pointer"
+            >
+              Why Breaksy
+            </a>
+            <a
               href="#interactive"
               onClick={(e) => handleDesktopNavClick(e, '#interactive')}
               className="hover:text-white hover:opacity-100 opacity-80 transition-all duration-200 cursor-pointer"
             >
               Simulator
+            </a>
+            <a
+              href="#comparison"
+              onClick={(e) => handleDesktopNavClick(e, '#comparison')}
+              className="hover:text-white hover:opacity-100 opacity-80 transition-all duration-200 cursor-pointer text-purple-200"
+            >
+              Comparison
             </a>
             <a
               href="#features"
@@ -228,44 +243,55 @@ export const HeroSection: React.FC<HeroSectionProps> = React.memo(({
         )}
       </FadeIn>
 
-      {/* 3. Center Section: Bunny sitting on top of clouds, BREAKSY title with responsive text clamp */}
-      <div className="relative w-full z-20 flex-1 flex flex-col items-center justify-center my-auto px-2 sm:px-4 py-2 sm:py-0">
+      {/* 3. Center Section: Bunny sitting on top of clouds with BREAKSY title */}
+      <div className="relative w-full z-20 flex flex-col items-center justify-center px-2 sm:px-4 pt-4 sm:pt-6">
         <HeroBreaksyCenterpiece onOpenDownload={onOpenDownload} />
       </div>
 
-      {/* 4. Bottom bar: Philosophy and Actions (elevated with generous clearance from bottom screen edge) */}
-      <div className="w-full max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center md:items-end px-4 sm:px-8 md:px-10 gap-3 sm:gap-4 md:gap-6 z-25 relative mt-auto pb-5 xs:pb-6 sm:pb-8 md:pb-10 lg:pb-12">
-        {/* Left App Philosophy paragraph */}
-        <FadeIn delay={0.4} y={15} className="w-full md:w-auto flex justify-center md:justify-start">
-          <div className="max-w-[340px] md:max-w-[380px] text-center md:text-left bg-black/40 backdrop-blur-md p-3 sm:p-3.5 rounded-2xl border border-white/10 shadow-lg">
-            <span className="text-[10px] sm:text-[11px] font-bold tracking-widest uppercase text-amber-300 block mb-0.5">
-              Friction Over Hard Blocking
+      {/* 4. Section 1 Developer Specification: Eyebrow, Headline, Subheadline, Primary CTA, Trust Copy, and HeroMetrics */}
+      <div className="w-full max-w-6xl mx-auto flex flex-col items-center justify-center px-4 sm:px-6 z-25 relative mt-4 sm:mt-6 text-center">
+        {/* Eyebrow / Badge */}
+        <FadeIn delay={0.1} y={15}>
+          <div className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/25 backdrop-blur-md text-[10px] sm:text-xs font-bold tracking-widest uppercase text-amber-300 shadow-lg shadow-purple-950/40 mb-3 sm:mb-4">
+            <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
+            <span>THE ALGORITHMIC TRAP IS DESIGNED TO DRAIN YOU</span>
+          </div>
+        </FadeIn>
+
+        {/* Headline (H1) */}
+        <FadeIn delay={0.18} y={20}>
+          <h1 className="hero-heading font-black text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white tracking-tight leading-[1.15] max-w-4xl mx-auto px-2">
+            You aren’t addicted. Your thumbs are just being{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-300 via-pink-300 to-amber-200">
+              hijacked
             </span>
-            <p
-              style={{ fontSize: 'clamp(0.82rem, 1.1vw, 1.02rem)' }}
-              className="text-[#E2E8F0] font-normal tracking-normal leading-snug"
-            >
-              Breaks mindless muscle-memory before doomscrolling begins.
+            .
+          </h1>
+        </FadeIn>
+
+        {/* Subheadline (Lead Paragraph) */}
+        <FadeIn delay={0.24} y={15}>
+          <p className="mt-3.5 sm:mt-4 text-[#D7E2EA] text-sm sm:text-base md:text-lg font-light leading-relaxed max-w-2xl mx-auto px-4">
+            Every time you open an app without thinking, algorithms steal another minute of your life. Breaksy intercepts the reflex before the doomscroll swallows your evening.
+          </p>
+        </FadeIn>
+
+        {/* Primary Call to Action */}
+        <FadeIn delay={0.3} y={15}>
+          <div className="flex flex-col items-center justify-center pt-5 sm:pt-6">
+            <ContactButton
+              label="Download Breaksy for Free"
+              onClick={onOpenDownload}
+            />
+            {/* Platform & Trust Micro-Copy directly below button */}
+            <p className="text-slate-400 text-[11px] sm:text-xs font-normal mt-3 tracking-wide text-center px-4">
+              Free on iOS & Android • No account required • 100% on-device privacy
             </p>
           </div>
         </FadeIn>
 
-        {/* Right Action Buttons */}
-        <FadeIn delay={0.48} y={15} className="w-full md:w-auto flex justify-center md:justify-end">
-          <div className="flex items-center gap-2 sm:gap-3 bg-black/35 backdrop-blur-md p-1.5 sm:p-2 rounded-full border border-white/10 shadow-lg shrink-0">
-            <a
-              href="#features"
-              onClick={(e) => handleDesktopNavClick(e, '#features')}
-              className="whitespace-nowrap shrink-0 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full border border-purple-400/50 hover:border-amber-300 text-purple-200 hover:text-white text-xs sm:text-sm font-medium uppercase tracking-wider transition-all duration-200 hover:bg-purple-500/20 cursor-pointer flex items-center justify-center select-none"
-            >
-              <span>Explore Features</span>
-            </a>
-            <ContactButton
-              label="Get Breaksy"
-              onClick={onOpenDownload}
-            />
-          </div>
-        </FadeIn>
+        {/* Sub-Component: 4-Column Minimalist Hero Stat Bar */}
+        <HeroMetrics />
       </div>
     </section>
   );

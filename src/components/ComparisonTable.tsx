@@ -1,89 +1,232 @@
 import React from 'react';
-import { Check, X } from 'lucide-react';
+import { Check, X, Sparkles } from 'lucide-react';
+
+interface ComparisonRow {
+  feature: string;
+  builtin: {
+    status: 'negative' | 'positive';
+    title: string;
+    description: string;
+  };
+  paid: {
+    status: 'negative' | 'positive';
+    title: string;
+    description: string;
+  };
+  breaksy: {
+    status: 'positive';
+    title: string;
+    description: string;
+  };
+}
+
+const ROWS: ComparisonRow[] = [
+  {
+    feature: 'Mindful Alternative',
+    builtin: {
+      status: 'negative',
+      title: 'None',
+      description: 'You either close the app or ignore the limit; leaves you with empty, restless boredom',
+    },
+    paid: {
+      status: 'negative',
+      title: 'Single static delay or blank screen',
+      description: 'Only offers a repetitive breathing circle or a locked screen with no healthy alternatives',
+    },
+    breaksy: {
+      status: 'positive',
+      title: 'Active wellness micro-breaks',
+      description: 'Guided breathing, memory games, vocabulary expansion, posture stretches & ambient focus timers',
+    },
+  },
+  {
+    feature: 'Personalization & Goal Setting',
+    builtin: {
+      status: 'negative',
+      title: 'One-size-fits-all timer',
+      description: 'No behavioral assessment or trigger-based customization',
+    },
+    paid: {
+      status: 'negative',
+      title: 'Generic blocklists',
+      description: 'Only allows manual app categories or rigid calendar schedules',
+    },
+    breaksy: {
+      status: 'positive',
+      title: 'Built-in Habit Tuner',
+      description: 'Calibrates friction to your specific goal: doomscrolling, morning phone-in-bed, sleep, or focus',
+    },
+  },
+  {
+    feature: 'Account & Privacy',
+    builtin: {
+      status: 'negative',
+      title: 'Tied to Apple ID / Google ecosystem',
+      description: 'Synced across cloud accounts',
+    },
+    paid: {
+      status: 'negative',
+      title: 'Mandatory registration',
+      description: 'Requires email sign-up, passwords, and profile creation',
+    },
+    breaksy: {
+      status: 'positive',
+      title: 'No Account Required',
+      description: '100% anonymous, instant 1-tap start with zero data collection',
+    },
+  },
+  {
+    feature: 'Pricing & Access',
+    builtin: {
+      status: 'positive',
+      title: 'Free',
+      description: 'Built into device OS',
+    },
+    paid: {
+      status: 'negative',
+      title: '$20 to $99 / year',
+      description: 'Locks basic features behind trial paywalls and yearly subscriptions',
+    },
+    breaksy: {
+      status: 'positive',
+      title: '100% Free Core Access',
+      description: 'Full-featured mindful pause with no subscription traps',
+    },
+  },
+  {
+    feature: 'Bypass & Habituation',
+    builtin: {
+      status: 'negative',
+      title: 'Trivial 1-tap bypass',
+      description: '“Ignore limit for 15 min” bypassed in under 1 second on reflex',
+    },
+    paid: {
+      status: 'negative',
+      title: 'Predictable or extreme',
+      description: 'Users habituate to static 5s timers, or rage-delete rigid VPN locks',
+    },
+    breaksy: {
+      status: 'positive',
+      title: 'Randomized micro-hurdles',
+      description: 'Rotates math, puzzles & breathing so your brain cannot bypass on reflex',
+    },
+  },
+  {
+    feature: 'Trigger Point',
+    builtin: {
+      status: 'negative',
+      title: 'After the damage is done',
+      description: 'Fires only after you have already scrolled for 60+ minutes',
+    },
+    paid: {
+      status: 'negative',
+      title: 'Rigid pre-set schedules',
+      description: 'Blocks apps during calendar blocks or broad time windows',
+    },
+    breaksy: {
+      status: 'positive',
+      title: 'Millisecond zero on app tap',
+      description: 'Intercepts the unconscious thumb reflex before the feed can load',
+    },
+  },
+  {
+    feature: 'Habit Extinction',
+    builtin: {
+      status: 'negative',
+      title: 'Treats the symptom',
+      description: 'Blunt time rationing that leaves the subconscious motor loop intact',
+    },
+    paid: {
+      status: 'negative',
+      title: 'Relies on force',
+      description: 'Creates friction without positive reinforcement, leading to app churn',
+    },
+    breaksy: {
+      status: 'positive',
+      title: 'Permanent rewiring',
+      description: 'Backed by clinical data: leads to 37% fewer subconscious launch attempts',
+    },
+  },
+];
 
 export const ComparisonTable: React.FC = () => {
-  const rows = [
-    {
-      feature: 'Trigger Point',
-      builtin: 'Only after an arbitrary daily cap is depleted (e.g., 1 hr/day)',
-      breaksy: 'The moment you open an app on autopilot',
-      builtinSub: 'Allows mindless scrolling until time runs out',
-      breaksySub: 'Catches the impulse before the scrolling session starts',
-    },
-    {
-      feature: 'Bypass Difficulty',
-      builtin: '“Ignore limit for 15 minutes” (trivial 1-tap dismiss)',
-      breaksy: 'Mindful micro-challenges (Quick math, breathing, puzzles)',
-      builtinSub: 'Zero friction, 94% of users bypass within seconds',
-      breaksySub: 'Wakes up your conscious mind to stop the reflex',
-    },
-    {
-      feature: 'Psychological Goal',
-      builtin: 'Blunt time rationing (treating the symptom)',
-      breaksy: 'Breaks the automatic scrolling habit at the root',
-      builtinSub: 'Leaves phone addiction neural pathways intact',
-      breaksySub: 'Creates permanent cognitive friction against compulsive checking',
-    },
-    {
-      feature: 'Atmosphere & Tone',
-      builtin: 'Guilt-inducing grey system dialog box',
-      breaksy: 'Themed ambient focus spaces (“Vibe Locks”) & Crystal Garden rewards',
-      builtinSub: 'Punitive and restrictive',
-      breaksySub: 'Serene, grounding, and rewarding focus sanctuary',
-    },
-    {
-      feature: 'Mindful Alternative',
-      builtin: 'None. You either close app or ignore limit',
-      breaksy: 'Guided breathing, memory games, vocabulary expansion, and posture stretches',
-      builtinSub: 'Leaves you with empty restless boredom',
-      breaksySub: 'Redirects nervous energy into restorative wellness micro-breaks',
-    },
-  ];
-
   return (
     <div className="glass-panel p-5 sm:p-8 md:p-10 rounded-3xl border border-white/10 flex flex-col gap-6 sm:gap-8">
       <div>
+        <span className="text-xs sm:text-sm font-bold tracking-widest uppercase text-amber-300 block mb-1">
+          HOW BREAKSY DIFFERS
+        </span>
         <h3 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-white heading-font">
-          How Breaksy Differs from Standard Built-in Screen Time
+          Built-in Screen Time vs. Paid Blockers vs. Breaksy
         </h3>
         <p className="text-xs sm:text-sm text-slate-300 mt-1.5 max-w-xl font-light">
           Traditional blockers simply delay the inevitable doomscroll. Breaksy dismantles the underlying subconscious habit loop.
         </p>
       </div>
 
-      {/* Desktop Table View (>= md) */}
-      <div className="hidden md:block overflow-x-auto">
-        <table className="w-full text-left border-collapse min-w-[640px]">
+      {/* Desktop Table View (>= lg) */}
+      <div className="hidden lg:block overflow-x-auto">
+        <table className="w-full text-left border-collapse min-w-[720px]">
           <thead>
-            <tr className="border-b border-white/10 text-xs uppercase tracking-wider text-slate-400 font-semibold">
+            <tr className="border-b border-white/10 text-xs uppercase tracking-wider text-slate-400 font-semibold bg-white/[0.02]">
               <th className="py-4 px-4 w-1/4">Feature</th>
-              <th className="py-4 px-4 w-3/8 text-slate-400">Built-in Screen Time (iOS / Android)</th>
-              <th className="py-4 px-4 w-3/8 text-indigo-300 font-bold bg-indigo-500/10 rounded-t-2xl">
-                Breaksy Companion
+              <th className="py-4 px-4 w-1/4 text-slate-400">
+                Built-in Screen Time
+                <span className="block text-[10px] text-slate-400 font-normal mt-0.5">(Apple / Google)</span>
+              </th>
+              <th className="py-4 px-4 w-1/4 text-slate-400">
+                Paid Blockers
+                <span className="block text-[10px] text-slate-400 font-normal mt-0.5">(Opal, One Sec)</span>
+              </th>
+              <th className="py-4 px-4 w-1/4 text-purple-200 font-bold bg-gradient-to-b from-purple-600/25 to-indigo-600/15 border-l border-r border-purple-500/20">
+                <div className="flex items-center gap-1.5">
+                  <Sparkles className="w-3.5 h-3.5 text-amber-300" />
+                  <span>Breaksy Companion</span>
+                </div>
               </th>
             </tr>
           </thead>
           <tbody className="divide-y divide-white/5 text-sm">
-            {rows.map((row, idx) => (
+            {ROWS.map((row, idx) => (
               <tr key={idx} className="hover:bg-white/[0.02] transition-colors">
                 <td className="py-5 px-4 font-semibold text-white align-top">
                   {row.feature}
                 </td>
+
                 <td className="py-5 px-4 text-slate-400 align-top">
                   <div className="flex items-start gap-2">
-                    <X className="w-4 h-4 text-rose-400 shrink-0 mt-0.5" />
+                    {row.builtin.status === 'positive' ? (
+                      <Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                    ) : (
+                      <X className="w-4 h-4 text-rose-400 shrink-0 mt-0.5" />
+                    )}
                     <div>
-                      <span className="text-slate-300 font-medium block">{row.builtin}</span>
-                      <span className="text-xs text-slate-500 mt-0.5 block">{row.builtinSub}</span>
+                      <span className="text-slate-300 font-medium block">{row.builtin.title}</span>
+                      <span className="text-xs text-slate-400 mt-0.5 block font-light leading-snug">{row.builtin.description}</span>
                     </div>
                   </div>
                 </td>
-                <td className="py-5 px-4 bg-indigo-500/[0.04] align-top">
+
+                <td className="py-5 px-4 text-slate-400 align-top">
+                  <div className="flex items-start gap-2">
+                    {row.paid.status === 'positive' ? (
+                      <Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                    ) : (
+                      <X className="w-4 h-4 text-rose-400 shrink-0 mt-0.5" />
+                    )}
+                    <div>
+                      <span className="text-slate-300 font-medium block">{row.paid.title}</span>
+                      <span className="text-xs text-slate-400 mt-0.5 block font-light leading-snug">{row.paid.description}</span>
+                    </div>
+                  </div>
+                </td>
+
+                <td className="py-5 px-4 bg-gradient-to-b from-purple-900/20 to-indigo-950/30 border-l border-r border-purple-500/20 align-top">
                   <div className="flex items-start gap-2">
                     <Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
                     <div>
-                      <span className="text-white font-bold block">{row.breaksy}</span>
-                      <span className="text-xs text-indigo-200 mt-0.5 block">{row.breaksySub}</span>
+                      <span className="text-white font-bold block">{row.breaksy.title}</span>
+                      <span className="text-xs text-indigo-200 mt-0.5 block font-normal leading-snug">{row.breaksy.description}</span>
                     </div>
                   </div>
                 </td>
@@ -93,9 +236,9 @@ export const ComparisonTable: React.FC = () => {
         </table>
       </div>
 
-      {/* Mobile Stacked Cards View (< md) */}
-      <div className="block md:hidden space-y-4">
-        {rows.map((row, idx) => (
+      {/* Mobile Stacked Cards View (< lg) */}
+      <div className="block lg:hidden space-y-4">
+        {ROWS.map((row, idx) => (
           <div
             key={idx}
             className="p-4 rounded-2xl bg-white/[0.03] border border-white/10 space-y-3"
@@ -106,23 +249,41 @@ export const ComparisonTable: React.FC = () => {
             </div>
 
             {/* Built-in comparison */}
-            <div className="p-3 rounded-xl bg-rose-500/5 border border-rose-500/15">
-              <div className="flex items-center gap-1.5 text-xs font-semibold text-rose-300 uppercase tracking-wider mb-1">
-                <X className="w-3.5 h-3.5 text-rose-400" />
+            <div className="p-3 rounded-xl bg-white/[0.02] border border-white/5 space-y-1">
+              <div className="flex items-center gap-1.5 text-xs font-semibold text-slate-300 uppercase tracking-wider">
+                {row.builtin.status === 'positive' ? (
+                  <Check className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                ) : (
+                  <X className="w-3.5 h-3.5 text-rose-400 shrink-0" />
+                )}
                 <span>Built-in Screen Time</span>
               </div>
-              <p className="text-xs text-slate-300">{row.builtin}</p>
-              <p className="text-[11px] text-slate-500 mt-0.5">{row.builtinSub}</p>
+              <p className="text-xs text-slate-200 font-medium">{row.builtin.title}</p>
+              <p className="text-[11px] text-slate-400 font-light">{row.builtin.description}</p>
+            </div>
+
+            {/* Paid Blockers comparison */}
+            <div className="p-3 rounded-xl bg-white/[0.02] border border-white/5 space-y-1">
+              <div className="flex items-center gap-1.5 text-xs font-semibold text-slate-300 uppercase tracking-wider">
+                {row.paid.status === 'positive' ? (
+                  <Check className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                ) : (
+                  <X className="w-3.5 h-3.5 text-rose-400 shrink-0" />
+                )}
+                <span>Paid Blockers (Opal, One Sec)</span>
+              </div>
+              <p className="text-xs text-slate-200 font-medium">{row.paid.title}</p>
+              <p className="text-[11px] text-slate-400 font-light">{row.paid.description}</p>
             </div>
 
             {/* Breaksy Companion */}
-            <div className="p-3 rounded-xl bg-purple-500/10 border border-purple-500/25 shadow-sm">
-              <div className="flex items-center gap-1.5 text-xs font-semibold text-purple-200 uppercase tracking-wider mb-1">
-                <Check className="w-3.5 h-3.5 text-emerald-400" />
+            <div className="p-3.5 rounded-xl bg-gradient-to-r from-purple-950/40 via-indigo-950/40 to-purple-950/30 border border-purple-500/30 shadow-md space-y-1">
+              <div className="flex items-center gap-1.5 text-xs font-bold text-purple-200 uppercase tracking-wider">
+                <Check className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
                 <span>Breaksy Companion</span>
               </div>
-              <p className="text-xs font-bold text-white">{row.breaksy}</p>
-              <p className="text-[11px] text-indigo-200 mt-0.5">{row.breaksySub}</p>
+              <p className="text-xs font-bold text-white">{row.breaksy.title}</p>
+              <p className="text-[11px] text-indigo-200 font-light">{row.breaksy.description}</p>
             </div>
           </div>
         ))}
