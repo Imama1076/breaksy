@@ -10,6 +10,12 @@ interface FaqItem {
 
 const FAQ_ITEMS: FaqItem[] = [
   {
+    category: 'Pricing & Value',
+    question: "Is Breaksy really free? What's the catch?",
+    answer:
+      "Breaksy is currently 100% free during our public release with all core features unlocked and no subscription traps.",
+  },
+  {
     category: 'Privacy & Security',
     question: 'Does Breaksy see what I type or read my private messages?',
     answer:
@@ -34,10 +40,10 @@ const FAQ_ITEMS: FaqItem[] = [
       'You are never trapped. Essential apps like Phone, Maps, and Banking can be whitelisted anytime. For blocked apps, a quick emergency override lets you bypass the screen whenever you truly need to.',
   },
   {
-    category: 'Platforms & Sync',
-    question: 'Is Breaksy available on both iOS (iPhone) and Android?',
+    category: 'Platforms & Compatibility',
+    question: 'Which platforms does Breaksy support?',
     answer:
-      'Yes! Breaksy is fully supported on both iOS and Android. Your focus streaks and crystal garden progress sync smoothly and securely across all your devices.',
+      'Breaksy is built and optimized for Android. You can install it on any modern Android smartphone or tablet with full system accessibility and zero battery drain.',
   },
 ];
 

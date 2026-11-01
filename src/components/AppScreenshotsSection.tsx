@@ -222,7 +222,7 @@ export const SCREENSHOT_SLIDES: ScreenshotSlide[] = [
     highlights: [
       'Per-app friction sliders: Zen, Strict, or Soft delay',
       'Schedule-based routine triggers for Work, Study, and Night',
-      'Supports 10,000+ iOS and Android apps with zero configuration',
+      'Supports 10,000+ Android apps with zero configuration',
     ],
     statLabel: 'App Compatibility',
     statValue: '10,000+ Apps',
@@ -243,7 +243,7 @@ export const SCREENSHOT_SLIDES: ScreenshotSlide[] = [
     description:
       'Keep Nox the sleeping bunny close. The interactive home and lock screen widget reflects your current session state, showing your streak, active vibe locks, and quick-start zen timers in one tap.',
     highlights: [
-      'Interactive iOS and Android widgets for lock and home screen',
+      'Interactive Android widgets for lock and home screen',
       'Dynamic mascot reactions to streaks and focus milestones',
       'One-tap vibe lock and timer activation without opening the app',
       'Rated 4.9/5 stars by over 28,000 mindful creators',

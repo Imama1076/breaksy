@@ -62,7 +62,7 @@ const ROWS: ComparisonRow[] = [
     feature: 'Account & Privacy',
     builtin: {
       status: 'negative',
-      title: 'Tied to Apple ID / Google ecosystem',
+      title: 'Tied to Google / OS account',
       description: 'Synced across cloud accounts',
     },
     paid: {
@@ -164,9 +164,6 @@ export const ComparisonMatrix: React.FC = () => {
         {/* Section Header */}
         <FadeIn delay={0} y={30}>
           <div className="flex flex-col items-center text-center mb-10 sm:mb-16">
-            <span className="text-xs sm:text-sm font-bold tracking-widest uppercase text-amber-300 block mb-2">
-              BUILT-IN SCREEN TIME VS. PAID BLOCKERS VS. BREAKSY
-            </span>
             <h2 className="hero-heading font-black uppercase text-center leading-tight tracking-tight text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl max-w-4xl">
               HOW BREAKSY DIFFERS
             </h2>
@@ -185,7 +182,7 @@ export const ComparisonMatrix: React.FC = () => {
                   <th className="py-5 px-6 w-1/4">Feature</th>
                   <th className="py-5 px-6 w-1/4 text-slate-400">
                     Built-in Screen Time
-                    <span className="block text-[10px] text-slate-400 font-normal mt-0.5">(Apple / Google)</span>
+                    <span className="block text-[10px] text-slate-400 font-normal mt-0.5">(Google Digital Wellbeing)</span>
                   </th>
                   <th className="py-5 px-6 w-1/4 text-slate-400">
                     Paid Blockers
@@ -278,7 +275,7 @@ export const ComparisonMatrix: React.FC = () => {
                     ) : (
                       <X className="w-3.5 h-3.5 text-rose-400 shrink-0" />
                     )}
-                    <span>Built-in Screen Time (Apple / Google)</span>
+                    <span>Built-in Screen Time (Google Digital Wellbeing)</span>
                   </div>
                   <p className="text-xs text-slate-200 font-medium">{row.builtin.title}</p>
                   <p className="text-[11px] text-slate-400 font-light">{row.builtin.description}</p>

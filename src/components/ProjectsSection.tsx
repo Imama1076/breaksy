@@ -36,13 +36,13 @@ interface TabItem {
 const TABS: TabItem[] = [
   {
     id: 'interception',
-    label: 'Launch Intercept',
+    label: 'Reflex Pause',
     badge: 'Live',
     icon: <ShieldAlert className="w-4 h-4 text-rose-400" />,
   },
   {
     id: 'challenges',
-    label: '6 Micro-Hurdles',
+    label: 'Focus Challenges',
     badge: 'Interactive',
     icon: <Brain className="w-4 h-4 text-purple-400" />,
   },
@@ -98,7 +98,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = React.memo(({ onO
               EXPERIENCE BREAKSY
             </h2>
             <p className="mt-3.5 text-[#D7E2EA] font-light max-w-xl text-xs sm:text-base leading-relaxed px-2">
-              Try the mindful pauses, focus spaces, and daily habits that power Breaksy on iOS & Android.
+              Try the mindful pauses, focus spaces, and daily habits that power Breaksy on Android.
             </p>
           </div>
         </FadeIn>
@@ -207,7 +207,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = React.memo(({ onO
                 Reclaim Your Attention Span Today
               </h3>
               <p className="text-xs sm:text-base text-slate-300 font-light leading-relaxed tracking-normal max-w-lg mx-auto">
-                Join thousands building intentional digital habits with Breaksy. Available for iOS and Android.
+                Join thousands building intentional digital habits with Breaksy. Available for Android.
               </p>
             </div>
             <div className="pt-1 sm:pt-2">

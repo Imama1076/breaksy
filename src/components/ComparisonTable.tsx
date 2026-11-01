@@ -61,7 +61,7 @@ const ROWS: ComparisonRow[] = [
     feature: 'Account & Privacy',
     builtin: {
       status: 'negative',
-      title: 'Tied to Apple ID / Google ecosystem',
+      title: 'Tied to Google / OS account',
       description: 'Synced across cloud accounts',
     },
     paid: {
@@ -172,7 +172,7 @@ export const ComparisonTable: React.FC = () => {
               <th className="py-4 px-4 w-1/4">Feature</th>
               <th className="py-4 px-4 w-1/4 text-slate-400">
                 Built-in Screen Time
-                <span className="block text-[10px] text-slate-400 font-normal mt-0.5">(Apple / Google)</span>
+                <span className="block text-[10px] text-slate-400 font-normal mt-0.5">(Google Digital Wellbeing)</span>
               </th>
               <th className="py-4 px-4 w-1/4 text-slate-400">
                 Paid Blockers

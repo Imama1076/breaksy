@@ -98,32 +98,13 @@ export const CrystalGardenShowcase: React.FC = () => {
             }}
           />
 
-          {/* Dynamic Transparent Crystal Flower Visual for every tier */}
-          <div className="relative w-56 h-56 flex items-center justify-center">
-            {activeFlower.id === 'lotus' ? (
-              <img
-                src="/crystal-flower-bloom.webp"
-                alt={activeFlower.name}
-                width={224}
-                height={224}
-                loading="lazy"
-                decoding="async"
-                className="w-full h-full object-contain filter drop-shadow-[0_0_28px_rgba(147,51,234,0.5)] hover:scale-105 transition-transform duration-300 select-none"
-                onError={(e) => {
-                  if (e.currentTarget.src.endsWith('.webp')) {
-                    e.currentTarget.src = '/crystal-flower-bloom.png';
-                  }
-                }}
-              />
-            ) : (
-              <div className="w-full h-full flex items-center justify-center hover:scale-105 transition-transform duration-300 select-none">
-                <CrystalFlowerVisual
-                  tierId={activeFlower.id}
-                  glowColor={activeFlower.glowColor}
-                  size={210}
-                />
-              </div>
-            )}
+          {/* Dynamic 100% Transparent Crystal Flower Visual for every tier */}
+          <div className="relative w-56 h-56 flex items-center justify-center hover:scale-105 transition-transform duration-300 select-none">
+            <CrystalFlowerVisual
+              tierId={activeFlower.id}
+              glowColor={activeFlower.glowColor}
+              size={210}
+            />
           </div>
 
           <div className="mt-3">

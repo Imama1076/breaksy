@@ -63,7 +63,7 @@ export const ScienceBackedSection: React.FC<ScienceBackedSectionProps> = React.m
 
             {/* Platform & Trust Micro-Copy directly below button */}
             <p className="text-slate-400 text-[11px] sm:text-xs font-normal mt-3 tracking-wide text-center px-4">
-              Free on iOS & Android • No account required • 100% on-device privacy
+              Free on Android • No account required • 100% on-device privacy
             </p>
           </div>
         </FadeIn>

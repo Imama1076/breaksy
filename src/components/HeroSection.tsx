@@ -236,7 +236,7 @@ export const HeroSection: React.FC<HeroSectionProps> = React.memo(({
               }}
               className="w-full py-3.5 rounded-2xl bg-purple-600 hover:bg-purple-500 text-white text-xs font-bold uppercase tracking-wider text-center shadow-lg shadow-purple-900/50 cursor-pointer mt-1 transition-colors"
             >
-              Download Breaksy (iOS & Android)
+              Download Breaksy for Android
             </button>
           </div>
         )}

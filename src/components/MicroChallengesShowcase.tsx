@@ -349,7 +349,7 @@ export const MicroChallengesShowcase: React.FC<MicroChallengesShowcaseProps> = (
       {/* Header */}
       <div className="pb-3 border-b border-white/10">
         <h3 className="text-xl sm:text-2xl font-extrabold text-white heading-font">
-          Six Cognitive Hurdles That Break Dopamine Loops
+          Interactive Focus Challenges That Break Dopamine Loops
         </h3>
         <p className="text-xs sm:text-sm text-slate-300 mt-1 max-w-xl font-light">
           Experience the real cognitive mini-games featured in Breaksy. Quick, rewarding hurdles snap your brain out of passive autopilot scrolling.

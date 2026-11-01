@@ -285,19 +285,6 @@ export default function App() {
               Screenshots
             </a>
             <a
-              href="#interactive"
-              onClick={(e) => {
-                e.preventDefault();
-                soundEngine.playClick();
-                const lenis = (window as unknown as { __lenis?: { scrollTo: (t: string, o?: { offset?: number }) => void } }).__lenis;
-                if (lenis) lenis.scrollTo('#interactive', { offset: -24 });
-                else document.querySelector('#interactive')?.scrollIntoView({ behavior: 'smooth' });
-              }}
-              className="hover:text-white transition-colors cursor-pointer"
-            >
-              Simulators
-            </a>
-            <a
               href="#faq"
               onClick={(e) => {
                 e.preventDefault();
@@ -310,18 +297,6 @@ export default function App() {
             >
               FAQ
             </a>
-            <button
-              onClick={() => navigateTo('privacy')}
-              className="hover:text-white transition-colors bg-transparent border-0 p-0 text-inherit cursor-pointer"
-            >
-              Privacy Policy
-            </button>
-            <button
-              onClick={() => navigateTo('terms')}
-              className="hover:text-white transition-colors bg-transparent border-0 p-0 text-inherit cursor-pointer"
-            >
-              Terms
-            </button>
             <button
               onClick={() => setIsDownloadModalOpen(true)}
               className="hover:text-white transition-colors bg-transparent border-0 p-0 text-inherit cursor-pointer text-purple-400 font-semibold"
@@ -343,13 +318,13 @@ export default function App() {
               onClick={() => navigateTo('privacy')}
               className="hover:text-white transition-colors bg-transparent border-0 p-0 text-inherit cursor-pointer"
             >
-              Privacy
+              Privacy Policy
             </button>
             <button
               onClick={() => navigateTo('terms')}
               className="hover:text-white transition-colors bg-transparent border-0 p-0 text-inherit cursor-pointer"
             >
-              Terms
+              Terms of Service
             </button>
             <span className="text-purple-400">v1.0.0 Production Build</span>
           </div>
