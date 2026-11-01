@@ -83,7 +83,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = React.memo(({ onO
   return (
     <section
       id="simulator"
-      className="relative min-h-[90vh] flex flex-col justify-center items-center bg-gradient-to-b from-[#0D102D] via-[#090C24] to-[#0B0E2A] text-white px-4 sm:px-8 md:px-10 pt-20 sm:pt-24 md:pt-28 pb-24 sm:pb-28 md:pb-32 overflow-hidden select-none border-t border-purple-500/10 scroll-mt-6 w-full max-w-full"
+      className="relative min-h-[90vh] flex flex-col justify-center items-center bg-gradient-to-b from-[#0D102D] via-[#090C24] to-[#0B0E2A] text-white px-4 sm:px-8 md:px-10 pt-20 sm:pt-24 md:pt-28 pb-28 sm:pb-36 md:pb-40 overflow-hidden select-none border-t border-purple-500/10 scroll-mt-6 w-full max-w-full"
     >
       {/* Anchor for backward compatibility with #interactive links */}
       <span id="interactive" className="absolute -top-10 opacity-0 pointer-events-none" />
@@ -200,18 +200,18 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = React.memo(({ onO
           </Suspense>
         </div>
 
-        <FadeIn delay={0.2} y={30} className="mt-14 sm:mt-20 text-center w-full min-w-0 max-w-full">
-          <div className="max-w-3xl mx-auto w-full min-w-0 py-6 sm:py-8 px-4 flex flex-col items-center gap-5 sm:gap-6">
-            <div className="flex flex-col items-center gap-3 sm:gap-4 w-full">
-              <h3 className="heading-font text-xl sm:text-3xl md:text-4xl font-black uppercase tracking-tight leading-tight text-white max-w-3xl mx-auto" style={{ fontFamily: "'Nunito', sans-serif" }}>
+        <FadeIn delay={0.2} y={30} className="mt-20 sm:mt-28 md:mt-32 text-center w-full min-w-0 max-w-full">
+          <div className="max-w-3xl mx-auto w-full min-w-0 py-8 sm:py-12 px-4 flex flex-col items-center gap-6 sm:gap-7">
+            <div className="flex flex-col items-center gap-3.5 sm:gap-4 w-full">
+              <h3 className="heading-font text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tight leading-tight text-white max-w-3xl mx-auto" style={{ fontFamily: "'Nunito', sans-serif" }}>
                 <span className="block" style={{ fontFamily: "'Nunito', sans-serif" }}>Reclaim Your Attention Span</span>
                 <span className="block" style={{ fontFamily: "'Nunito', sans-serif" }}>Today</span>
               </h3>
-              <p className="text-xs sm:text-base text-slate-300 font-light leading-relaxed tracking-normal max-w-lg mx-auto">
+              <p className="text-sm sm:text-base md:text-lg text-slate-300 font-light leading-relaxed tracking-normal max-w-lg mx-auto">
                 Join thousands building intentional digital habits with Breaksy. Available for Android.
               </p>
             </div>
-            <div className="pt-1 sm:pt-2">
+            <div className="pt-2 sm:pt-3">
               <ContactButton label="Download Breaksy App" onClick={onOpenDownload} />
             </div>
           </div>
