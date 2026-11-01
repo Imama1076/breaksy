@@ -59,19 +59,19 @@ export const FaqSection: React.FC = React.memo(() => {
       {/* Background Glow (Hardware-accelerated radial glow) */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[450px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(147,51,234,0.15)_0%,transparent_70%)] pointer-events-none" />
 
-      <div className="max-w-3xl mx-auto relative z-10 w-full min-w-0 max-w-full">
+      <div className="max-w-[620px] mx-auto relative z-10 w-full min-w-0 max-w-full">
         <FadeIn delay={0} y={20}>
-          <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-3xl xs:text-4xl sm:text-5xl font-black uppercase tracking-tight text-white mb-4">
+          <div className="text-center mb-10 sm:mb-14">
+            <h2 className="text-3xl xs:text-4xl sm:text-5xl font-black uppercase tracking-tight text-white mb-3">
               Frequently Asked <span className="hero-heading">Questions</span>
             </h2>
-            <p className="text-slate-300 text-sm sm:text-base max-w-xl mx-auto font-light">
+            <p className="text-slate-300 text-xs sm:text-sm max-w-lg mx-auto font-light leading-relaxed">
               Everything you need to know about Breaksy&apos;s privacy guarantees, battery efficiency, and mindful mechanics.
             </p>
           </div>
         </FadeIn>
 
-        <div className="space-y-3 sm:space-y-4">
+        <div className="space-y-3 sm:space-y-3.5">
           {FAQ_ITEMS.map((item, idx) => {
             const isOpen = openIndex === idx;
             return (
@@ -86,13 +86,13 @@ export const FaqSection: React.FC = React.memo(() => {
                   <button
                     onClick={() => toggleItem(idx)}
                     aria-expanded={isOpen}
-                    className="w-full text-left px-5 sm:px-6 py-4 sm:py-5 flex items-center justify-between gap-4 cursor-pointer"
+                    className="w-full text-left px-4 sm:px-5 py-3.5 sm:py-4 flex items-center justify-between gap-3 cursor-pointer"
                   >
-                    <div className="flex items-center gap-3">
-                      <span className="text-xs text-purple-400 font-bold tracking-wider tabular-nums">
+                    <div className="flex items-center gap-2.5 sm:gap-3 flex-1 min-w-0">
+                      <span className="text-xs text-purple-400 font-bold tracking-wider tabular-nums shrink-0">
                         0{idx + 1}
                       </span>
-                      <span className="text-sm sm:text-base font-semibold text-white tracking-wide">
+                      <span className="text-xs sm:text-sm font-semibold text-white tracking-wide">
                         {item.question}
                       </span>
                     </div>
@@ -106,7 +106,7 @@ export const FaqSection: React.FC = React.memo(() => {
                   </button>
 
                   {isOpen && (
-                    <div className="px-5 sm:px-6 pb-5 pt-1 text-xs sm:text-sm text-slate-300 font-light leading-relaxed border-t border-purple-500/15 animate-in fade-in duration-200">
+                    <div className="px-4 sm:px-5 pb-4 pt-1 text-xs sm:text-sm text-slate-300 font-light leading-relaxed border-t border-purple-500/15 animate-in fade-in duration-200">
                       <p>{item.answer}</p>
                     </div>
                   )}
