@@ -90,13 +90,6 @@ export const HeroSection: React.FC<HeroSectionProps> = React.memo(({
             className="hidden md:flex items-center gap-6 lg:gap-8 text-[#D7E2EA] font-medium uppercase tracking-wider text-xs sm:text-sm"
           >
             <a
-              href="#why-breaksy"
-              onClick={(e) => handleDesktopNavClick(e, '#why-breaksy')}
-              className="hover:text-white hover:opacity-100 opacity-80 transition-all duration-200 cursor-pointer"
-            >
-              Why Breaksy
-            </a>
-            <a
               href="#interactive"
               onClick={(e) => handleDesktopNavClick(e, '#interactive')}
               className="hover:text-white hover:opacity-100 opacity-80 transition-all duration-200 cursor-pointer"
@@ -118,11 +111,11 @@ export const HeroSection: React.FC<HeroSectionProps> = React.memo(({
               Features
             </a>
             <a
-              href="#previews"
-              onClick={(e) => handleDesktopNavClick(e, '#previews')}
+              href="#faq"
+              onClick={(e) => handleDesktopNavClick(e, '#faq')}
               className="hover:text-white hover:opacity-100 opacity-80 transition-all duration-200 cursor-pointer"
             >
-              Screenshots
+              FAQ
             </a>
 
             {/* Speaker Sound Toggle (Mutes/Unmutes entire site) */}
@@ -213,6 +206,14 @@ export const HeroSection: React.FC<HeroSectionProps> = React.memo(({
               <ArrowRight className="w-3.5 h-3.5 text-purple-400" />
             </a>
             <a
+              href="#comparison"
+              onClick={() => handleMobileNavClick('#comparison')}
+              className="px-4 py-3 rounded-xl bg-white/5 hover:bg-white/10 text-slate-200 hover:text-white text-xs font-semibold uppercase tracking-wider flex items-center justify-between transition-colors"
+            >
+              <span>Comparison</span>
+              <ArrowRight className="w-3.5 h-3.5 text-purple-400" />
+            </a>
+            <a
               href="#features"
               onClick={() => handleMobileNavClick('#features')}
               className="px-4 py-3 rounded-xl bg-white/5 hover:bg-white/10 text-slate-200 hover:text-white text-xs font-semibold uppercase tracking-wider flex items-center justify-between transition-colors"
@@ -221,11 +222,11 @@ export const HeroSection: React.FC<HeroSectionProps> = React.memo(({
               <ArrowRight className="w-3.5 h-3.5 text-purple-400" />
             </a>
             <a
-              href="#previews"
-              onClick={() => handleMobileNavClick('#previews')}
+              href="#faq"
+              onClick={() => handleMobileNavClick('#faq')}
               className="px-4 py-3 rounded-xl bg-white/5 hover:bg-white/10 text-slate-200 hover:text-white text-xs font-semibold uppercase tracking-wider flex items-center justify-between transition-colors"
             >
-              <span>10 Screen Gallery</span>
+              <span>FAQ</span>
               <ArrowRight className="w-3.5 h-3.5 text-purple-400" />
             </a>
             <button

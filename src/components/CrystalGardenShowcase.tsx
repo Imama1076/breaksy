@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Lock, Sparkles, Flower2 } from 'lucide-react';
+import { Lock, Flower2 } from 'lucide-react';
 import { CrystalFlowerVisual } from './CrystalFlowerVisual';
 
 interface FlowerTier {

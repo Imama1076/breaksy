@@ -20,33 +20,22 @@ export const ScienceBackedSection: React.FC<ScienceBackedSectionProps> = React.m
       <div className="absolute bottom-10 right-1/4 w-[500px] h-[400px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(245,158,11,0.08)_0%,transparent_70%)] pointer-events-none" />
 
       <div className="max-w-6xl mx-auto flex flex-col items-center justify-center relative z-10 text-center">
-        {/* Eyebrow Badge in Sentence Case with yellow dot */}
-        <FadeIn delay={0.05} y={15}>
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#181635]/90 border border-purple-500/30 backdrop-blur-md text-xs sm:text-sm font-semibold tracking-wide text-amber-300 shadow-lg shadow-purple-950/40 mb-4 sm:mb-6">
-            <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse shrink-0" />
-            <span>Mindful digital wellbeing backed by science</span>
-          </div>
-        </FadeIn>
-
         {/* Headline (H2) */}
-        <FadeIn delay={0.12} y={20}>
+        <FadeIn delay={0.08} y={20}>
           <h2 className="hero-heading font-black text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white tracking-tight leading-[1.15] max-w-4xl mx-auto px-2">
-            You aren’t addicted. Your{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-200 via-pink-200 to-amber-200">
-              thumbs are just being hijacked.
-            </span>
+            You aren’t addicted. Your thumbs are just being hijacked.
           </h2>
         </FadeIn>
 
         {/* Subheadline Paragraph */}
-        <FadeIn delay={0.18} y={15}>
+        <FadeIn delay={0.15} y={15}>
           <p className="mt-4 sm:mt-5 text-[#D7E2EA] text-sm sm:text-base md:text-lg font-light leading-relaxed max-w-2xl mx-auto px-4">
             Every time you open an app without thinking, algorithms steal another minute of your life. Breaksy intercepts the reflex with a 5-second mindful pause—stopping the doomscroll before it swallows your evening.
           </p>
         </FadeIn>
 
         {/* Call to Action Button */}
-        <FadeIn delay={0.24} y={15}>
+        <FadeIn delay={0.22} y={15}>
           <div className="flex flex-col items-center justify-center pt-6 sm:pt-7">
             <button
               onClick={() => {
@@ -60,11 +49,6 @@ export const ScienceBackedSection: React.FC<ScienceBackedSectionProps> = React.m
               </span>
               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity blur-md" />
             </button>
-
-            {/* Platform & Trust Micro-Copy directly below button */}
-            <p className="text-slate-400 text-[11px] sm:text-xs font-normal mt-3 tracking-wide text-center px-4">
-              Free on Android • No account required • 100% on-device privacy
-            </p>
           </div>
         </FadeIn>
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Check, X, Sparkles } from 'lucide-react';
+import { Check, X } from 'lucide-react';
 
 interface ComparisonRow {
   feature: string;
@@ -179,10 +179,7 @@ export const ComparisonTable: React.FC = () => {
                 <span className="block text-[10px] text-slate-400 font-normal mt-0.5">(Opal, One Sec)</span>
               </th>
               <th className="py-4 px-4 w-1/4 text-purple-200 font-bold bg-gradient-to-b from-purple-600/25 to-indigo-600/15 border-l border-r border-purple-500/20">
-                <div className="flex items-center gap-1.5">
-                  <Sparkles className="w-3.5 h-3.5 text-amber-300" />
-                  <span>Breaksy Companion</span>
-                </div>
+                <span>Breaksy Companion</span>
               </th>
             </tr>
           </thead>

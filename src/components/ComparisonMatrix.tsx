@@ -1,5 +1,5 @@
 import React from 'react';
-import { Check, X, Sparkles } from 'lucide-react';
+import { Check, X } from 'lucide-react';
 import { FadeIn } from './MotionHelpers';
 
 interface ComparisonRow {
@@ -189,10 +189,7 @@ export const ComparisonMatrix: React.FC = () => {
                     <span className="block text-[10px] text-slate-400 font-normal mt-0.5">(Opal, One Sec)</span>
                   </th>
                   <th className="py-5 px-6 w-1/4 text-purple-200 font-bold bg-gradient-to-b from-purple-600/25 to-indigo-600/15 border-l border-r border-purple-500/20">
-                    <div className="flex items-center gap-1.5">
-                      <Sparkles className="w-4 h-4 text-amber-300" />
-                      <span>Breaksy Companion</span>
-                    </div>
+                    <span>Breaksy Companion</span>
                   </th>
                 </tr>
               </thead>
