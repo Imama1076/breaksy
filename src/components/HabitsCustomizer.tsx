@@ -62,37 +62,37 @@ const HABITS: HabitItem[] = [
   {
     id: 'scroll',
     title: 'Scrolling Addiction',
-    subtitle: 'Remove the scrolling addiction',
+    subtitle: 'Break compulsive social media feeds',
     icon: <ScrollingAddictionIcon />,
   },
   {
     id: 'focus',
     title: 'Mind Focus',
-    subtitle: 'Increase the focus',
+    subtitle: 'Protect deep work and attention span',
     icon: <MindFocusIcon />,
   },
   {
     id: 'bed',
-    title: 'Using phone in bed',
-    subtitle: 'Reduce phone habit first time in morning',
+    title: 'Using Phone in Bed',
+    subtitle: 'Stop scrolling first thing in the morning',
     icon: <PhoneInBedIcon />,
   },
   {
     id: 'adult',
-    title: 'X Addiction',
-    subtitle: 'Remove the adult videos addiction',
+    title: 'X / Adult Content',
+    subtitle: 'Block adult content and late-night triggers',
     icon: <AdultXIcon />,
   },
   {
     id: 'screentime',
     title: 'Screen Time',
-    subtitle: 'Reduce the screen time',
+    subtitle: 'Cut down overall daily screen hours',
     icon: <ScreenTimeIcon />,
   },
   {
     id: 'sleep',
     title: 'Improve Sleep',
-    subtitle: 'Reduce the phone time at night',
+    subtitle: 'Wind down without blue-light stimulation',
     icon: <ImproveSleepIcon />,
   },
 ];
@@ -111,7 +111,7 @@ export const HabitsCustomizer: React.FC = () => {
       {/* Header */}
       <div className="pb-1">
         <h3 className="text-xl sm:text-3xl font-extrabold text-white heading-font tracking-tight">
-          What Habits you want to change ?
+          Which habits do you want to change?
         </h3>
       </div>
 

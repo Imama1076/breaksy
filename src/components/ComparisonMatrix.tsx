@@ -165,10 +165,10 @@ export const ComparisonMatrix: React.FC = () => {
         <FadeIn delay={0} y={30}>
           <div className="flex flex-col items-center text-center mb-10 sm:mb-16">
             <span className="text-xs sm:text-sm font-bold tracking-widest uppercase text-amber-300 block mb-2">
-              HOW BREAKSY DIFFERS
+              BUILT-IN SCREEN TIME VS. PAID BLOCKERS VS. BREAKSY
             </span>
             <h2 className="hero-heading font-black uppercase text-center leading-tight tracking-tight text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl max-w-4xl">
-              Built-in Screen Time vs. Paid Blockers vs. Breaksy
+              HOW BREAKSY DIFFERS
             </h2>
             <p className="mt-3.5 text-[#D7E2EA] font-light max-w-2xl text-xs sm:text-base leading-relaxed px-4">
               Traditional blockers simply delay the inevitable doomscroll. Breaksy dismantles the underlying subconscious habit loop.

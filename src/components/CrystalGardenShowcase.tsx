@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Lock, CheckCircle2, Sparkles, Flower2 } from 'lucide-react';
+import { Lock, Sparkles, Flower2 } from 'lucide-react';
+import { CrystalFlowerVisual } from './CrystalFlowerVisual';
 
 interface FlowerTier {
   id: string;
@@ -97,22 +98,32 @@ export const CrystalGardenShowcase: React.FC = () => {
             }}
           />
 
-          {/* Genuine Crystal Lotus Flower Art from Image 5 */}
+          {/* Dynamic Transparent Crystal Flower Visual for every tier */}
           <div className="relative w-56 h-56 flex items-center justify-center">
-            <img
-              src="/crystal-flower-bloom.webp"
-              alt={activeFlower.name}
-              width={224}
-              height={224}
-              loading="lazy"
-              decoding="async"
-              className="w-full h-full object-contain filter drop-shadow-[0_0_28px_rgba(147,51,234,0.5)] hover:scale-105 transition-transform duration-300 select-none"
-              onError={(e) => {
-                if (e.currentTarget.src.endsWith('.webp')) {
-                  e.currentTarget.src = '/crystal-flower-bloom.png';
-                }
-              }}
-            />
+            {activeFlower.id === 'lotus' ? (
+              <img
+                src="/crystal-flower-bloom.webp"
+                alt={activeFlower.name}
+                width={224}
+                height={224}
+                loading="lazy"
+                decoding="async"
+                className="w-full h-full object-contain filter drop-shadow-[0_0_28px_rgba(147,51,234,0.5)] hover:scale-105 transition-transform duration-300 select-none"
+                onError={(e) => {
+                  if (e.currentTarget.src.endsWith('.webp')) {
+                    e.currentTarget.src = '/crystal-flower-bloom.png';
+                  }
+                }}
+              />
+            ) : (
+              <div className="w-full h-full flex items-center justify-center hover:scale-105 transition-transform duration-300 select-none">
+                <CrystalFlowerVisual
+                  tierId={activeFlower.id}
+                  glowColor={activeFlower.glowColor}
+                  size={210}
+                />
+              </div>
+            )}
           </div>
 
           <div className="mt-3">
@@ -172,22 +183,28 @@ export const CrystalGardenShowcase: React.FC = () => {
                 }`}
               >
                 <div className="flex items-center gap-3.5">
-                  {/* Thumbnail matching Image 5: Dark rounded box with lock/silhouette and progress line */}
-                  <div className="w-12 h-12 rounded-2xl bg-black/60 border border-white/10 flex flex-col items-center justify-center shrink-0 relative overflow-hidden shadow-inner">
-                    <div className="relative z-10 flex items-center justify-center">
-                      {isUnlocked ? (
-                        <CheckCircle2 className="w-5 h-5 text-purple-400" />
-                      ) : (
-                        <Lock className="w-4 h-4 text-slate-300" />
+                  {/* Thumbnail: Dark rounded box with transparent crystal flower and progress indicator */}
+                  <div className="w-12 h-12 rounded-2xl bg-black/60 border border-white/10 flex flex-col items-center justify-center shrink-0 relative overflow-hidden shadow-inner p-1">
+                    <div className="relative z-10 w-7 h-7 flex items-center justify-center">
+                      <CrystalFlowerVisual
+                        tierId={flower.id}
+                        glowColor={flower.glowColor}
+                        size={28}
+                        className={isUnlocked ? 'opacity-100' : 'opacity-40 grayscale'}
+                      />
+                      {!isUnlocked && (
+                        <div className="absolute inset-0 flex items-center justify-center bg-black/50 rounded-full">
+                          <Lock className="w-3 h-3 text-slate-300" />
+                        </div>
                       )}
                     </div>
-                    {/* Mini progress line indicator from Image 5 */}
-                    <div className="w-7 h-1 bg-white/10 rounded-full mt-1.5 overflow-hidden">
+                    {/* Mini progress line indicator */}
+                    <div className="w-7 h-1 bg-white/10 rounded-full mt-1 overflow-hidden">
                       <div
                         className="h-full rounded-full transition-all duration-300"
                         style={{
                           width: `${progressRatio * 100}%`,
-                          backgroundColor: isUnlocked ? '#A855F7' : '#F59E0B',
+                          backgroundColor: isUnlocked ? flower.glowColor : '#F59E0B',
                         }}
                       />
                     </div>

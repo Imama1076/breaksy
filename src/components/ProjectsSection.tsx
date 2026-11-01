@@ -8,7 +8,6 @@ const VibeLocksShowcase = lazy(() => import('./VibeLocksShowcase').then(m => ({ 
 const CrystalGardenShowcase = lazy(() => import('./CrystalGardenShowcase').then(m => ({ default: m.CrystalGardenShowcase })));
 const SoundscapeMixer = lazy(() => import('./SoundscapeMixer').then(m => ({ default: m.SoundscapeMixer })));
 const HabitsCustomizer = lazy(() => import('./HabitsCustomizer').then(m => ({ default: m.HabitsCustomizer })));
-const ComparisonTable = lazy(() => import('./ComparisonTable').then(m => ({ default: m.ComparisonTable })));
 
 import {
   ShieldAlert,
@@ -17,7 +16,6 @@ import {
   Sprout,
   Moon,
   Sliders,
-  BarChart3,
 } from 'lucide-react';
 
 type ExperienceTab =
@@ -26,8 +24,7 @@ type ExperienceTab =
   | 'vibelocks'
   | 'garden'
   | 'sleep'
-  | 'habits'
-  | 'comparison';
+  | 'habits';
 
 interface TabItem {
   id: ExperienceTab;
@@ -72,12 +69,6 @@ const TABS: TabItem[] = [
     label: 'Habit Tuner',
     badge: 'Setup',
     icon: <Sliders className="w-4 h-4 text-cyan-400" />,
-  },
-  {
-    id: 'comparison',
-    label: 'vs Built-in Screen Time',
-    badge: 'Breakdown',
-    icon: <BarChart3 className="w-4 h-4 text-yellow-400" />,
   },
 ];
 
@@ -205,13 +196,6 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = React.memo(({ onO
               </FadeIn>
             )}
 
-            {activeTab === 'comparison' && (
-              <FadeIn key="comparison" delay={0.05} y={20}>
-                <div className="max-w-5xl mx-auto">
-                  <ComparisonTable />
-                </div>
-              </FadeIn>
-            )}
           </Suspense>
         </div>
 

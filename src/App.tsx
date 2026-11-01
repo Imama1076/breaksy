@@ -7,6 +7,7 @@ import { HeroSection } from './components/HeroSection';
 const CosmicStarfield = lazy(() => import('./components/CosmicStarfield').then((m) => ({ default: m.CosmicStarfield })));
 const BunnyCursorCompanion = lazy(() => import('./components/BunnyCursorCompanion').then((m) => ({ default: m.BunnyCursorCompanion })));
 const AboutSection = lazy(() => import('./components/AboutSection').then((m) => ({ default: m.AboutSection })));
+const ScienceBackedSection = lazy(() => import('./components/ScienceBackedSection').then((m) => ({ default: m.ScienceBackedSection })));
 const ComparisonMatrix = lazy(() => import('./components/ComparisonMatrix').then((m) => ({ default: m.ComparisonMatrix })));
 const ProjectsSection = lazy(() => import('./components/ProjectsSection').then((m) => ({ default: m.ProjectsSection })));
 const ServicesSection = lazy(() => import('./components/ServicesSection').then((m) => ({ default: m.ServicesSection })));
@@ -187,19 +188,22 @@ export default function App() {
           {/* Section 2: Why Breaksy Component (<WhyBreaksy /> — #why-breaksy) */}
           <AboutSection onOpenDownload={handleOpenDownload} />
 
-          {/* Section 3: Product Comparison Component (<ComparisonMatrix /> — #comparison) */}
-          <ComparisonMatrix />
+          {/* Section 3: Mindful Digital Wellbeing Backed By Science */}
+          <ScienceBackedSection onOpenDownload={handleOpenDownload} />
 
           {/* Section 4: Interactive Breaksy Experience & Simulator Section (#simulator / #interactive) */}
           <ProjectsSection onOpenDownload={handleOpenDownload} />
 
-          {/* Section 4: Features Section (01 Reflex Interception, 02 Micro-Hurdles, 03 Vibe Locks, 04 Crystal Garden, 05 Circadian Sleep) */}
+          {/* Section 5: Features Section (01 Reflex Interception, 02 Micro-Hurdles, 03 Vibe Locks, 04 Crystal Garden, 05 Circadian Sleep) */}
           <ServicesSection />
 
-          {/* Section 5: Mobile App Feature Showcase Slideshow (How Breaksy Feels In Hand · All 10 Signature Experiences) */}
+          {/* Section 6: Mobile App Feature Showcase Slideshow (How Breaksy Feels In Hand · All 10 Signature Experiences) */}
           <AppScreenshotsSection onOpenDownload={handleOpenDownload} />
 
-          {/* Section 6: Frequently Asked Questions (Privacy guarantees, battery footprint, emergency overrides) */}
+          {/* Section 7: Product Comparison Component (<ComparisonMatrix /> — #comparison) - Placed directly above FAQ */}
+          <ComparisonMatrix />
+
+          {/* Section 8: Frequently Asked Questions (Privacy guarantees, battery footprint, emergency overrides) */}
           <FaqSection />
         </Suspense>
       </main>
