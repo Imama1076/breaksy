@@ -22,7 +22,7 @@ export const ScienceBackedSection: React.FC<ScienceBackedSectionProps> = React.m
       <div className="max-w-6xl mx-auto flex flex-col items-center justify-center relative z-10 text-center w-full min-w-0">
         {/* Headline (H2) */}
         <FadeIn delay={0.08} y={20}>
-          <h2 className="hero-heading font-black text-3xl xs:text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-[1.15] max-w-4xl mx-auto px-2">
+          <h2 className="text-white font-black text-3xl xs:text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-[1.15] max-w-4xl mx-auto px-2">
             You aren’t addicted. Your thumbs are just being hijacked.
           </h2>
         </FadeIn>

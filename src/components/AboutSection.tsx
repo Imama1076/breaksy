@@ -35,7 +35,7 @@ export const AboutSection: React.FC<AboutSectionProps> = React.memo(() => {
       {/* Main Content Flow */}
       <div className="relative z-20 flex flex-col items-center max-w-4xl mx-auto gap-6 sm:gap-10 w-full min-w-0">
         <FadeIn delay={0} y={30}>
-          <h2 className="hero-heading font-black uppercase leading-none tracking-tight text-4xl xs:text-5xl sm:text-6xl md:text-7xl">
+          <h2 className="text-white font-black uppercase leading-none tracking-tight text-4xl xs:text-5xl sm:text-6xl md:text-7xl">
             WHY BREAKSY
           </h2>
         </FadeIn>
