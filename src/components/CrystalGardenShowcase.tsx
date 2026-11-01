@@ -75,10 +75,10 @@ export const CrystalGardenShowcase: React.FC = () => {
   const isCurrentActiveUnlocked = currentStreak >= activeFlower.streakReq;
 
   return (
-    <div id="garden" className="glass-panel p-5 sm:p-8 rounded-[32px] border border-white/10 flex flex-col gap-6">
+    <div id="garden" className="glass-panel p-4 xs:p-6 sm:p-8 rounded-[28px] sm:rounded-[32px] border border-white/10 flex flex-col gap-5 sm:gap-6">
       {/* Header */}
       <div className="pb-3 border-b border-white/10">
-        <h3 className="text-2xl sm:text-3xl font-extrabold text-white heading-font">
+        <h3 className="text-xl xs:text-2xl sm:text-3xl font-extrabold text-white heading-font">
           Flower Garden: Grow Your Streak, Grow Your Garden
         </h3>
         <p className="text-xs sm:text-sm text-slate-300 mt-1 max-w-xl font-light">
@@ -87,23 +87,23 @@ export const CrystalGardenShowcase: React.FC = () => {
       </div>
 
       {/* Main Showcase Layout */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 items-center">
         {/* Left: Authentic Crystal Flower Artwork matching Image 5 */}
-        <div className="lg:col-span-5 flex flex-col items-center justify-center p-6 rounded-3xl bg-gradient-to-b from-indigo-950/40 via-purple-950/20 to-black/50 border border-white/10 text-center relative overflow-hidden">
+        <div className="lg:col-span-5 flex flex-col items-center justify-center p-4 xs:p-6 rounded-2xl sm:rounded-3xl bg-gradient-to-b from-indigo-950/40 via-purple-950/20 to-black/50 border border-white/10 text-center relative overflow-hidden">
           {/* Ambient Bloom Aura */}
           <div
-            className="absolute w-60 h-60 rounded-full opacity-45 transition-all duration-700 pointer-events-none"
+            className="absolute w-52 h-52 sm:w-60 sm:h-60 rounded-full opacity-45 transition-all duration-700 pointer-events-none"
             style={{
               background: `radial-gradient(circle, ${activeFlower.glowColor} 0%, transparent 70%)`,
             }}
           />
 
           {/* Dynamic 100% Transparent Crystal Flower Visual for every tier */}
-          <div className="relative w-56 h-56 flex items-center justify-center hover:scale-105 transition-transform duration-300 select-none">
+          <div className="relative w-44 h-44 xs:w-52 xs:h-52 sm:w-56 sm:h-56 flex items-center justify-center hover:scale-105 transition-transform duration-300 select-none">
             <CrystalFlowerVisual
               tierId={activeFlower.id}
               glowColor={activeFlower.glowColor}
-              size={210}
+              size={185}
             />
           </div>
 

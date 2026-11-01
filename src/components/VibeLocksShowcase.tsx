@@ -122,14 +122,14 @@ export const VibeLocksShowcase: React.FC = () => {
   };
 
   return (
-    <div id="vibe-locks" className="glass-panel p-6 sm:p-10 rounded-[32px] border border-white/10 flex flex-col gap-8">
+    <div id="vibe-locks" className="glass-panel p-4 xs:p-6 sm:p-10 rounded-[28px] sm:rounded-[32px] border border-white/10 flex flex-col gap-6 sm:gap-8">
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b border-white/10">
         <div>
-          <h3 className="text-2xl sm:text-3xl font-extrabold text-white heading-font">
+          <h3 className="text-xl xs:text-2xl sm:text-3xl font-extrabold text-white heading-font">
             Lock Into Intentional Deep-Work Sessions
           </h3>
-          <p className="text-sm text-slate-300 mt-1 max-w-xl">
+          <p className="text-xs xs:text-sm text-slate-300 mt-1 max-w-xl">
             Combine intentional app shielding with immersive ambient atmospheres designed to protect your attention span.
           </p>
         </div>
@@ -149,31 +149,33 @@ export const VibeLocksShowcase: React.FC = () => {
       </div>
 
       {/* Theme Selector Strip */}
-      <div className="flex flex-wrap items-center gap-3">
-        {THEMES.map((t) => (
-          <button
-            key={t.id}
-            onClick={() => handleSelectTheme(t)}
-            className={`px-4 py-2.5 rounded-2xl text-xs font-semibold flex items-center gap-2 transition-all cursor-pointer border ${
-              selectedTheme.id === t.id
-                ? 'bg-amber-500/20 border-amber-400/60 text-amber-200 shadow-md shadow-amber-500/10'
-                : 'bg-white/[0.03] hover:bg-white/[0.08] border-white/5 text-slate-400'
-            }`}
-          >
-            {t.icon}
-            <span>{t.name}</span>
-          </button>
-        ))}
+      <div className="w-full overflow-x-auto breaksy-scrollbar-x pb-2 -mx-1 px-1">
+        <div className="flex items-center gap-2 sm:gap-3 min-w-max">
+          {THEMES.map((t) => (
+            <button
+              key={t.id}
+              onClick={() => handleSelectTheme(t)}
+              className={`px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl sm:rounded-2xl text-xs font-semibold flex items-center gap-2 transition-all shrink-0 cursor-pointer border ${
+                selectedTheme.id === t.id
+                  ? 'bg-amber-500/20 border-amber-400/60 text-amber-200 shadow-md shadow-amber-500/10'
+                  : 'bg-white/[0.03] hover:bg-white/[0.08] border-white/5 text-slate-400'
+              }`}
+            >
+              {t.icon}
+              <span>{t.name}</span>
+            </button>
+          ))}
+        </div>
       </div>
 
       {/* Hero Showcase Card for Selected Theme */}
       <div
-        className={`relative w-full rounded-3xl p-6 sm:p-8 bg-gradient-to-b ${selectedTheme.bgGradient} border border-white/10 shadow-2xl flex flex-col items-center text-center gap-6 overflow-hidden`}
+        className={`relative w-full rounded-2xl sm:rounded-3xl p-5 xs:p-6 sm:p-8 bg-gradient-to-b ${selectedTheme.bgGradient} border border-white/10 shadow-2xl flex flex-col items-center text-center gap-5 sm:gap-6 overflow-hidden`}
       >
-        {/* Previous & Next Theme Navigation Chevrons */}
+        {/* Previous & Next Theme Navigation Chevrons (desktop/tablet) */}
         <button
           onClick={handlePrevTheme}
-          className="absolute left-3 sm:left-5 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/40 hover:bg-black/70 text-white flex items-center justify-center border border-white/15 transition-all cursor-pointer backdrop-blur-md shadow-lg z-10 active:scale-95"
+          className="hidden sm:flex absolute left-3 sm:left-5 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/40 hover:bg-black/70 text-white items-center justify-center border border-white/15 transition-all cursor-pointer backdrop-blur-md shadow-lg z-10 active:scale-95"
           aria-label="Previous Theme"
         >
           <ChevronLeft className="w-5 h-5" />
@@ -181,7 +183,7 @@ export const VibeLocksShowcase: React.FC = () => {
 
         <button
           onClick={handleNextTheme}
-          className="absolute right-3 sm:right-5 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/40 hover:bg-black/70 text-white flex items-center justify-center border border-white/15 transition-all cursor-pointer backdrop-blur-md shadow-lg z-10 active:scale-95"
+          className="hidden sm:flex absolute right-3 sm:right-5 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/40 hover:bg-black/70 text-white items-center justify-center border border-white/15 transition-all cursor-pointer backdrop-blur-md shadow-lg z-10 active:scale-95"
           aria-label="Next Theme"
         >
           <ChevronRight className="w-5 h-5" />

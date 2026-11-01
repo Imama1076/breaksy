@@ -62,7 +62,7 @@ export const FaqSection: React.FC = React.memo(() => {
       <div className="max-w-4xl mx-auto relative z-10">
         <FadeIn delay={0} y={20}>
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-white mb-4">
+            <h2 className="text-3xl xs:text-4xl sm:text-5xl font-black uppercase tracking-tight text-white mb-4">
               Frequently Asked <span className="hero-heading">Questions</span>
             </h2>
             <p className="text-slate-300 text-sm sm:text-base max-w-xl mx-auto font-light">

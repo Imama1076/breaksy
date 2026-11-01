@@ -428,7 +428,7 @@ export const AppScreenshotsSection: React.FC<AppScreenshotsSectionProps> = React
         {/* Section Header */}
         <FadeIn delay={0} y={20}>
           <div className="text-center max-w-4xl mx-auto mb-6 sm:mb-8">
-            <h2 className="text-2xl sm:text-4xl md:text-5xl font-black uppercase tracking-tight text-white mb-2">
+            <h2 className="text-3xl xs:text-4xl sm:text-5xl font-black uppercase tracking-tight text-white mb-2">
               How Breaksy <span className="hero-heading">Feels In Hand</span>
             </h2>
             <p className="text-slate-300 font-light text-xs sm:text-sm md:text-base max-w-2xl mx-auto leading-relaxed">

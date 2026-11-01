@@ -345,7 +345,7 @@ export const MicroChallengesShowcase: React.FC<MicroChallengesShowcaseProps> = (
   };
 
   return (
-    <div id="challenges" className="glass-panel p-5 sm:p-8 rounded-[28px] border border-white/10 flex flex-col gap-5 sm:gap-6">
+    <div id="challenges" className="glass-panel p-3.5 xs:p-5 sm:p-8 rounded-[24px] sm:rounded-[28px] border border-white/10 flex flex-col gap-4 sm:gap-6">
       {/* Header */}
       <div className="pb-3 border-b border-white/10">
         <h3 className="text-xl sm:text-2xl font-extrabold text-white heading-font">
@@ -357,28 +357,33 @@ export const MicroChallengesShowcase: React.FC<MicroChallengesShowcaseProps> = (
       </div>
 
       {/* 6 Tabs */}
-      <div className="flex flex-wrap items-center gap-2">
-        {[
-          { id: 'math' as ChallengeTab, label: 'Math Challenge', icon: <Calculator className="w-4 h-4" /> },
-          { id: 'word' as ChallengeTab, label: 'Word Mind', icon: <BookOpen className="w-4 h-4" /> },
-          { id: 'puzzle' as ChallengeTab, label: 'Spatial Puzzle', icon: <Grid3X3 className="w-4 h-4" /> },
-          { id: 'memory' as ChallengeTab, label: 'Memory Recall', icon: <Brain className="w-4 h-4" /> },
-          { id: 'breathing' as ChallengeTab, label: 'Breathing', icon: <Wind className="w-4 h-4" /> },
-          { id: 'stretch' as ChallengeTab, label: 'Stretching', icon: <Activity className="w-4 h-4" /> },
-        ].map((tab) => (
-          <button
-            key={tab.id}
-            onClick={() => setActiveTab(tab.id)}
-            className={`px-4 py-2.5 rounded-2xl text-xs font-semibold flex items-center gap-2 transition-all cursor-pointer ${
-              activeTab === tab.id
-                ? 'bg-purple-600 text-white shadow-lg shadow-purple-600/30'
-                : 'bg-white/5 hover:bg-white/10 text-slate-300'
-            }`}
-          >
-            {tab.icon}
-            <span>{tab.label}</span>
-          </button>
-        ))}
+      <div className="w-full overflow-x-auto breaksy-scrollbar-x pb-2 -mx-1 px-1">
+        <div className="flex items-center gap-2 min-w-max">
+          {[
+            { id: 'math' as ChallengeTab, label: 'Math Challenge', icon: <Calculator className="w-4 h-4" /> },
+            { id: 'word' as ChallengeTab, label: 'Word Mind', icon: <BookOpen className="w-4 h-4" /> },
+            { id: 'puzzle' as ChallengeTab, label: 'Spatial Puzzle', icon: <Grid3X3 className="w-4 h-4" /> },
+            { id: 'memory' as ChallengeTab, label: 'Memory Recall', icon: <Brain className="w-4 h-4" /> },
+            { id: 'breathing' as ChallengeTab, label: 'Breathing', icon: <Wind className="w-4 h-4" /> },
+            { id: 'stretch' as ChallengeTab, label: 'Stretching', icon: <Activity className="w-4 h-4" /> },
+          ].map((tab) => (
+            <button
+              key={tab.id}
+              onClick={() => {
+                soundEngine.playClick();
+                setActiveTab(tab.id);
+              }}
+              className={`px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl sm:rounded-2xl text-xs font-semibold flex items-center gap-2 transition-all shrink-0 cursor-pointer ${
+                activeTab === tab.id
+                  ? 'bg-purple-600 text-white shadow-lg shadow-purple-600/30'
+                  : 'bg-white/5 hover:bg-white/10 text-slate-300'
+              }`}
+            >
+              {tab.icon}
+              <span>{tab.label}</span>
+            </button>
+          ))}
+        </div>
       </div>
 
       {/* ACTIVE TAB CONTENT */}
@@ -386,7 +391,7 @@ export const MicroChallengesShowcase: React.FC<MicroChallengesShowcaseProps> = (
 
         {/* 1. MATH CHALLENGE (10 Questions Progressive) */}
         {activeTab === 'math' && (
-          <div className="w-full max-w-md p-6 sm:p-8 rounded-3xl bg-black/40 border border-indigo-400/20 flex flex-col items-center gap-5 text-center relative overflow-hidden">
+          <div className="w-full max-w-md p-4 xs:p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-black/40 border border-indigo-400/20 flex flex-col items-center gap-4 sm:gap-5 text-center relative overflow-hidden">
             {!mathCompleted ? (
               <>
                 <div className="flex items-center justify-between w-full text-xs font-mono">
@@ -462,7 +467,7 @@ export const MicroChallengesShowcase: React.FC<MicroChallengesShowcaseProps> = (
 
         {/* 2. WORD MIND (Scrambled Alphabets) */}
         {activeTab === 'word' && (
-          <div className="w-full max-w-md p-6 sm:p-8 rounded-3xl bg-black/40 border border-amber-400/20 flex flex-col items-center gap-5 text-center relative overflow-hidden">
+          <div className="w-full max-w-md p-4 xs:p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-black/40 border border-amber-400/20 flex flex-col items-center gap-4 sm:gap-5 text-center relative overflow-hidden">
             {!wordCompleted ? (
               <>
                 <div className="flex items-center justify-between w-full text-xs font-semibold">
@@ -562,7 +567,7 @@ export const MicroChallengesShowcase: React.FC<MicroChallengesShowcaseProps> = (
 
         {/* 3. SPATIAL PUZZLE (Sliding 3x3 Grid) */}
         {activeTab === 'puzzle' && (
-          <div className="w-full max-w-sm p-6 sm:p-8 rounded-3xl bg-black/40 border border-white/10 flex flex-col items-center gap-4 text-center">
+          <div className="w-full max-w-sm p-4 xs:p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-black/40 border border-white/10 flex flex-col items-center gap-4 text-center">
             {!puzzleSolved ? (
               <>
                 <div className="flex items-center justify-between w-full text-xs text-slate-400 font-mono">
@@ -570,7 +575,7 @@ export const MicroChallengesShowcase: React.FC<MicroChallengesShowcaseProps> = (
                   <span className="text-indigo-300 font-bold">Moves: {puzzleMoves}</span>
                 </div>
 
-                <div className="grid grid-cols-3 gap-2 w-64 h-64 p-2 bg-slate-900 rounded-2xl border border-white/10 shadow-inner">
+                <div className="grid grid-cols-3 gap-2 w-56 h-56 xs:w-64 xs:h-64 p-2 bg-slate-900 rounded-2xl border border-white/10 shadow-inner">
                   {puzzleTiles.map((val, idx) => (
                     <button
                       key={idx}
@@ -628,7 +633,7 @@ export const MicroChallengesShowcase: React.FC<MicroChallengesShowcaseProps> = (
 
         {/* 4. MEMORY RECALL (Mixed Shuffled Cards across all rows & cols) */}
         {activeTab === 'memory' && (
-          <div className="w-full max-w-sm p-6 sm:p-8 rounded-3xl bg-black/40 border border-emerald-500/20 flex flex-col items-center gap-4 text-center">
+          <div className="w-full max-w-sm p-4 xs:p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-black/40 border border-emerald-500/20 flex flex-col items-center gap-4 text-center">
             {!memoryCompleted ? (
               <>
                 <div className="flex items-center justify-between w-full text-xs text-slate-400 font-mono">
@@ -708,7 +713,7 @@ export const MicroChallengesShowcase: React.FC<MicroChallengesShowcaseProps> = (
 
         {/* 5. BREATHING CHALLENGE (Stops after 3 cycles, restart button) */}
         {activeTab === 'breathing' && (
-          <div className="w-full max-w-md p-6 sm:p-8 rounded-3xl bg-black/40 border border-emerald-500/20 flex flex-col items-center gap-5 text-center">
+          <div className="w-full max-w-md p-4 xs:p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-black/40 border border-emerald-500/20 flex flex-col items-center gap-4 sm:gap-5 text-center">
             <div className="flex items-center justify-between w-full text-xs font-semibold">
               <span className="text-emerald-300 uppercase tracking-wider">
                 Box Respiration & Parasympathetic Reset
@@ -803,7 +808,7 @@ export const MicroChallengesShowcase: React.FC<MicroChallengesShowcaseProps> = (
 
         {/* 6. STRETCHING CHALLENGE (Clear, readable posture instructions, zero funny images) */}
         {activeTab === 'stretch' && (
-          <div className="w-full max-w-xl p-5 sm:p-8 rounded-3xl bg-black/40 border border-purple-500/20 flex flex-col items-center gap-5 text-center">
+          <div className="w-full max-w-xl p-4 xs:p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-black/40 border border-purple-500/20 flex flex-col items-center gap-4 sm:gap-5 text-center">
             {!stretchCompleted ? (
               <>
                 <div className="flex items-center justify-between w-full text-xs font-semibold">

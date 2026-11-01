@@ -134,7 +134,7 @@ export const ComparisonMatrix: React.FC = () => {
         {/* Section Header */}
         <FadeIn delay={0} y={30}>
           <div className="flex flex-col items-center text-center mb-12 sm:mb-16">
-            <h2 className="hero-heading font-black uppercase text-center leading-tight tracking-tight text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl max-w-4xl">
+            <h2 className="hero-heading font-black uppercase text-center leading-tight tracking-tight text-3xl xs:text-4xl sm:text-5xl lg:text-6xl max-w-4xl">
               HOW BREAKSY DIFFERS
             </h2>
             <p className="mt-3.5 text-[#D7E2EA] font-light max-w-2xl text-xs sm:text-base leading-relaxed px-4">
@@ -149,7 +149,7 @@ export const ComparisonMatrix: React.FC = () => {
             <table className="w-full text-left border-collapse">
               <thead>
                 <tr className="border-b border-white/10 text-xs uppercase tracking-wider text-slate-400 font-semibold bg-white/[0.02]">
-                  <th className="py-5 px-6 w-1/4">Feature & Importance</th>
+                  <th className="py-5 px-6 w-1/4">Feature</th>
                   <th className="py-5 px-6 w-1/4 text-slate-400">
                     Built in Screen Time
                     <span className="block text-[10px] text-slate-400 font-normal mt-0.5">(Google Digital Wellbeing)</span>
@@ -166,14 +166,9 @@ export const ComparisonMatrix: React.FC = () => {
               <tbody className="divide-y divide-white/5 text-sm">
                 {ROWS.map((row, idx) => (
                   <tr key={idx} className="hover:bg-white/[0.02] transition-colors">
-                    {/* Feature Name & Importance */}
+                    {/* Feature Name */}
                     <td className="py-5 px-6 align-top">
-                      <div className="flex flex-col items-start gap-1.5">
-                        <span className="text-white font-bold text-sm sm:text-base leading-snug">{row.feature}</span>
-                        <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-amber-400/15 text-amber-300 border border-amber-400/25">
-                          {row.importance} Importance
-                        </span>
-                      </div>
+                      <span className="text-white font-bold text-sm sm:text-base leading-snug">{row.feature}</span>
                     </td>
 
                     {/* Column 1: Built-in */}
@@ -234,13 +229,8 @@ export const ComparisonMatrix: React.FC = () => {
           {ROWS.map((row, idx) => (
             <FadeIn key={idx} delay={idx * 0.04} y={15}>
               <div className="p-5 sm:p-6 rounded-3xl glass-panel bg-white/[0.03] border border-white/10 space-y-4 shadow-xl">
-                <div className="text-sm sm:text-base font-bold text-white tracking-wide border-b border-white/10 pb-3 flex items-center justify-between gap-2 flex-wrap">
-                  <div className="flex items-center gap-2 flex-wrap">
-                    <span>{row.feature}</span>
-                    <span className="px-2 py-0.5 rounded-full text-[9px] font-bold uppercase tracking-wider bg-amber-400/15 text-amber-300 border border-amber-400/25">
-                      {row.importance} Importance
-                    </span>
-                  </div>
+                <div className="text-sm sm:text-base font-bold text-white tracking-wide border-b border-white/10 pb-3 flex items-center justify-between gap-2">
+                  <span>{row.feature}</span>
                   <span className="text-[10px] font-mono text-purple-300 shrink-0">0{idx + 1}</span>
                 </div>
 

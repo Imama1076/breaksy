@@ -206,12 +206,12 @@ export const SoundscapeMixer: React.FC<SoundscapeMixerProps> = ({ onTimerComplet
   const anyActive = tracks.some((t) => t.active);
 
   return (
-    <div id="soundscapes" className="glass-panel p-6 sm:p-8 rounded-3xl border border-white/10 flex flex-col gap-6 shadow-2xl shadow-indigo-950/40">
+    <div id="soundscapes" className="glass-panel p-4 xs:p-6 sm:p-8 rounded-[28px] sm:rounded-3xl border border-white/10 flex flex-col gap-5 sm:gap-6 shadow-2xl shadow-indigo-950/40">
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-white/10">
         <div>
-          <h3 className="text-2xl font-bold text-white heading-font">Curated Dream Soundscapes</h3>
-          <p className="text-sm text-slate-300 mt-1 max-w-xl">
+          <h3 className="text-xl xs:text-2xl font-bold text-white heading-font">Curated Dream Soundscapes</h3>
+          <p className="text-xs xs:text-sm text-slate-300 mt-1 max-w-xl">
             Procedurally synthesized ambient soundscapes tuned to psychoacoustic sleep frequencies. Play individually or blend together in harmony.
           </p>
         </div>
@@ -230,41 +230,43 @@ export const SoundscapeMixer: React.FC<SoundscapeMixerProps> = ({ onTimerComplet
       </div>
 
       {/* Quick Mix Presets Bar */}
-      <div className="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none flex-wrap">
-        <button
-          onClick={() =>
-            applyPreset([
-              { id: 'rain', volume: 0.65 },
-              { id: 'delta', volume: 0.55 },
-            ])
-          }
-          className="px-3.5 py-1.5 rounded-xl text-xs font-medium bg-indigo-500/15 border border-indigo-500/30 text-indigo-200 hover:bg-indigo-500/25 transition-all cursor-pointer"
-        >
-          Deep REM
-        </button>
-        <button
-          onClick={() =>
-            applyPreset([
-              { id: 'hearth', volume: 0.6 },
-              { id: 'chimes', volume: 0.45 },
-              { id: 'forest', volume: 0.5 },
-            ])
-          }
-          className="px-3.5 py-1.5 rounded-xl text-xs font-medium bg-amber-500/15 border border-amber-500/30 text-amber-200 hover:bg-amber-500/25 transition-all cursor-pointer"
-        >
-          Cozy Cabin
-        </button>
-        <button
-          onClick={() =>
-            applyPreset([
-              { id: 'ocean', volume: 0.65 },
-              { id: 'chimes', volume: 0.4 },
-            ])
-          }
-          className="px-3.5 py-1.5 rounded-xl text-xs font-medium bg-cyan-500/15 border border-cyan-500/30 text-cyan-200 hover:bg-cyan-500/25 transition-all cursor-pointer"
-        >
-          Ocean Breeze
-        </button>
+      <div className="w-full overflow-x-auto breaksy-scrollbar-x pb-2 -mx-1 px-1">
+        <div className="flex items-center gap-2 min-w-max">
+          <button
+            onClick={() =>
+              applyPreset([
+                { id: 'rain', volume: 0.65 },
+                { id: 'delta', volume: 0.55 },
+              ])
+            }
+            className="px-3.5 py-1.5 rounded-xl text-xs font-medium bg-indigo-500/15 border border-indigo-500/30 text-indigo-200 hover:bg-indigo-500/25 transition-all shrink-0 cursor-pointer"
+          >
+            Deep REM
+          </button>
+          <button
+            onClick={() =>
+              applyPreset([
+                { id: 'hearth', volume: 0.6 },
+                { id: 'chimes', volume: 0.45 },
+                { id: 'forest', volume: 0.5 },
+              ])
+            }
+            className="px-3.5 py-1.5 rounded-xl text-xs font-medium bg-amber-500/15 border border-amber-500/30 text-amber-200 hover:bg-amber-500/25 transition-all shrink-0 cursor-pointer"
+          >
+            Cozy Cabin
+          </button>
+          <button
+            onClick={() =>
+              applyPreset([
+                { id: 'ocean', volume: 0.65 },
+                { id: 'chimes', volume: 0.4 },
+              ])
+            }
+            className="px-3.5 py-1.5 rounded-xl text-xs font-medium bg-cyan-500/15 border border-cyan-500/30 text-cyan-200 hover:bg-cyan-500/25 transition-all shrink-0 cursor-pointer"
+          >
+            Ocean Breeze
+          </button>
+        </div>
       </div>
 
       {/* Track Grid: 6 Real Working Dream Soundscapes */}

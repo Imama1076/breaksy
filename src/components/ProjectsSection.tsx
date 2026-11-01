@@ -94,7 +94,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = React.memo(({ onO
         {/* Section Header */}
         <FadeIn delay={0} y={30}>
           <div className="flex flex-col items-center text-center mb-8 sm:mb-12">
-            <h2 className="hero-heading font-black uppercase text-center leading-none tracking-tight text-[2.2rem] xs:text-[2.75rem] sm:text-5xl md:text-6xl">
+            <h2 className="hero-heading font-black uppercase text-center leading-none tracking-tight text-3xl xs:text-4xl sm:text-5xl md:text-6xl">
               EXPERIENCE BREAKSY
             </h2>
             <p className="mt-3.5 text-[#D7E2EA] font-light max-w-xl text-xs sm:text-base leading-relaxed px-2">
@@ -109,7 +109,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = React.memo(({ onO
             ref={tabsContainerRef}
             className="w-full overflow-x-auto breaksy-scrollbar-x pb-4 mb-8 sm:mb-12 max-w-full"
           >
-            <div className="flex items-center gap-2 sm:gap-3 min-w-max mx-auto px-2 justify-start xl:justify-center">
+            <div className="flex items-center gap-2 sm:gap-3 min-w-max px-3 sm:px-4 sm:mx-auto sm:justify-center">
               {TABS.map((tab) => {
                 const isActive = activeTab === tab.id;
                 return (
@@ -128,12 +128,13 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = React.memo(({ onO
                         });
                       }
                     }}
-                    className={`px-3.5 sm:px-5 py-2.5 sm:py-3 rounded-xl sm:rounded-2xl text-[11px] sm:text-sm font-semibold uppercase tracking-wider transition-all shrink-0 cursor-pointer ${
+                    className={`flex items-center gap-2 px-3.5 sm:px-5 py-2.5 sm:py-3 rounded-xl sm:rounded-2xl text-xs sm:text-sm font-semibold uppercase tracking-wider transition-all shrink-0 cursor-pointer ${
                       isActive
                         ? 'bg-gradient-to-r from-indigo-500 via-purple-500 to-indigo-600 text-white shadow-lg shadow-indigo-500/30'
                         : 'bg-white/5 border border-white/10 text-slate-300 hover:bg-white/10 hover:text-white'
                     }`}
                   >
+                    <span className="shrink-0">{tab.icon}</span>
                     <span>{tab.label}</span>
                   </button>
                 );
