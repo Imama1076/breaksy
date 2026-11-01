@@ -83,7 +83,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = React.memo(({ onO
   return (
     <section
       id="simulator"
-      className="relative bg-gradient-to-b from-[#0D102D] via-[#090C24] to-[#0B0E2A] text-white px-4 sm:px-8 md:px-10 pt-10 sm:pt-14 md:pt-16 pb-16 sm:pb-20 overflow-hidden select-none border-t border-purple-500/10 scroll-mt-6"
+      className="relative min-h-[90vh] flex flex-col justify-center bg-gradient-to-b from-[#0D102D] via-[#090C24] to-[#0B0E2A] text-white px-4 sm:px-8 md:px-10 pt-20 sm:pt-24 md:pt-28 pb-24 sm:pb-28 md:pb-32 overflow-hidden select-none border-t border-purple-500/10 scroll-mt-6"
     >
       {/* Anchor for backward compatibility with #interactive links */}
       <span id="interactive" className="absolute -top-10 opacity-0 pointer-events-none" />

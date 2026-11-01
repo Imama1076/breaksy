@@ -416,7 +416,7 @@ export const AppScreenshotsSection: React.FC<AppScreenshotsSectionProps> = React
     <section
       id="previews"
       ref={sectionRef}
-      className="relative w-full bg-gradient-to-b from-[#090C24] via-[#0D102E] to-[#0A0D28] text-white pt-10 sm:pt-14 pb-12 sm:pb-16 px-4 sm:px-6 md:px-10 select-none overflow-hidden border-t border-purple-500/15"
+      className="relative w-full min-h-[90vh] flex flex-col justify-center bg-gradient-to-b from-[#090C24] via-[#0D102E] to-[#0A0D28] text-white pt-24 sm:pt-28 md:pt-32 pb-24 sm:pb-28 md:pb-32 px-4 sm:px-6 md:px-10 select-none overflow-hidden border-t border-purple-500/15"
     >
       {/* Background ambient lighting (Hardware-accelerated radial glow) */}
       <div className="absolute top-1/3 left-1/4 w-[750px] h-[550px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(88,28,135,0.18)_0%,transparent_70%)] pointer-events-none" />

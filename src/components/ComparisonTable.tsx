@@ -22,25 +22,25 @@ interface ComparisonRow {
 
 const ROWS: ComparisonRow[] = [
   {
-    feature: 'Mindful Alternative',
+    feature: 'Mindful Alternative & Anti Bypass',
     builtin: {
       status: 'negative',
-      title: 'None',
-      description: 'You either close the app or ignore the limit; leaves you with empty, restless boredom',
+      title: 'None & trivial 1 tap bypass',
+      description: 'You either close the app or bypass limit in under 1 second on reflex with empty boredom',
     },
     paid: {
       status: 'negative',
-      title: 'Single static delay or blank screen',
-      description: 'Only offers a repetitive breathing circle or a locked screen with no healthy alternatives',
+      title: 'Static delay & rigid VPN locks',
+      description: 'Single repetitive breathing circle or frustrating lock screens that users rage delete',
     },
     breaksy: {
       status: 'positive',
-      title: 'Active wellness micro breaks',
-      description: 'Guided breathing, memory games, vocabulary expansion, posture stretches & ambient focus timers',
+      title: 'Active wellness micro hurdles',
+      description: 'Rotates quick math, word puzzles, guided breathing & ambient focus that cannot be bypassed on reflex',
     },
   },
   {
-    feature: 'Personalization & Goal Setting',
+    feature: 'Personalized Habit Tuning',
     builtin: {
       status: 'negative',
       title: 'One size fits all timer',
@@ -58,11 +58,11 @@ const ROWS: ComparisonRow[] = [
     },
   },
   {
-    feature: 'Account & Privacy',
+    feature: 'Privacy & No Account',
     builtin: {
       status: 'negative',
       title: 'Tied to Google / OS account',
-      description: 'Synced across cloud accounts',
+      description: 'Synced across cloud accounts and system telemetry',
     },
     paid: {
       status: 'negative',
@@ -76,7 +76,7 @@ const ROWS: ComparisonRow[] = [
     },
   },
   {
-    feature: 'Pricing & Access',
+    feature: 'Free Core Access',
     builtin: {
       status: 'positive',
       title: 'Free',
@@ -94,57 +94,21 @@ const ROWS: ComparisonRow[] = [
     },
   },
   {
-    feature: 'Bypass & Habituation',
+    feature: 'Instant Intervention & Habit Change',
     builtin: {
       status: 'negative',
-      title: 'Trivial 1 tap bypass',
-      description: '“Ignore limit for 15 min” bypassed in under 1 second on reflex',
+      title: 'Too late & treats symptoms',
+      description: 'Fires only after 60+ minutes of scrolling, leaving the subconscious motor loop intact',
     },
     paid: {
       status: 'negative',
-      title: 'Predictable or extreme',
-      description: 'Users habituate to static 5s timers, or rage delete rigid VPN locks',
+      title: 'Relies on brute force',
+      description: 'Creates friction without positive reinforcement, leading to high app churn',
     },
     breaksy: {
       status: 'positive',
-      title: 'Randomized micro hurdles',
-      description: 'Rotates math, puzzles & breathing so your brain cannot bypass on reflex',
-    },
-  },
-  {
-    feature: 'Trigger Point',
-    builtin: {
-      status: 'negative',
-      title: 'After the damage is done',
-      description: 'Fires only after you have already scrolled for 60+ minutes',
-    },
-    paid: {
-      status: 'negative',
-      title: 'Rigid preset schedules',
-      description: 'Blocks apps during calendar blocks or broad time windows',
-    },
-    breaksy: {
-      status: 'positive',
-      title: 'Millisecond zero on app tap',
-      description: 'Intercepts the unconscious thumb reflex before the feed can load',
-    },
-  },
-  {
-    feature: 'Habit Extinction',
-    builtin: {
-      status: 'negative',
-      title: 'Treats the symptom',
-      description: 'Blunt time rationing that leaves the subconscious motor loop intact',
-    },
-    paid: {
-      status: 'negative',
-      title: 'Relies on force',
-      description: 'Creates friction without positive reinforcement, leading to app churn',
-    },
-    breaksy: {
-      status: 'positive',
-      title: 'Permanent rewiring',
-      description: 'Backed by clinical data: leads to 37% fewer subconscious launch attempts',
+      title: 'Tap zero reflex rewiring',
+      description: 'Intercepts unconscious thumb reflexes at millisecond zero; clinical data shows 37% fewer open attempts',
     },
   },
 ];
