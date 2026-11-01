@@ -51,7 +51,7 @@ export const ServicesSection: React.FC = React.memo(() => {
       <div className="max-w-5xl xl:max-w-6xl mx-auto w-full min-w-0">
         <FadeIn delay={0} y={30}>
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="font-black uppercase text-center text-white leading-none tracking-tight text-[clamp(2.5rem,8vw,120px)]">
+            <h2 className="section-heading-shade font-black uppercase text-center leading-none tracking-tight text-[clamp(2.5rem,8vw,120px)]">
               FEATURES
             </h2>
             <p className="mt-3 max-w-2xl mx-auto text-xs sm:text-base text-slate-300 font-light">

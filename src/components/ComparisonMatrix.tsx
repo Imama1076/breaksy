@@ -134,7 +134,7 @@ export const ComparisonMatrix: React.FC = () => {
         {/* Section Header */}
         <FadeIn delay={0} y={30}>
           <div className="flex flex-col items-center text-center mb-12 sm:mb-16">
-            <h2 className="text-white font-black uppercase text-center leading-tight tracking-tight text-3xl xs:text-4xl sm:text-5xl lg:text-6xl max-w-4xl">
+            <h2 className="section-heading-shade font-black uppercase text-center leading-tight tracking-tight text-3xl xs:text-4xl sm:text-5xl lg:text-6xl max-w-4xl">
               HOW BREAKSY DIFFERS
             </h2>
             <p className="mt-3.5 text-[#D7E2EA] font-light max-w-2xl text-xs sm:text-base leading-relaxed px-4">

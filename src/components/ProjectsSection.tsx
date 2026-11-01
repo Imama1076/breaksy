@@ -94,7 +94,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = React.memo(({ onO
         {/* Section Header */}
         <FadeIn delay={0} y={30} className="w-full min-w-0 max-w-full">
           <div className="flex flex-col items-center text-center mb-8 sm:mb-12 w-full">
-            <h2 className="text-white font-black uppercase text-center leading-none tracking-tight text-3xl xs:text-4xl sm:text-5xl md:text-6xl">
+            <h2 className="section-heading-shade font-black uppercase text-center leading-none tracking-tight text-3xl xs:text-4xl sm:text-5xl md:text-6xl">
               EXPERIENCE BREAKSY
             </h2>
             <p className="mt-3.5 text-[#D7E2EA] font-light max-w-xl text-xs sm:text-base leading-relaxed px-2">
