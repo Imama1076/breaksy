@@ -107,9 +107,9 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = React.memo(({ onO
         <FadeIn delay={0.1} y={20} className="w-full min-w-0 max-w-full">
           <div
             ref={tabsContainerRef}
-            className="w-full overflow-x-auto breaksy-scrollbar-x pb-4 mb-8 sm:mb-12 max-w-full"
+            className="w-full overflow-x-auto sm:overflow-visible breaksy-scrollbar-x pb-4 sm:pb-0 mb-8 sm:mb-12 max-w-full"
           >
-            <div className="flex items-center gap-2 sm:gap-2.5 min-w-max px-3 sm:px-4 sm:mx-auto sm:justify-center">
+            <div className="flex items-center gap-2 sm:gap-2.5 min-w-max sm:min-w-0 sm:flex-wrap sm:justify-center px-3 sm:px-0">
               {TABS.map((tab) => {
                 const isActive = activeTab === tab.id;
                 return (
@@ -118,7 +118,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = React.memo(({ onO
                     onClick={(e) => {
                       setActiveTab(tab.id);
                       const container = tabsContainerRef.current;
-                      if (container) {
+                      if (container && window.innerWidth < 640) {
                         const btn = e.currentTarget;
                         const targetLeft =
                           btn.offsetLeft - container.clientWidth / 2 + btn.clientWidth / 2;
@@ -128,7 +128,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = React.memo(({ onO
                         });
                       }
                     }}
-                    className={`flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl sm:rounded-2xl text-xs sm:text-xs md:text-sm font-semibold uppercase tracking-wider transition-all shrink-0 cursor-pointer ${
+                    className={`flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-3.5 md:px-4 py-2 sm:py-2.5 rounded-xl sm:rounded-2xl text-xs sm:text-xs md:text-sm font-semibold uppercase tracking-wider transition-all shrink-0 cursor-pointer ${
                       isActive
                         ? 'bg-gradient-to-r from-indigo-500 via-purple-500 to-indigo-600 text-white shadow-lg shadow-indigo-500/30'
                         : 'bg-white/5 border border-white/10 text-slate-300 hover:bg-white/10 hover:text-white'
