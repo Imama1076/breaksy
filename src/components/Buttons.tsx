@@ -5,6 +5,7 @@ interface ContactButtonProps {
   onClick?: () => void;
   className?: string;
   href?: string;
+  size?: 'sm' | 'md' | 'lg';
 }
 
 export const ContactButton: React.FC<ContactButtonProps> = ({
@@ -12,6 +13,7 @@ export const ContactButton: React.FC<ContactButtonProps> = ({
   onClick,
   className = '',
   href,
+  size = 'md',
 }) => {
   const content = (
     <span className="relative z-10 flex items-center justify-center gap-2">
@@ -26,7 +28,14 @@ export const ContactButton: React.FC<ContactButtonProps> = ({
     outlineOffset: '-3px',
   };
 
-  const commonClasses = `whitespace-nowrap shrink-0 rounded-full text-white font-semibold uppercase tracking-wider transition-all duration-200 hover:scale-[1.03] active:scale-[0.97] px-5 py-2 sm:px-6 sm:py-2.5 md:px-7 md:py-2.5 text-xs sm:text-sm inline-flex items-center justify-center cursor-pointer select-none ${className}`;
+  const sizeClasses =
+    size === 'lg'
+      ? 'px-6 py-3 sm:px-8 sm:py-3.5 md:px-9 md:py-4 text-xs sm:text-sm md:text-base font-bold'
+      : size === 'sm'
+      ? 'px-4 py-1.5 sm:px-5 sm:py-2 text-xs'
+      : 'px-5 py-2.5 sm:px-6 sm:py-2.5 md:px-7 md:py-2.5 text-xs sm:text-sm';
+
+  const commonClasses = `whitespace-nowrap shrink-0 rounded-full text-white font-semibold uppercase tracking-wider transition-all duration-200 hover:scale-[1.03] active:scale-[0.97] ${sizeClasses} inline-flex items-center justify-center cursor-pointer select-none ${className}`;
 
   if (href) {
     return (

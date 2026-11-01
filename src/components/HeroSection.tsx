@@ -271,7 +271,7 @@ export const HeroSection: React.FC<HeroSectionProps> = React.memo(({
             <a
               href="#features"
               onClick={(e) => handleDesktopNavClick(e, '#features')}
-              className="whitespace-nowrap shrink-0 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full border border-purple-400/50 hover:border-amber-300 text-purple-200 hover:text-white text-xs sm:text-sm font-medium uppercase tracking-wider transition-all duration-200 hover:bg-purple-500/20 cursor-pointer flex items-center justify-center select-none"
+              className="whitespace-nowrap shrink-0 px-4 sm:px-5 py-2.5 sm:py-2.5 rounded-full border border-purple-400/50 hover:border-amber-300 text-purple-200 hover:text-white text-xs sm:text-sm font-medium uppercase tracking-wider transition-all duration-200 hover:bg-purple-500/20 cursor-pointer flex items-center justify-center select-none"
             >
               <span>Explore Features</span>
             </a>

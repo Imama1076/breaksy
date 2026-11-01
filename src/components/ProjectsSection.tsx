@@ -212,7 +212,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = React.memo(({ onO
               </p>
             </div>
             <div className="pt-1 sm:pt-2">
-              <ContactButton label="Download Breaksy App" onClick={onOpenDownload} />
+              <ContactButton label="Download Breaksy App" onClick={onOpenDownload} size="lg" />
             </div>
           </div>
         </FadeIn>
