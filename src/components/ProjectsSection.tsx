@@ -202,8 +202,9 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = React.memo(({ onO
         <FadeIn delay={0.2} y={30} className="mt-14 sm:mt-20 text-center">
           <div className="max-w-3xl mx-auto py-6 sm:py-8 px-4 flex flex-col items-center gap-5 sm:gap-6">
             <div className="flex flex-col items-center gap-3 sm:gap-4">
-              <h3 className="text-xl sm:text-3xl font-black uppercase tracking-normal leading-snug sm:leading-tight text-white max-w-xl">
-                Reclaim Your Attention Span Today
+              <h3 className="text-xl sm:text-3xl md:text-4xl font-black uppercase tracking-tight leading-tight text-white max-w-3xl mx-auto">
+                <span className="block">Reclaim Your Attention Span</span>
+                <span className="block">Today</span>
               </h3>
               <p className="text-xs sm:text-base text-slate-300 font-light leading-relaxed tracking-normal max-w-lg mx-auto">
                 Join thousands building intentional digital habits with Breaksy. Available for Android.
