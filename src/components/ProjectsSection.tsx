@@ -83,14 +83,14 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = React.memo(({ onO
   return (
     <section
       id="simulator"
-      className="relative min-h-[90vh] flex flex-col justify-center items-center bg-gradient-to-b from-[#0D102D] via-[#090C24] to-[#0B0E2A] text-white px-4 sm:px-8 md:px-10 pt-20 sm:pt-24 md:pt-28 pb-24 sm:pb-28 md:pb-32 overflow-hidden select-none border-t border-purple-500/10 scroll-mt-6 w-full max-w-full"
+      className="relative min-h-[90vh] flex flex-col justify-center items-center bg-gradient-to-b from-[#0D102D] via-[#090C24] to-[#0B0E2A] text-white px-4 sm:px-8 md:px-10 lg:px-16 xl:px-24 pt-20 sm:pt-24 md:pt-28 pb-24 sm:pb-28 md:pb-32 overflow-hidden select-none border-t border-purple-500/10 scroll-mt-6 w-full max-w-full"
     >
       {/* Anchor for backward compatibility with #interactive links */}
       <span id="interactive" className="absolute -top-10 opacity-0 pointer-events-none" />
       {/* Background ambient cosmic glow (Hardware-accelerated radial gradients) */}
       <div className="absolute top-1/4 left-1/3 w-[850px] h-[600px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(147,51,234,0.14)_0%,transparent_70%)] pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/4 w-[650px] h-[500px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(99,102,241,0.12)_0%,transparent_70%)] pointer-events-none" />
-      <div className="max-w-7xl mx-auto w-full min-w-0 max-w-full">
+      <div className="max-w-6xl mx-auto w-full min-w-0 max-w-full">
         {/* Section Header */}
         <FadeIn delay={0} y={30} className="w-full min-w-0 max-w-full">
           <div className="flex flex-col items-center text-center mb-8 sm:mb-12 w-full">

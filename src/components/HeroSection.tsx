@@ -69,7 +69,7 @@ export const HeroSection: React.FC<HeroSectionProps> = React.memo(({
 
       {/* 2. Navbar */}
       <FadeIn delay={0} y={-20} className="w-full z-30 relative">
-        <header className="w-full max-w-7xl mx-auto px-4 sm:px-8 md:px-10 flex items-center justify-between pt-2 md:pt-3">
+        <header className="w-full max-w-7xl mx-auto px-4 sm:px-8 md:px-10 lg:px-16 xl:px-24 flex items-center justify-between pt-2 md:pt-3">
           {/* Logo with Mascot Icon */}
           <a
             href="#"
@@ -249,7 +249,7 @@ export const HeroSection: React.FC<HeroSectionProps> = React.memo(({
       </div>
 
       {/* 4. Bottom bar: Philosophy and Actions (elevated with generous clearance from bottom screen edge) */}
-      <div className="w-full max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center md:items-end px-4 sm:px-8 md:px-10 gap-3 sm:gap-4 md:gap-6 z-25 relative mt-auto pb-5 xs:pb-6 sm:pb-8 md:pb-10 lg:pb-12">
+      <div className="w-full max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center md:items-end px-4 sm:px-8 md:px-10 lg:px-16 xl:px-24 gap-3 sm:gap-4 md:gap-6 z-25 relative mt-auto pb-5 xs:pb-6 sm:pb-8 md:pb-10 lg:pb-12">
         {/* Left App Philosophy paragraph */}
         <FadeIn delay={0.4} y={15} className="w-full md:w-auto flex justify-center md:justify-start">
           <div className="max-w-[340px] md:max-w-[380px] text-center md:text-left bg-black/40 backdrop-blur-md p-3 sm:p-3.5 rounded-2xl border border-white/10 shadow-lg">

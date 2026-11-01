@@ -44,11 +44,11 @@ export const ServicesSection: React.FC = React.memo(() => {
   return (
     <section
       id="features"
-      className="relative min-h-[85vh] flex flex-col justify-center bg-gradient-to-b from-[#0E102E] via-[#0A0C26] to-[#0D102D] text-white px-4 sm:px-8 md:px-10 py-24 sm:py-32 md:py-36 z-10 select-none border-t border-purple-500/15 w-full max-w-full"
+      className="relative min-h-[85vh] flex flex-col justify-center bg-gradient-to-b from-[#0E102E] via-[#0A0C26] to-[#0D102D] text-white px-4 sm:px-8 md:px-10 lg:px-16 xl:px-24 py-24 sm:py-32 md:py-36 z-10 select-none border-t border-purple-500/15 w-full max-w-full"
     >
       {/* Background ambient illumination (Hardware-accelerated radial glow) */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[800px] h-[500px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(147,51,234,0.14)_0%,transparent_70%)] pointer-events-none" />
-      <div className="max-w-6xl mx-auto w-full min-w-0 max-w-full">
+      <div className="max-w-5xl xl:max-w-6xl mx-auto w-full min-w-0 max-w-full">
         <FadeIn delay={0} y={30}>
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="font-black uppercase text-center text-white leading-none tracking-tight text-[clamp(2.5rem,8vw,120px)]">
@@ -63,16 +63,16 @@ export const ServicesSection: React.FC = React.memo(() => {
         <div className="flex flex-col divide-y divide-white/10 border-t border-b border-white/10">
           {BREAKSY_FEATURES.map((item, i) => (
             <FadeIn key={item.number} delay={i * 0.06} y={20}>
-              <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 sm:gap-6 py-6 sm:py-8 group hover:bg-white/[0.02] transition-colors rounded-2xl px-2 sm:px-6">
+              <div className="flex flex-col lg:flex-row lg:items-center justify-start gap-4 sm:gap-6 lg:gap-10 xl:gap-14 py-6 sm:py-8 group hover:bg-white/[0.02] transition-colors rounded-2xl px-2 sm:px-6">
                 {/* Number on left */}
-                <div className="flex items-center gap-4 lg:w-40 shrink-0">
+                <div className="flex items-center gap-4 lg:w-28 xl:w-32 shrink-0">
                   <span className="font-black text-purple-400/80 group-hover:text-purple-300 transition-colors leading-none text-[clamp(2.4rem,6vw,80px)] tracking-tighter">
                     {item.number}
                   </span>
                 </div>
 
                 {/* Name & description in middle */}
-                <div className="flex flex-col gap-1.5 md:gap-2 flex-1 max-w-2xl">
+                <div className="flex flex-col gap-1.5 md:gap-2 flex-1 max-w-3xl">
                   <h3 className="text-lg sm:text-2xl font-bold uppercase tracking-tight text-white group-hover:text-purple-200 transition-colors">
                     {item.name}
                   </h3>

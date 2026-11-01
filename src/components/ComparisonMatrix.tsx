@@ -124,13 +124,13 @@ export const ComparisonMatrix: React.FC = () => {
   return (
     <section
       id="comparison"
-      className="relative min-h-[85vh] flex flex-col justify-center bg-gradient-to-b from-[#0B0E2A] via-[#080B20] to-[#0D102D] text-white px-4 sm:px-8 md:px-10 py-24 sm:py-32 md:py-36 overflow-hidden select-none border-t border-purple-500/10 w-full max-w-full"
+      className="relative min-h-[85vh] flex flex-col justify-center bg-gradient-to-b from-[#0B0E2A] via-[#080B20] to-[#0D102D] text-white px-4 sm:px-8 md:px-10 lg:px-16 xl:px-24 py-24 sm:py-32 md:py-36 overflow-hidden select-none border-t border-purple-500/10 w-full max-w-full"
     >
       {/* Background ambient cosmic glow */}
       <div className="absolute top-1/3 left-1/4 w-[750px] h-[550px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(147,51,234,0.12)_0%,transparent_70%)] pointer-events-none" />
       <div className="absolute bottom-1/3 right-1/4 w-[600px] h-[450px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(99,102,241,0.1)_0%,transparent_70%)] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto relative z-10 w-full min-w-0 max-w-full">
+      <div className="max-w-5xl xl:max-w-6xl mx-auto relative z-10 w-full min-w-0 max-w-full">
         {/* Section Header */}
         <FadeIn delay={0} y={30}>
           <div className="flex flex-col items-center text-center mb-12 sm:mb-16">

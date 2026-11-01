@@ -24,7 +24,7 @@ export const AboutSection: React.FC<AboutSectionProps> = React.memo(() => {
   return (
     <section
       id="why-breaksy"
-      className="relative min-h-[85vh] sm:min-h-[90vh] bg-gradient-to-b from-[#0C0F2B] via-[#090B22] to-[#0E102E] flex flex-col items-center justify-center text-center px-4 sm:px-8 md:px-10 py-28 sm:py-36 md:py-44 overflow-hidden select-none border-t border-purple-500/10 scroll-mt-6 w-full max-w-full"
+      className="relative min-h-[85vh] sm:min-h-[90vh] bg-gradient-to-b from-[#0C0F2B] via-[#090B22] to-[#0E102E] flex flex-col items-center justify-center text-center px-4 sm:px-8 md:px-10 lg:px-16 xl:px-24 py-28 sm:py-36 md:py-44 overflow-hidden select-none border-t border-purple-500/10 scroll-mt-6 w-full max-w-full"
     >
       {/* Anchor for backward compatibility with #about links */}
       <span id="about" className="absolute -top-10 opacity-0 pointer-events-none" />
