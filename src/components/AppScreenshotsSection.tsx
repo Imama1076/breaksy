@@ -424,7 +424,7 @@ export const AppScreenshotsSection: React.FC<AppScreenshotsSectionProps> = React
 
 
 
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="max-w-7xl mx-auto relative z-10 w-full min-w-0 max-w-full">
         {/* Section Header */}
         <FadeIn delay={0} y={20}>
           <div className="text-center max-w-4xl mx-auto mb-6 sm:mb-8">

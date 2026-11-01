@@ -83,17 +83,17 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = React.memo(({ onO
   return (
     <section
       id="simulator"
-      className="relative min-h-[90vh] flex flex-col justify-center bg-gradient-to-b from-[#0D102D] via-[#090C24] to-[#0B0E2A] text-white px-4 sm:px-8 md:px-10 pt-20 sm:pt-24 md:pt-28 pb-24 sm:pb-28 md:pb-32 overflow-hidden select-none border-t border-purple-500/10 scroll-mt-6"
+      className="relative min-h-[90vh] flex flex-col justify-center items-center bg-gradient-to-b from-[#0D102D] via-[#090C24] to-[#0B0E2A] text-white px-4 sm:px-8 md:px-10 pt-20 sm:pt-24 md:pt-28 pb-24 sm:pb-28 md:pb-32 overflow-hidden select-none border-t border-purple-500/10 scroll-mt-6 w-full max-w-full"
     >
       {/* Anchor for backward compatibility with #interactive links */}
       <span id="interactive" className="absolute -top-10 opacity-0 pointer-events-none" />
       {/* Background ambient cosmic glow (Hardware-accelerated radial gradients) */}
       <div className="absolute top-1/4 left-1/3 w-[850px] h-[600px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(147,51,234,0.14)_0%,transparent_70%)] pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/4 w-[650px] h-[500px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(99,102,241,0.12)_0%,transparent_70%)] pointer-events-none" />
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto w-full min-w-0 max-w-full">
         {/* Section Header */}
-        <FadeIn delay={0} y={30}>
-          <div className="flex flex-col items-center text-center mb-8 sm:mb-12">
+        <FadeIn delay={0} y={30} className="w-full min-w-0 max-w-full">
+          <div className="flex flex-col items-center text-center mb-8 sm:mb-12 w-full">
             <h2 className="hero-heading font-black uppercase text-center leading-none tracking-tight text-3xl xs:text-4xl sm:text-5xl md:text-6xl">
               EXPERIENCE BREAKSY
             </h2>
@@ -104,7 +104,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = React.memo(({ onO
         </FadeIn>
 
         {/* Tab Switcher */}
-        <FadeIn delay={0.1} y={20}>
+        <FadeIn delay={0.1} y={20} className="w-full min-w-0 max-w-full">
           <div
             ref={tabsContainerRef}
             className="w-full overflow-x-auto breaksy-scrollbar-x pb-4 mb-8 sm:mb-12 max-w-full"
@@ -144,11 +144,11 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = React.memo(({ onO
         </FadeIn>
 
         {/* Tab Panels with Suspense */}
-        <div className="relative">
+        <div className="relative w-full min-w-0 max-w-full">
           <Suspense fallback={<div className="min-h-[340px] flex items-center justify-center text-purple-300 font-bold tracking-widest text-xl">...</div>}>
             {activeTab === 'interception' && (
-              <FadeIn key="interception" delay={0.05} y={20}>
-                <div className="max-w-5xl mx-auto">
+              <FadeIn key="interception" delay={0.05} y={20} className="w-full min-w-0 max-w-full">
+                <div className="max-w-5xl mx-auto w-full min-w-0 max-w-full">
                   <InterceptionSimulator
                     onOpenDownload={onOpenDownload}
                     onNavigateToChallenges={() => setActiveTab('challenges')}
@@ -158,40 +158,40 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = React.memo(({ onO
             )}
 
             {activeTab === 'challenges' && (
-              <FadeIn key="challenges" delay={0.05} y={20}>
-                <div className="max-w-5xl mx-auto">
+              <FadeIn key="challenges" delay={0.05} y={20} className="w-full min-w-0 max-w-full">
+                <div className="max-w-5xl mx-auto w-full min-w-0 max-w-full">
                   <MicroChallengesShowcase onOpenDownload={onOpenDownload} />
                 </div>
               </FadeIn>
             )}
 
             {activeTab === 'vibelocks' && (
-              <FadeIn key="vibelocks" delay={0.05} y={20}>
-                <div className="max-w-5xl mx-auto">
+              <FadeIn key="vibelocks" delay={0.05} y={20} className="w-full min-w-0 max-w-full">
+                <div className="max-w-5xl mx-auto w-full min-w-0 max-w-full">
                   <VibeLocksShowcase />
                 </div>
               </FadeIn>
             )}
 
             {activeTab === 'garden' && (
-              <FadeIn key="garden" delay={0.05} y={20}>
-                <div className="max-w-4xl mx-auto">
+              <FadeIn key="garden" delay={0.05} y={20} className="w-full min-w-0 max-w-full">
+                <div className="max-w-4xl mx-auto w-full min-w-0 max-w-full">
                   <CrystalGardenShowcase />
                 </div>
               </FadeIn>
             )}
 
             {activeTab === 'sleep' && (
-              <FadeIn key="sleep" delay={0.05} y={20}>
-                <div className="max-w-4xl mx-auto">
+              <FadeIn key="sleep" delay={0.05} y={20} className="w-full min-w-0 max-w-full">
+                <div className="max-w-4xl mx-auto w-full min-w-0 max-w-full">
                   <SoundscapeMixer isSleeping={true} />
                 </div>
               </FadeIn>
             )}
 
             {activeTab === 'habits' && (
-              <FadeIn key="habits" delay={0.05} y={20}>
-                <div className="max-w-4xl mx-auto">
+              <FadeIn key="habits" delay={0.05} y={20} className="w-full min-w-0 max-w-full">
+                <div className="max-w-4xl mx-auto w-full min-w-0 max-w-full">
                   <HabitsCustomizer />
                 </div>
               </FadeIn>
@@ -200,9 +200,9 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = React.memo(({ onO
           </Suspense>
         </div>
 
-        <FadeIn delay={0.2} y={30} className="mt-14 sm:mt-20 text-center">
-          <div className="max-w-3xl mx-auto py-6 sm:py-8 px-4 flex flex-col items-center gap-5 sm:gap-6">
-            <div className="flex flex-col items-center gap-3 sm:gap-4">
+        <FadeIn delay={0.2} y={30} className="mt-14 sm:mt-20 text-center w-full min-w-0 max-w-full">
+          <div className="max-w-3xl mx-auto w-full min-w-0 py-6 sm:py-8 px-4 flex flex-col items-center gap-5 sm:gap-6">
+            <div className="flex flex-col items-center gap-3 sm:gap-4 w-full">
               <h3 className="heading-font text-xl sm:text-3xl md:text-4xl font-black uppercase tracking-tight leading-tight text-white max-w-3xl mx-auto" style={{ fontFamily: "'Nunito', sans-serif" }}>
                 <span className="block" style={{ fontFamily: "'Nunito', sans-serif" }}>Reclaim Your Attention Span</span>
                 <span className="block" style={{ fontFamily: "'Nunito', sans-serif" }}>Today</span>

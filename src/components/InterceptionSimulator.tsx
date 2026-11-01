@@ -47,12 +47,12 @@ export const InterceptionSimulator: React.FC<InterceptionSimulatorProps> = ({
   };
 
   return (
-    <div className="glass-panel p-3.5 xs:p-5 sm:p-8 md:p-12 rounded-[24px] sm:rounded-[36px] border border-white/10 flex flex-col gap-5 sm:gap-8 md:gap-10 relative overflow-hidden">
+    <div className="glass-panel p-3.5 xs:p-5 sm:p-8 md:p-12 rounded-[24px] sm:rounded-[36px] border border-white/10 flex flex-col gap-5 sm:gap-8 md:gap-10 relative overflow-hidden w-full min-w-0 max-w-full">
       {/* Background glow */}
       <div className="absolute -top-24 -left-24 w-80 h-80 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(99,102,241,0.18)_0%,transparent_70%)] pointer-events-none" />
 
       {/* Header */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 sm:gap-4 pb-4 sm:pb-6 border-b border-white/10">
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 sm:gap-4 pb-4 sm:pb-6 border-b border-white/10 w-full min-w-0">
         <div>
           <h3 className="text-xl xs:text-2xl sm:text-3xl font-extrabold text-white heading-font">
             How Breaksy Protects Your Attention
@@ -63,21 +63,21 @@ export const InterceptionSimulator: React.FC<InterceptionSimulatorProps> = ({
         </div>
       </div>
 
-      {/* 4 CORE OPTIONS (Wider aspect ratio, balanced height) */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 xs:gap-3 sm:gap-4 md:gap-5 items-stretch">
+      {/* 4 CORE OPTIONS (2 Per Row on Mobile, 4 on Desktop) */}
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 xs:gap-3 sm:gap-4 md:gap-5 items-stretch w-full min-w-0">
         {/* OPTION 1: Download The App */}
         <button
           onClick={triggerDownloadAction}
-          className="h-full min-h-[105px] xs:min-h-[120px] sm:min-h-[140px] md:min-h-[155px] p-2.5 xs:p-3 sm:p-4 md:p-5 rounded-2xl sm:rounded-3xl bg-purple-950/30 hover:bg-purple-900/40 border border-purple-500/30 hover:border-purple-400 transition-all flex flex-col items-center justify-between text-center gap-1.5 xs:gap-2 group cursor-pointer transform hover:-translate-y-1 shadow-lg"
+          className="h-full min-h-[105px] xs:min-h-[120px] sm:min-h-[140px] md:min-h-[155px] p-2 xs:p-3 sm:p-4 md:p-5 rounded-2xl sm:rounded-3xl bg-purple-950/30 hover:bg-purple-900/40 border border-purple-500/30 hover:border-purple-400 transition-all flex flex-col items-center justify-between text-center gap-1.5 xs:gap-2 group cursor-pointer transform hover:-translate-y-1 shadow-lg w-full min-w-0"
         >
           <div className="w-8 h-8 xs:w-9 xs:h-9 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-xl sm:rounded-2xl bg-purple-600 flex items-center justify-center text-white shrink-0 shadow-md group-hover:scale-105 transition-transform">
             <Download className="w-3.5 h-3.5 xs:w-4 xs:h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
           </div>
-          <div className="flex-1 flex flex-col items-center justify-center py-0.5 sm:py-1 w-full">
-            <span className="text-[11px] xs:text-xs sm:text-sm md:text-base font-bold text-white block leading-snug">Download The App</span>
+          <div className="flex-1 flex flex-col items-center justify-center py-0.5 sm:py-1 w-full min-w-0">
+            <span className="text-[11px] xs:text-xs sm:text-sm md:text-base font-bold text-white block leading-snug break-words">Download The App</span>
           </div>
           <div className="pt-0.5 shrink-0">
-            <span className="text-[9px] xs:text-[10px] sm:text-xs text-purple-300 font-semibold flex items-center justify-center gap-0.5 xs:gap-1 group-hover:translate-x-0.5 transition-transform text-center">
+            <span className="text-[9px] xs:text-[10px] sm:text-xs text-purple-300 font-semibold flex items-center justify-center gap-0.5 xs:gap-1 group-hover:translate-x-0.5 transition-transform text-center whitespace-nowrap">
               Install App <ArrowRight className="w-2.5 h-2.5 xs:w-3 xs:h-3 sm:w-3.5 sm:h-3.5 shrink-0" />
             </span>
           </div>
@@ -86,16 +86,16 @@ export const InterceptionSimulator: React.FC<InterceptionSimulatorProps> = ({
         {/* OPTION 2: Block Apps You Want (Opens Download Popup) */}
         <button
           onClick={triggerDownloadAction}
-          className="h-full min-h-[105px] xs:min-h-[120px] sm:min-h-[140px] md:min-h-[155px] p-2.5 xs:p-3 sm:p-4 md:p-5 rounded-2xl sm:rounded-3xl bg-white/[0.03] hover:bg-white/[0.08] border border-white/10 hover:border-purple-400/40 transition-all flex flex-col items-center justify-between text-center gap-1.5 xs:gap-2 group cursor-pointer transform hover:-translate-y-1 shadow-lg"
+          className="h-full min-h-[105px] xs:min-h-[120px] sm:min-h-[140px] md:min-h-[155px] p-2 xs:p-3 sm:p-4 md:p-5 rounded-2xl sm:rounded-3xl bg-white/[0.03] hover:bg-white/[0.08] border border-white/10 hover:border-purple-400/40 transition-all flex flex-col items-center justify-between text-center gap-1.5 xs:gap-2 group cursor-pointer transform hover:-translate-y-1 shadow-lg w-full min-w-0"
         >
           <div className="w-8 h-8 xs:w-9 xs:h-9 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-xl sm:rounded-2xl bg-purple-600 flex items-center justify-center text-white shrink-0 shadow-md group-hover:scale-105 transition-transform">
             <ShieldCheck className="w-3.5 h-3.5 xs:w-4 xs:h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
           </div>
-          <div className="flex-1 flex flex-col items-center justify-center py-0.5 sm:py-1 w-full">
-            <span className="text-[11px] xs:text-xs sm:text-sm md:text-base font-bold text-white block leading-snug">Block Social Apps</span>
+          <div className="flex-1 flex flex-col items-center justify-center py-0.5 sm:py-1 w-full min-w-0">
+            <span className="text-[11px] xs:text-xs sm:text-sm md:text-base font-bold text-white block leading-snug break-words">Block Social Apps</span>
           </div>
           <div className="pt-0.5 shrink-0">
-            <span className="text-[9px] xs:text-[10px] sm:text-xs text-purple-300 font-semibold flex items-center justify-center gap-0.5 xs:gap-1 group-hover:translate-x-0.5 transition-transform text-center">
+            <span className="text-[9px] xs:text-[10px] sm:text-xs text-purple-300 font-semibold flex items-center justify-center gap-0.5 xs:gap-1 group-hover:translate-x-0.5 transition-transform text-center whitespace-nowrap">
               Install to Block <ArrowRight className="w-2.5 h-2.5 xs:w-3 xs:h-3 sm:w-3.5 sm:h-3.5 shrink-0" />
             </span>
           </div>
@@ -104,16 +104,16 @@ export const InterceptionSimulator: React.FC<InterceptionSimulatorProps> = ({
         {/* OPTION 3: Play Quick Games (Directs User to Focus Challenges) */}
         <button
           onClick={handleGoToChallenges}
-          className="h-full min-h-[105px] xs:min-h-[120px] sm:min-h-[140px] md:min-h-[155px] p-2.5 xs:p-3 sm:p-4 md:p-5 rounded-2xl sm:rounded-3xl bg-white/[0.03] hover:bg-white/[0.08] border border-white/10 hover:border-purple-400/40 transition-all flex flex-col items-center justify-between text-center gap-1.5 xs:gap-2 group cursor-pointer transform hover:-translate-y-1 shadow-lg"
+          className="h-full min-h-[105px] xs:min-h-[120px] sm:min-h-[140px] md:min-h-[155px] p-2 xs:p-3 sm:p-4 md:p-5 rounded-2xl sm:rounded-3xl bg-white/[0.03] hover:bg-white/[0.08] border border-white/10 hover:border-purple-400/40 transition-all flex flex-col items-center justify-between text-center gap-1.5 xs:gap-2 group cursor-pointer transform hover:-translate-y-1 shadow-lg w-full min-w-0"
         >
           <div className="w-8 h-8 xs:w-9 xs:h-9 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-xl sm:rounded-2xl bg-purple-600 flex items-center justify-center text-white shrink-0 shadow-md group-hover:scale-105 transition-transform">
             <Gamepad2 className="w-3.5 h-3.5 xs:w-4 xs:h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
           </div>
-          <div className="flex-1 flex flex-col items-center justify-center py-0.5 sm:py-1 w-full">
-            <span className="text-[11px] xs:text-xs sm:text-sm md:text-base font-bold text-white block leading-snug">Play Quick Games</span>
+          <div className="flex-1 flex flex-col items-center justify-center py-0.5 sm:py-1 w-full min-w-0">
+            <span className="text-[11px] xs:text-xs sm:text-sm md:text-base font-bold text-white block leading-snug break-words">Play Quick Games</span>
           </div>
           <div className="pt-0.5 shrink-0">
-            <span className="text-[9px] xs:text-[10px] sm:text-xs text-purple-300 font-semibold flex items-center justify-center gap-0.5 xs:gap-1 group-hover:translate-x-0.5 transition-transform text-center">
+            <span className="text-[9px] xs:text-[10px] sm:text-xs text-purple-300 font-semibold flex items-center justify-center gap-0.5 xs:gap-1 group-hover:translate-x-0.5 transition-transform text-center whitespace-nowrap">
               Go to Hurdles <ArrowRight className="w-2.5 h-2.5 xs:w-3 xs:h-3 sm:w-3.5 sm:h-3.5 shrink-0" />
             </span>
           </div>
@@ -122,7 +122,7 @@ export const InterceptionSimulator: React.FC<InterceptionSimulatorProps> = ({
         {/* OPTION 4: Free From Scrolling (Motivational Quote & Focus Impact) */}
         <button
           onClick={handleToggleQuote}
-          className={`h-full min-h-[105px] xs:min-h-[120px] sm:min-h-[140px] md:min-h-[155px] p-2.5 xs:p-3 sm:p-4 md:p-5 rounded-2xl sm:rounded-3xl border transition-all flex flex-col items-center justify-between text-center gap-1.5 xs:gap-2 group cursor-pointer transform hover:-translate-y-1 shadow-lg ${
+          className={`h-full min-h-[105px] xs:min-h-[120px] sm:min-h-[140px] md:min-h-[155px] p-2 xs:p-3 sm:p-4 md:p-5 rounded-2xl sm:rounded-3xl border transition-all flex flex-col items-center justify-between text-center gap-1.5 xs:gap-2 group cursor-pointer transform hover:-translate-y-1 shadow-lg w-full min-w-0 ${
             showMotivationalQuote
               ? 'bg-purple-950/40 border-purple-400/50 shadow-purple-950/40'
               : 'bg-white/[0.03] hover:bg-white/[0.08] border-white/10 hover:border-purple-400/40'
@@ -131,11 +131,11 @@ export const InterceptionSimulator: React.FC<InterceptionSimulatorProps> = ({
           <div className="w-8 h-8 xs:w-9 xs:h-9 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-xl sm:rounded-2xl bg-purple-600 flex items-center justify-center text-white shrink-0 shadow-md group-hover:scale-105 transition-transform">
             <Flame className="w-3.5 h-3.5 xs:w-4 xs:h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
           </div>
-          <div className="flex-1 flex flex-col items-center justify-center py-0.5 sm:py-1 w-full">
-            <span className="text-[11px] xs:text-xs sm:text-sm md:text-base font-bold text-white block leading-snug">Free From Scrolling</span>
+          <div className="flex-1 flex flex-col items-center justify-center py-0.5 sm:py-1 w-full min-w-0">
+            <span className="text-[11px] xs:text-xs sm:text-sm md:text-base font-bold text-white block leading-snug break-words">Free From Scrolling</span>
           </div>
           <div className="pt-0.5 shrink-0">
-            <span className="text-[9px] xs:text-[10px] sm:text-xs text-purple-300 font-semibold flex items-center justify-center gap-0.5 xs:gap-1 group-hover:translate-x-0.5 transition-transform text-center">
+            <span className="text-[9px] xs:text-[10px] sm:text-xs text-purple-300 font-semibold flex items-center justify-center gap-0.5 xs:gap-1 group-hover:translate-x-0.5 transition-transform text-center whitespace-nowrap">
               {showMotivationalQuote ? 'Hide Impact' : 'Focus Impact'} <ArrowRight className="w-2.5 h-2.5 xs:w-3 xs:h-3 sm:w-3.5 sm:h-3.5 shrink-0" />
             </span>
           </div>

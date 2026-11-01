@@ -55,11 +55,11 @@ export const FaqSection: React.FC = React.memo(() => {
   };
 
   return (
-    <section id="faq" className="relative min-h-[85vh] flex flex-col justify-center bg-gradient-to-b from-[#0B0E2A] via-[#080A20] to-[#060716] text-white py-24 sm:py-32 md:py-36 px-4 sm:px-6 md:px-10 overflow-hidden border-t border-purple-500/10">
+    <section id="faq" className="relative min-h-[85vh] flex flex-col justify-center bg-gradient-to-b from-[#0B0E2A] via-[#080A20] to-[#060716] text-white py-24 sm:py-32 md:py-36 px-4 sm:px-6 md:px-10 overflow-hidden border-t border-purple-500/10 w-full max-w-full">
       {/* Background Glow (Hardware-accelerated radial glow) */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[450px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(147,51,234,0.15)_0%,transparent_70%)] pointer-events-none" />
 
-      <div className="max-w-4xl mx-auto relative z-10">
+      <div className="max-w-4xl mx-auto relative z-10 w-full min-w-0 max-w-full">
         <FadeIn delay={0} y={20}>
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-3xl xs:text-4xl sm:text-5xl font-black uppercase tracking-tight text-white mb-4">

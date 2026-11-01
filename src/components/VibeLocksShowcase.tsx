@@ -122,7 +122,7 @@ export const VibeLocksShowcase: React.FC = () => {
   };
 
   return (
-    <div id="vibe-locks" className="glass-panel p-4 xs:p-6 sm:p-10 rounded-[28px] sm:rounded-[32px] border border-white/10 flex flex-col gap-6 sm:gap-8">
+    <div id="vibe-locks" className="glass-panel p-4 xs:p-6 sm:p-10 rounded-[28px] sm:rounded-[32px] border border-white/10 flex flex-col gap-6 sm:gap-8 w-full min-w-0 max-w-full">
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b border-white/10">
         <div>

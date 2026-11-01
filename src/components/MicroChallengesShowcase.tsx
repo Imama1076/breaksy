@@ -345,7 +345,7 @@ export const MicroChallengesShowcase: React.FC<MicroChallengesShowcaseProps> = (
   };
 
   return (
-    <div id="challenges" className="glass-panel p-3.5 xs:p-5 sm:p-8 rounded-[24px] sm:rounded-[28px] border border-white/10 flex flex-col gap-4 sm:gap-6">
+    <div id="challenges" className="glass-panel p-3.5 xs:p-5 sm:p-8 rounded-[24px] sm:rounded-[28px] border border-white/10 flex flex-col gap-4 sm:gap-6 w-full min-w-0 max-w-full">
       {/* Header */}
       <div className="pb-3 border-b border-white/10">
         <h3 className="text-xl sm:text-2xl font-extrabold text-white heading-font">

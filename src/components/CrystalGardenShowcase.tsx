@@ -75,7 +75,7 @@ export const CrystalGardenShowcase: React.FC = () => {
   const isCurrentActiveUnlocked = currentStreak >= activeFlower.streakReq;
 
   return (
-    <div id="garden" className="glass-panel p-4 xs:p-6 sm:p-8 rounded-[28px] sm:rounded-[32px] border border-white/10 flex flex-col gap-5 sm:gap-6">
+    <div id="garden" className="glass-panel p-4 xs:p-6 sm:p-8 rounded-[28px] sm:rounded-[32px] border border-white/10 flex flex-col gap-5 sm:gap-6 w-full min-w-0 max-w-full">
       {/* Header */}
       <div className="pb-3 border-b border-white/10">
         <h3 className="text-xl xs:text-2xl sm:text-3xl font-extrabold text-white heading-font">

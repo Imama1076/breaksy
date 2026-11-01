@@ -206,7 +206,7 @@ export const SoundscapeMixer: React.FC<SoundscapeMixerProps> = ({ onTimerComplet
   const anyActive = tracks.some((t) => t.active);
 
   return (
-    <div id="soundscapes" className="glass-panel p-4 xs:p-6 sm:p-8 rounded-[28px] sm:rounded-3xl border border-white/10 flex flex-col gap-5 sm:gap-6 shadow-2xl shadow-indigo-950/40">
+    <div id="soundscapes" className="glass-panel p-4 xs:p-6 sm:p-8 rounded-[28px] sm:rounded-3xl border border-white/10 flex flex-col gap-5 sm:gap-6 shadow-2xl shadow-indigo-950/40 w-full min-w-0 max-w-full">
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-white/10">
         <div>

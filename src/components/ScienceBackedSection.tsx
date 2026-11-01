@@ -13,13 +13,13 @@ export const ScienceBackedSection: React.FC<ScienceBackedSectionProps> = React.m
   return (
     <section
       id="science"
-      className="relative min-h-[85vh] flex flex-col justify-center bg-gradient-to-b from-[#090C22] via-[#0D102D] to-[#0A0D26] text-white px-4 sm:px-8 md:px-10 py-24 sm:py-32 md:py-36 overflow-hidden select-none border-t border-purple-500/10"
+      className="relative min-h-[85vh] flex flex-col justify-center bg-gradient-to-b from-[#090C22] via-[#0D102D] to-[#0A0D26] text-white px-4 sm:px-8 md:px-10 py-24 sm:py-32 md:py-36 overflow-hidden select-none border-t border-purple-500/10 w-full max-w-full"
     >
       {/* Background ambient cosmic glow */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[900px] h-[550px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(147,51,234,0.15)_0%,transparent_70%)] pointer-events-none" />
       <div className="absolute bottom-10 right-1/4 w-[500px] h-[400px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(245,158,11,0.08)_0%,transparent_70%)] pointer-events-none" />
 
-      <div className="max-w-6xl mx-auto flex flex-col items-center justify-center relative z-10 text-center">
+      <div className="max-w-6xl mx-auto flex flex-col items-center justify-center relative z-10 text-center w-full min-w-0 max-w-full">
         {/* Headline (H2) */}
         <FadeIn delay={0.08} y={20}>
           <h2 className="hero-heading font-black text-3xl xs:text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-[1.15] max-w-4xl mx-auto px-2">
