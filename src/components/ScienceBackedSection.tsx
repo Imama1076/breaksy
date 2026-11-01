@@ -19,7 +19,7 @@ export const ScienceBackedSection: React.FC<ScienceBackedSectionProps> = React.m
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[900px] h-[550px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(147,51,234,0.15)_0%,transparent_70%)] pointer-events-none" />
       <div className="absolute bottom-10 right-1/4 w-[500px] h-[400px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(245,158,11,0.08)_0%,transparent_70%)] pointer-events-none" />
 
-      <div className="max-w-6xl mx-auto flex flex-col items-center justify-center relative z-10 text-center w-full min-w-0 max-w-full">
+      <div className="max-w-6xl mx-auto flex flex-col items-center justify-center relative z-10 text-center w-full min-w-0">
         {/* Headline (H2) */}
         <FadeIn delay={0.08} y={20}>
           <h2 className="hero-heading font-black text-3xl xs:text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-[1.15] max-w-4xl mx-auto px-2">

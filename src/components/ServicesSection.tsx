@@ -48,7 +48,7 @@ export const ServicesSection: React.FC = React.memo(() => {
     >
       {/* Background ambient illumination (Hardware-accelerated radial glow) */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[800px] h-[500px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(147,51,234,0.14)_0%,transparent_70%)] pointer-events-none" />
-      <div className="max-w-5xl xl:max-w-6xl mx-auto w-full min-w-0 max-w-full">
+      <div className="max-w-5xl xl:max-w-6xl mx-auto w-full min-w-0">
         <FadeIn delay={0} y={30}>
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="font-black uppercase text-center text-white leading-none tracking-tight text-[clamp(2.5rem,8vw,120px)]">

@@ -33,7 +33,7 @@ export const AboutSection: React.FC<AboutSectionProps> = React.memo(() => {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] sm:w-[950px] h-[600px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(147,51,234,0.2)_0%,transparent_70%)] pointer-events-none" />
 
       {/* Main Content Flow */}
-      <div className="relative z-20 flex flex-col items-center max-w-4xl mx-auto gap-6 sm:gap-10 w-full min-w-0 max-w-full">
+      <div className="relative z-20 flex flex-col items-center max-w-4xl mx-auto gap-6 sm:gap-10 w-full min-w-0">
         <FadeIn delay={0} y={30}>
           <h2 className="hero-heading font-black uppercase leading-none tracking-tight text-4xl xs:text-5xl sm:text-6xl md:text-7xl">
             WHY BREAKSY
