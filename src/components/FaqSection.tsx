@@ -59,13 +59,13 @@ export const FaqSection: React.FC = React.memo(() => {
       {/* Background Glow (Hardware-accelerated radial glow) */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[450px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(147,51,234,0.15)_0%,transparent_70%)] pointer-events-none" />
 
-      <div className="max-w-[620px] mx-auto relative z-10 w-full min-w-0 max-w-full">
+      <div className="max-w-[500px] mx-auto relative z-10 w-full min-w-0 max-w-full">
         <FadeIn delay={0} y={20}>
-          <div className="text-center mb-10 sm:mb-14">
-            <h2 className="text-3xl xs:text-4xl sm:text-5xl font-black uppercase tracking-tight text-white mb-3">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-[2.5rem] font-black uppercase tracking-tight text-white mb-3 leading-tight">
               Frequently Asked <span className="hero-heading">Questions</span>
             </h2>
-            <p className="text-slate-300 text-xs sm:text-sm max-w-lg mx-auto font-light leading-relaxed">
+            <p className="text-slate-300 text-xs sm:text-sm max-w-md mx-auto font-light leading-relaxed">
               Everything you need to know about Breaksy&apos;s privacy guarantees, battery efficiency, and mindful mechanics.
             </p>
           </div>
