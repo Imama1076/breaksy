@@ -892,7 +892,7 @@ export const MicroChallengesShowcase: React.FC<MicroChallengesShowcaseProps> = (
                       <div className="space-y-2 text-xs text-slate-300 leading-relaxed pt-1">
                         <p className="flex items-start gap-2">
                           <span className="w-5 h-5 rounded-full bg-amber-500/20 text-amber-300 flex items-center justify-center shrink-0 font-bold text-[10px]">1</span>
-                          <span><strong>Starting Position:</strong> Sit upright with both sit-bones grounded and your knees aligned with your hips.</span>
+                          <span><strong>Starting Position:</strong> Sit upright with both sit bones grounded and your knees aligned with your hips.</span>
                         </p>
                         <p className="flex items-start gap-2">
                           <span className="w-5 h-5 rounded-full bg-amber-500/20 text-amber-300 flex items-center justify-center shrink-0 font-bold text-[10px]">2</span>
@@ -900,7 +900,7 @@ export const MicroChallengesShowcase: React.FC<MicroChallengesShowcaseProps> = (
                         </p>
                         <p className="flex items-start gap-2">
                           <span className="w-5 h-5 rounded-full bg-amber-500/20 text-amber-300 flex items-center justify-center shrink-0 font-bold text-[10px]">3</span>
-                          <span><strong>The Rotation:</strong> Inhale to lengthen your spine tall, then exhale to gently rotate your torso from the mid-back to the left.</span>
+                          <span><strong>The Rotation:</strong> Inhale to lengthen your spine tall, then exhale to gently rotate your torso from the mid back to the left.</span>
                         </p>
                         <p className="flex items-start gap-2">
                           <span className="w-5 h-5 rounded-full bg-amber-500/20 text-amber-300 flex items-center justify-center shrink-0 font-bold text-[10px]">4</span>

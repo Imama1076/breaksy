@@ -30,7 +30,7 @@ export const ScienceBackedSection: React.FC<ScienceBackedSectionProps> = React.m
         {/* Subheadline Paragraph */}
         <FadeIn delay={0.15} y={15}>
           <p className="mt-4 sm:mt-5 text-[#D7E2EA] text-sm sm:text-base md:text-lg font-light leading-relaxed max-w-2xl mx-auto px-4">
-            Every time you open an app without thinking, algorithms steal another minute of your life. Breaksy intercepts the reflex with a 5-second mindful pause—stopping the doomscroll before it swallows your evening.
+            Every time you open an app without thinking, algorithms steal another minute of your life. Breaksy intercepts the reflex with a 5 second mindful pause, stopping the doomscroll before it swallows your evening.
           </p>
         </FadeIn>
 

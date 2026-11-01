@@ -69,8 +69,8 @@ export const SCREENSHOT_SLIDES: ScreenshotSlide[] = [
   {
     id: 'micro-hurdle-engine',
     order: 2,
-    badge: '02 · Micro-Hurdle Engine',
-    category: 'Micro-Hurdles',
+    badge: '02 · Micro Hurdle Engine',
+    category: 'Micro Hurdles',
     title: 'FUN QUICK PUZZLES TO RESET YOUR FOCUS',
     subtitle: 'Quick brain teasers that pause the scrolling habit instantly.',
     description:
@@ -79,14 +79,14 @@ export const SCREENSHOT_SLIDES: ScreenshotSlide[] = [
       'Adaptive challenge difficulty tailored to time of day',
       'No frustrating wall: earn mindful screen time through focus',
       'Instant dopamine loop interruption',
-      '4.2x reduction in impulsive midday social media check-ins',
+      '4.2x reduction in impulsive midday social media check ins',
     ],
     statLabel: 'Cognitive Engagement',
-    statValue: '4.2x Fewer Check-ins',
+    statValue: '4.2x Fewer Check ins',
     icon: <Brain className="w-5 h-5 text-amber-300" />,
     accentColor: 'amber',
     glowColor: 'rgba(245, 158, 11, 0.25)',
-    mechanismTitle: 'Cognitive Micro-Hurdle Engine',
+    mechanismTitle: 'Cognitive Micro Hurdle Engine',
     mechanismTag: 'Active Friction',
     defaultImage: '/slide2.webp',
   },
@@ -96,7 +96,7 @@ export const SCREENSHOT_SLIDES: ScreenshotSlide[] = [
     badge: '03 · Atmospheric Vibe Locks',
     category: 'Vibe Locks',
     title: 'CURATED SOUNDSCAPES & DEEP FOCUS SANCTUARIES',
-    subtitle: 'Turn your workspace into an ambient, distraction-free sanctuary.',
+    subtitle: 'Turn your workspace into an ambient, distraction free sanctuary.',
     description:
       'Set a focus timer from 25 to 90 minutes with relaxing sounds like rain on a tent or soft ambient white noise, turning your phone into a peaceful desk clock.',
     highlights: [
@@ -119,7 +119,7 @@ export const SCREENSHOT_SLIDES: ScreenshotSlide[] = [
     order: 4,
     badge: '04 · Crystal Habit Garden',
     category: 'Crystal Garden',
-    title: 'WATCH YOUR SCREEN-FREE HOURS BLOOM INTO CRYSTALS',
+    title: 'WATCH YOUR SCREEN FREE HOURS BLOOM INTO CRYSTALS',
     subtitle: 'Turn reclaimed minutes into a living, glowing cosmic biome.',
     description:
       'Every minute spent away from digital feeds nourishes your cosmic garden. Unlock rare amethyst geodes, stardust sprouts, and night flowers as your streak builds day by day.',
@@ -174,7 +174,7 @@ export const SCREENSHOT_SLIDES: ScreenshotSlide[] = [
     highlights: [
       'See the exact times and patterns you check your phone most often.',
       'Interception success ratios and weekly momentum scores',
-      '100% private, on-device analytics storage',
+      '100% private, on device analytics storage',
       'Average daily screen time dropped from 5.4h to 2.1h in 3 weeks',
     ],
     statLabel: 'Screen Time Reduction',
@@ -194,11 +194,11 @@ export const SCREENSHOT_SLIDES: ScreenshotSlide[] = [
     title: 'EMERGENCY OVERRIDES THAT RESPECT YOUR AUTONOMY',
     subtitle: 'You are always in control, gently guided by mindful friction.',
     description:
-      'Need critical work files or answering an urgent family message? Breaksy never imprisons your device. A short 30-second breathing cool-down or emergency passcode ensures you only enter when you truly need to.',
+      'Need critical work files or answering an urgent family message? Breaksy never imprisons your device. A short 30 second breathing cool down or emergency passcode ensures you only enter when you truly need to.',
     highlights: [
-      '30-Second reflection delay prevents impulsive overrides',
+      '30 Second reflection delay prevents impulsive overrides',
       'Whitelisted emergency contacts and essential communication',
-      'Zero shame: transparent self-accountability bypass log',
+      'Zero shame: transparent self accountability bypass log',
       '91% of attempted overrides aborted after reflection pause',
     ],
     statLabel: 'Impulse Filter',
@@ -218,10 +218,10 @@ export const SCREENSHOT_SLIDES: ScreenshotSlide[] = [
     title: 'CUSTOMIZED FRICTION TAILORED TO YOUR ROUTINE',
     subtitle: 'Differentiate between essential productivity tools and doomscroll traps.',
     description:
-      'Set precise friction levels per app. Apply strict Zen hurdles on TikTok and Reels, gentle 3-second breathing delays on Slack after 7 PM, and leave your camera, notes, and music untouched.',
+      'Set precise friction levels per app. Apply strict Zen hurdles on TikTok and Reels, gentle 3 second breathing delays on Slack after 7 PM, and leave your camera, notes, and music untouched.',
     highlights: [
-      'Per-app friction sliders: Zen, Strict, or Soft delay',
-      'Schedule-based routine triggers for Work, Study, and Night',
+      'Per app friction sliders: Zen, Strict, or Soft delay',
+      'Schedule based routine triggers for Work, Study, and Night',
       'Supports 10,000+ Android apps with zero configuration',
     ],
     statLabel: 'App Compatibility',
@@ -229,7 +229,7 @@ export const SCREENSHOT_SLIDES: ScreenshotSlide[] = [
     icon: <SlidersHorizontal className="w-5 h-5 text-indigo-300" />,
     accentColor: 'indigo',
     glowColor: 'rgba(129, 140, 248, 0.25)',
-    mechanismTitle: 'Per-App Friction Sliders & Profiles',
+    mechanismTitle: 'Per App Friction Sliders & Profiles',
     mechanismTag: 'Custom Schedules',
     defaultImage: '/slide8.webp',
   },
@@ -245,7 +245,7 @@ export const SCREENSHOT_SLIDES: ScreenshotSlide[] = [
     highlights: [
       'Interactive Android widgets for lock and home screen',
       'Dynamic mascot reactions to streaks and focus milestones',
-      'One-tap vibe lock and timer activation without opening the app',
+      'One tap vibe lock and timer activation without opening the app',
       'Rated 4.9/5 stars by over 28,000 mindful creators',
     ],
     statLabel: 'User Rating',

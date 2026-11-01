@@ -260,7 +260,7 @@ export const HeroSection: React.FC<HeroSectionProps> = React.memo(({
               style={{ fontSize: 'clamp(0.82rem, 1.1vw, 1.02rem)' }}
               className="text-[#E2E8F0] font-normal tracking-normal leading-snug"
             >
-              Breaks mindless muscle-memory before doomscrolling begins.
+              Breaks mindless muscle memory before doomscrolling begins.
             </p>
           </div>
         </FadeIn>

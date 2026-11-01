@@ -43,7 +43,7 @@ export const AboutSection: React.FC<AboutSectionProps> = React.memo(() => {
         {/* Character-by-character scroll animated text with content writer's exact copy */}
         <div className="max-w-[840px] px-2 sm:px-4">
           <AnimatedText
-            text="Traditional screen time limits punish you with hard lockouts—driving you to rage-delete them the second you want a dopamine hit. By then, you’ve already lost. Breaksy steps in at the exact millisecond of impulse. It introduces a mindful 5-second cognitive pause that breaks the hypnotic trance, giving you back the power to choose your life over a glowing feed."
+            text="Traditional screen time limits punish you with hard lockouts, driving you to rage delete them the second you want a dopamine hit. By then, you’ve already lost. Breaksy steps in at the exact millisecond of impulse. It introduces a mindful 5 second cognitive pause that breaks the hypnotic trance, giving you back the power to choose your life over a glowing feed."
             className="text-[#E2E8F0] font-normal leading-relaxed text-base sm:text-lg md:text-xl lg:text-2xl text-center tracking-normal"
           />
         </div>

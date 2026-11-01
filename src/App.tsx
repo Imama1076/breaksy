@@ -214,7 +214,7 @@ export default function App() {
           <div className="flex flex-col items-center md:items-start gap-3">
             <BreaksyLogo size="md" showText={true} />
             <p className="text-xs sm:text-sm text-slate-400 font-light max-w-sm">
-              Behavioral screen-time intervention designed to curb mindless phone habits, stop doomscrolling, and rebuild daily focus.
+              Behavioral screen time intervention designed to curb mindless phone habits, stop doomscrolling, and rebuild daily focus.
             </p>
           </div>
 
@@ -310,7 +310,7 @@ export default function App() {
           <div className="flex items-center gap-3 flex-wrap">
             <span>© {new Date().getFullYear()} Breaksy Inc. All rights reserved.</span>
             <span className="text-emerald-400 flex items-center gap-1">
-              <ShieldCheck className="w-3.5 h-3.5" /> 100% On-Device Privacy Guaranteed
+              <ShieldCheck className="w-3.5 h-3.5" /> 100% On Device Privacy Guaranteed
             </span>
           </div>
           <div className="flex items-center gap-5 sm:gap-6">

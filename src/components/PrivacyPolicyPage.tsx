@@ -83,7 +83,7 @@ export const PrivacyPolicyPage: React.FC<PrivacyPolicyPageProps> = ({
             <span className="text-white/20">•</span>
             <span><strong className="text-slate-300">Platform:</strong> Android Digital Wellbeing</span>
             <span className="text-white/20">•</span>
-            <span><strong className="text-slate-300">Architecture:</strong> Local On-Device Storage</span>
+            <span><strong className="text-slate-300">Architecture:</strong> Local On Device Storage</span>
           </div>
         </div>
 
@@ -92,9 +92,9 @@ export const PrivacyPolicyPage: React.FC<PrivacyPolicyPageProps> = ({
             {/* Quick Principles Note */}
             <div className="mb-10 pl-4 border-l-2 border-emerald-500/60 text-xs sm:text-sm text-slate-300 leading-relaxed">
               <span className="text-white font-semibold block mb-1 uppercase tracking-wider text-xs">
-                Device-First Architecture
+                Device First Architecture
               </span>
-              Breaksy operates locally without server sign-ups. Your app selections and habit records stay on your phone. Read below for full details on on-device processing and third-party Google services.
+              Breaksy operates locally without server sign ups. Your app selections and habit records stay on your phone. Read below for full details on on device processing and third party Google services.
             </div>
 
             {/* Section 1 */}
@@ -108,10 +108,10 @@ export const PrivacyPolicyPage: React.FC<PrivacyPolicyPageProps> = ({
               </h2>
               <div className="space-y-3.5 text-slate-300 text-sm sm:text-base font-light leading-relaxed">
                 <p>
-                  Breaksy (&ldquo;Breaksy&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;) is an Android digital wellbeing app that helps you reduce mindless scrolling and build healthier screen-time habits. It does this by pausing you with a breathing prompt or short challenge when you open apps you have chosen.
+                  Breaksy (&ldquo;Breaksy&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;) is an Android digital wellbeing app that helps you reduce mindless scrolling and build healthier screen time habits. It does this by pausing you with a breathing prompt or short challenge when you open apps you have chosen.
                 </p>
                 <p>
-                  This policy explains what information Breaksy accesses and handles, why, who receives it, and what choices you have. It covers information that stays on your device and information processed by the third-party services built into the app (Google Firebase and Google AdMob). It applies to the Breaksy app on Android.
+                  This policy explains what information Breaksy accesses and handles, why, who receives it, and what choices you have. It covers information that stays on your device and information processed by the third party services built into the app (Google Firebase and Google AdMob). It applies to the Breaksy app on Android.
                 </p>
               </div>
             </section>
@@ -129,7 +129,7 @@ export const PrivacyPolicyPage: React.FC<PrivacyPolicyPageProps> = ({
                 <ul className="space-y-2.5 pl-1">
                   <li className="flex items-start gap-2.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-purple-400 shrink-0 mt-2" />
-                    <span>Breaksy has no account, sign-up or login.</span>
+                    <span>Breaksy has no account, sign up or login.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-purple-400 shrink-0 mt-2" />
@@ -141,11 +141,11 @@ export const PrivacyPolicyPage: React.FC<PrivacyPolicyPageProps> = ({
                   </li>
                   <li className="flex items-start gap-2.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-purple-400 shrink-0 mt-2" />
-                    <span>Third-party services in the app (Firebase Analytics, Firebase Cloud Messaging, Firebase Crashlytics and Google AdMob) collect technical and advertising-related information from your device. This is explained in sections 5 and 6.</span>
+                    <span>Third party services in the app (Firebase Analytics, Firebase Cloud Messaging, Firebase Crashlytics and Google AdMob) collect technical and advertising related information from your device. This is explained in sections 5 and 6.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-purple-400 shrink-0 mt-2" />
-                    <span>Breaksy does not have an in-app setting to change ad personalization. You can control ads through your Android settings.</span>
+                    <span>Breaksy does not have an in app setting to change ad personalization. You can control ads through your Android settings.</span>
                   </li>
                 </ul>
               </div>

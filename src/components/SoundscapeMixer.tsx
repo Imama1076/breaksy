@@ -37,7 +37,7 @@ export const SoundscapeMixer: React.FC<SoundscapeMixerProps> = ({ onTimerComplet
     {
       id: 'delta',
       name: 'Deep Lunar Delta (1.5Hz)',
-      subtitle: '1.5Hz isochronic pulse for restorative slow-wave sleep',
+      subtitle: '1.5Hz isochronic pulse for restorative slow wave sleep',
       icon: <Radio className="w-5 h-5 text-purple-300" />,
       active: false,
       volume: 0.55,

@@ -16,7 +16,7 @@ const BREAKSY_FEATURES: FeatureItem[] = [
   },
   {
     number: '02',
-    name: 'Mindful Micro-Challenges',
+    name: 'Mindful Micro Challenges',
     description:
       'Instead of a boring lock screen, solve quick puzzles, word games, or take a deep breath. It stops mindless scrolling and gives you a moment to decide.',
   },
@@ -30,7 +30,7 @@ const BREAKSY_FEATURES: FeatureItem[] = [
     number: '04',
     name: 'Crystal Garden & Habit Streaks',
     description:
-      'Hit your daily screen-time goals to watch your crystal garden grow. Keep your streak alive to unlock rare, beautiful blooms over time.',
+      'Hit your daily screen time goals to watch your crystal garden grow. Keep your streak alive to unlock rare, beautiful blooms over time.',
   },
   {
     number: '05',

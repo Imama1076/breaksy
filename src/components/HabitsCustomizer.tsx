@@ -80,7 +80,7 @@ const HABITS: HabitItem[] = [
   {
     id: 'adult',
     title: 'X / Adult Content',
-    subtitle: 'Block adult content and late-night triggers',
+    subtitle: 'Block adult content and late night triggers',
     icon: <AdultXIcon />,
   },
   {
@@ -92,7 +92,7 @@ const HABITS: HabitItem[] = [
   {
     id: 'sleep',
     title: 'Improve Sleep',
-    subtitle: 'Wind down without blue-light stimulation',
+    subtitle: 'Wind down without blue light stimulation',
     icon: <ImproveSleepIcon />,
   },
 ];

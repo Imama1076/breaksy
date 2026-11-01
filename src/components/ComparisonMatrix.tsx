@@ -36,7 +36,7 @@ const ROWS: ComparisonRow[] = [
     },
     breaksy: {
       status: 'positive',
-      title: 'Active wellness micro-breaks',
+      title: 'Active wellness micro breaks',
       description: 'Guided breathing, memory games, vocabulary expansion, posture stretches & ambient focus timers',
     },
   },
@@ -44,8 +44,8 @@ const ROWS: ComparisonRow[] = [
     feature: 'Personalization & Goal Setting',
     builtin: {
       status: 'negative',
-      title: 'One-size-fits-all timer',
-      description: 'No behavioral assessment or trigger-based customization',
+      title: 'One size fits all timer',
+      description: 'No behavioral assessment or trigger based customization',
     },
     paid: {
       status: 'negative',
@@ -54,8 +54,8 @@ const ROWS: ComparisonRow[] = [
     },
     breaksy: {
       status: 'positive',
-      title: 'Built-in Habit Tuner',
-      description: 'Calibrates friction to your specific goal: doomscrolling, morning phone-in-bed, sleep, or focus',
+      title: 'Built in Habit Tuner',
+      description: 'Calibrates friction to your specific goal: doomscrolling, morning phone in bed, sleep, or focus',
     },
   },
   {
@@ -68,12 +68,12 @@ const ROWS: ComparisonRow[] = [
     paid: {
       status: 'negative',
       title: 'Mandatory registration',
-      description: 'Requires email sign-up, passwords, and profile creation',
+      description: 'Requires email sign up, passwords, and profile creation',
     },
     breaksy: {
       status: 'positive',
       title: 'No Account Required',
-      description: '100% anonymous, instant 1-tap start with zero data collection',
+      description: '100% anonymous, instant 1 tap start with zero data collection',
     },
   },
   {
@@ -91,24 +91,24 @@ const ROWS: ComparisonRow[] = [
     breaksy: {
       status: 'positive',
       title: '100% Free Core Access',
-      description: 'Full-featured mindful pause with no subscription traps',
+      description: 'Full featured mindful pause with no subscription traps',
     },
   },
   {
     feature: 'Bypass & Habituation',
     builtin: {
       status: 'negative',
-      title: 'Trivial 1-tap bypass',
+      title: 'Trivial 1 tap bypass',
       description: '“Ignore limit for 15 min” bypassed in under 1 second on reflex',
     },
     paid: {
       status: 'negative',
       title: 'Predictable or extreme',
-      description: 'Users habituate to static 5s timers, or rage-delete rigid VPN locks',
+      description: 'Users habituate to static 5s timers, or rage delete rigid VPN locks',
     },
     breaksy: {
       status: 'positive',
-      title: 'Randomized micro-hurdles',
+      title: 'Randomized micro hurdles',
       description: 'Rotates math, puzzles & breathing so your brain cannot bypass on reflex',
     },
   },
@@ -121,7 +121,7 @@ const ROWS: ComparisonRow[] = [
     },
     paid: {
       status: 'negative',
-      title: 'Rigid pre-set schedules',
+      title: 'Rigid preset schedules',
       description: 'Blocks apps during calendar blocks or broad time windows',
     },
     breaksy: {
@@ -181,7 +181,7 @@ export const ComparisonMatrix: React.FC = () => {
                 <tr className="border-b border-white/10 text-xs uppercase tracking-wider text-slate-400 font-semibold bg-white/[0.02]">
                   <th className="py-5 px-6 w-1/4">Feature</th>
                   <th className="py-5 px-6 w-1/4 text-slate-400">
-                    Built-in Screen Time
+                    Built in Screen Time
                     <span className="block text-[10px] text-slate-400 font-normal mt-0.5">(Google Digital Wellbeing)</span>
                   </th>
                   <th className="py-5 px-6 w-1/4 text-slate-400">
@@ -272,7 +272,7 @@ export const ComparisonMatrix: React.FC = () => {
                     ) : (
                       <X className="w-3.5 h-3.5 text-rose-400 shrink-0" />
                     )}
-                    <span>Built-in Screen Time (Google Digital Wellbeing)</span>
+                    <span>Built in Screen Time (Google Digital Wellbeing)</span>
                   </div>
                   <p className="text-xs text-slate-200 font-medium">{row.builtin.title}</p>
                   <p className="text-[11px] text-slate-400 font-light">{row.builtin.description}</p>

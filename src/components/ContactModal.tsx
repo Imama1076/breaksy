@@ -62,7 +62,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
           {/* Privacy Guarantee Note */}
           <div className="pt-2 flex items-center justify-center gap-2 text-xs text-slate-400 text-center">
             <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
-            <span>No account required • 100% on-device privacy guarantee</span>
+            <span>No account required • 100% on device privacy guarantee</span>
           </div>
         </div>
       </div>

@@ -43,7 +43,7 @@ const THEMES: VibeTheme[] = [
   {
     id: 'space',
     name: 'Cosmic Orbit',
-    description: 'Zero-gravity binaural drones tuned to 1.5Hz delta brainwave flow.',
+    description: 'Zero gravity binaural drones tuned to 1.5Hz delta brainwave flow.',
     icon: <Moon className="w-4 h-4 text-purple-400" />,
     bgGradient: 'from-purple-950/40 via-slate-900 to-indigo-950/50',
     largeIcon: <Moon className="w-8 h-8 text-purple-400" />,

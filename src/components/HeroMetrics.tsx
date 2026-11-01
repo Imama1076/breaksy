@@ -11,7 +11,7 @@ const METRICS: MetricItem[] = [
   {
     value: '36%',
     label: 'Impulse Drop',
-    description: 'Closed immediately during the 5-second pause',
+    description: 'Closed immediately during the 5 second pause',
   },
   {
     value: '37%',
