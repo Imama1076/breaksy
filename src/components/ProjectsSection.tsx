@@ -90,7 +90,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = React.memo(({ onO
       {/* Background ambient cosmic glow (Hardware-accelerated radial gradients) */}
       <div className="absolute top-1/4 left-1/3 w-[850px] h-[600px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(147,51,234,0.14)_0%,transparent_70%)] pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/4 w-[650px] h-[500px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(99,102,241,0.12)_0%,transparent_70%)] pointer-events-none" />
-      <div className="max-w-6xl mx-auto w-full min-w-0 max-w-full">
+      <div className="max-w-4xl mx-auto w-full min-w-0 max-w-full">
         {/* Section Header */}
         <FadeIn delay={0} y={30} className="w-full min-w-0 max-w-full">
           <div className="flex flex-col items-center text-center mb-8 sm:mb-12 w-full">
@@ -109,7 +109,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = React.memo(({ onO
             ref={tabsContainerRef}
             className="w-full overflow-x-auto breaksy-scrollbar-x pb-4 mb-8 sm:mb-12 max-w-full"
           >
-            <div className="flex items-center gap-2 sm:gap-3 min-w-max px-3 sm:px-4 sm:mx-auto sm:justify-center">
+            <div className="flex items-center gap-2 sm:gap-2.5 min-w-max px-3 sm:px-4 sm:mx-auto sm:justify-center">
               {TABS.map((tab) => {
                 const isActive = activeTab === tab.id;
                 return (
@@ -128,7 +128,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = React.memo(({ onO
                         });
                       }
                     }}
-                    className={`flex items-center gap-2 px-3.5 sm:px-5 py-2.5 sm:py-3 rounded-xl sm:rounded-2xl text-xs sm:text-sm font-semibold uppercase tracking-wider transition-all shrink-0 cursor-pointer ${
+                    className={`flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl sm:rounded-2xl text-xs sm:text-xs md:text-sm font-semibold uppercase tracking-wider transition-all shrink-0 cursor-pointer ${
                       isActive
                         ? 'bg-gradient-to-r from-indigo-500 via-purple-500 to-indigo-600 text-white shadow-lg shadow-indigo-500/30'
                         : 'bg-white/5 border border-white/10 text-slate-300 hover:bg-white/10 hover:text-white'
@@ -148,7 +148,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = React.memo(({ onO
           <Suspense fallback={<div className="min-h-[340px] flex items-center justify-center text-purple-300 font-bold tracking-widest text-xl">...</div>}>
             {activeTab === 'interception' && (
               <FadeIn key="interception" delay={0.05} y={20} className="w-full min-w-0 max-w-full">
-                <div className="max-w-5xl mx-auto w-full min-w-0 max-w-full">
+                <div className="max-w-4xl mx-auto w-full min-w-0 max-w-full">
                   <InterceptionSimulator
                     onOpenDownload={onOpenDownload}
                     onNavigateToChallenges={() => setActiveTab('challenges')}
@@ -159,7 +159,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = React.memo(({ onO
 
             {activeTab === 'challenges' && (
               <FadeIn key="challenges" delay={0.05} y={20} className="w-full min-w-0 max-w-full">
-                <div className="max-w-5xl mx-auto w-full min-w-0 max-w-full">
+                <div className="max-w-4xl mx-auto w-full min-w-0 max-w-full">
                   <MicroChallengesShowcase onOpenDownload={onOpenDownload} />
                 </div>
               </FadeIn>
@@ -167,7 +167,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = React.memo(({ onO
 
             {activeTab === 'vibelocks' && (
               <FadeIn key="vibelocks" delay={0.05} y={20} className="w-full min-w-0 max-w-full">
-                <div className="max-w-5xl mx-auto w-full min-w-0 max-w-full">
+                <div className="max-w-4xl mx-auto w-full min-w-0 max-w-full">
                   <VibeLocksShowcase />
                 </div>
               </FadeIn>
