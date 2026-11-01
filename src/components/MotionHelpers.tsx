@@ -109,8 +109,8 @@ const ReadingWord: React.FC<{
   progress: any;
   range: [number, number];
 }> = React.memo(({ children, progress, range }) => {
-  const opacity = useTransform(progress, range, [0.25, 1]);
-  const color = useTransform(progress, range, ['rgba(148, 163, 184, 0.45)', '#FFFFFF']);
+  const opacity = useTransform(progress, range, [0.72, 1]);
+  const color = useTransform(progress, range, ['rgba(215, 226, 234, 0.85)', '#FFFFFF']);
 
   return (
     <motion.span

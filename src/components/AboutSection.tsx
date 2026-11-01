@@ -24,16 +24,16 @@ export const AboutSection: React.FC<AboutSectionProps> = React.memo(() => {
   return (
     <section
       id="why-breaksy"
-      className="relative min-h-0 sm:min-h-[65vh] bg-gradient-to-b from-[#0C0F2B] via-[#090B22] to-[#0E102E] flex flex-col items-center justify-center text-center px-4 sm:px-8 md:px-10 py-16 sm:py-24 overflow-hidden select-none border-t border-purple-500/10 scroll-mt-6"
+      className="relative min-h-[75vh] sm:min-h-[85vh] md:min-h-[90vh] bg-gradient-to-b from-[#0C0F2B] via-[#090B22] to-[#0E102E] flex flex-col items-center justify-center text-center px-4 sm:px-8 md:px-10 py-24 sm:py-36 md:py-44 overflow-hidden select-none border-t border-purple-500/10 scroll-mt-6"
     >
       {/* Anchor for backward compatibility with #about links */}
       <span id="about" className="absolute -top-10 opacity-0 pointer-events-none" />
 
       {/* Background purple-navy ambient illumination (Hardware accelerated radial glow) */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] sm:w-[900px] h-[550px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(147,51,234,0.18)_0%,transparent_70%)] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] sm:w-[950px] h-[600px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(147,51,234,0.2)_0%,transparent_70%)] pointer-events-none" />
 
       {/* Main Content Flow */}
-      <div className="relative z-20 flex flex-col items-center max-w-4xl mx-auto gap-5 sm:gap-8">
+      <div className="relative z-20 flex flex-col items-center max-w-4xl mx-auto gap-6 sm:gap-10">
         <FadeIn delay={0} y={30}>
           <h2 className="hero-heading font-black uppercase leading-none tracking-tight text-3xl sm:text-5xl md:text-7xl">
             WHY BREAKSY
@@ -41,10 +41,10 @@ export const AboutSection: React.FC<AboutSectionProps> = React.memo(() => {
         </FadeIn>
 
         {/* Character-by-character scroll animated text with content writer's exact copy */}
-        <div className="max-w-[760px] px-2 sm:px-4">
+        <div className="max-w-[840px] px-2 sm:px-4">
           <AnimatedText
             text="Traditional screen time limits punish you with hard lockouts—driving you to rage-delete them the second you want a dopamine hit. By then, you’ve already lost. Breaksy steps in at the exact millisecond of impulse. It introduces a mindful 5-second cognitive pause that breaks the hypnotic trance, giving you back the power to choose your life over a glowing feed."
-            className="text-[#D7E2EA] font-normal leading-relaxed text-sm sm:text-base md:text-lg text-center tracking-normal"
+            className="text-[#E2E8F0] font-normal leading-relaxed text-base sm:text-lg md:text-xl lg:text-2xl text-center tracking-normal"
           />
         </div>
 

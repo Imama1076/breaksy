@@ -147,7 +147,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = React.memo(({ onO
           <Suspense fallback={<div className="min-h-[340px] flex items-center justify-center text-purple-300 font-bold tracking-widest text-xl">...</div>}>
             {activeTab === 'interception' && (
               <FadeIn key="interception" delay={0.05} y={20}>
-                <div className="max-w-4xl mx-auto">
+                <div className="max-w-5xl mx-auto">
                   <InterceptionSimulator
                     onOpenDownload={onOpenDownload}
                     onNavigateToChallenges={() => setActiveTab('challenges')}
@@ -199,11 +199,10 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = React.memo(({ onO
           </Suspense>
         </div>
 
-        {/* Section Footer Callout */}
         <FadeIn delay={0.2} y={30} className="mt-14 sm:mt-20 text-center">
-          <div className="glass-panel max-w-3xl mx-auto p-6 sm:p-10 rounded-3xl border border-indigo-400/20 flex flex-col items-center gap-5 sm:gap-6">
+          <div className="max-w-3xl mx-auto py-6 sm:py-8 px-4 flex flex-col items-center gap-5 sm:gap-6">
             <div className="flex flex-col items-center gap-3 sm:gap-4">
-              <h3 className="text-xl sm:text-3xl font-black uppercase tracking-normal leading-snug sm:leading-tight text-white max-w-xl">
+              <h3 className="text-2xl sm:text-4xl md:text-5xl font-black uppercase tracking-tight leading-snug sm:leading-tight text-white max-w-xl">
                 Reclaim Your Attention Span Today
               </h3>
               <p className="text-xs sm:text-base text-slate-300 font-light leading-relaxed tracking-normal max-w-lg mx-auto">
